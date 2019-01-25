@@ -38,11 +38,9 @@ class RepositoryGrid extends React.Component {
   render() {
     return (
       <div className="repositories-grid">
-        {
-          this.props.repositories.map((repositoryGroup, counter) => {
-            return this.renderGroup(repositoryGroup, counter);
-          })
-        }
+        <div className="row grid-container">
+          { this.props.repositories.map(repository => <GridItem dateJump={ this.props.dateJump } repository={ repository } key={ repository.url }/>) }
+        </div>
       </div>
     );
   }

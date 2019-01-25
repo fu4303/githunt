@@ -5,7 +5,7 @@
 }
 
 .header-row h4 {
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .group-heading h4 {
@@ -53,4 +53,8 @@
 
 .alert-warning {
   background: #ffa;
+}
+
+.no-trending-data.alert {
+  margin-top: 1rem;
 }

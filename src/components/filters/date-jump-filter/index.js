@@ -4,6 +4,13 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap
 
 import './styles.css';
 
+const dateJumpDefs = {
+  'day': 'Today',
+  'week': 'This Week',
+  'month': 'This Month',
+  'year': 'This Year',
+}
+
 class DateJumpFilter extends React.Component {
   state = {
     dropdownOpen: false
@@ -24,18 +31,7 @@ class DateJumpFilter extends React.Component {
   };
 
   getSelectedDateJump() {
-    switch (this.props.selectedDateJump) {
-      case 'day':
-        return 'Daily';
-      case 'month':
-        return 'Monthly';
-      case 'year':
-        return 'Yearly';
-      case 'week':
-        return 'Weekly';
-      default:
-        return 'Weekly';
-    }
+    return dateJumpDefs[this.props.selectedDateJump]
   }
 
   render() {
@@ -46,10 +42,9 @@ class DateJumpFilter extends React.Component {
           { this.getSelectedDateJump() }
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem onClick={ () => this.updateDateJump('year') }>Yearly</DropdownItem>
-          <DropdownItem onClick={ () => this.updateDateJump('month') }>Monthly</DropdownItem>
-          <DropdownItem onClick={ () => this.updateDateJump('week') }>Weekly</DropdownItem>
-          <DropdownItem onClick={ () => this.updateDateJump('day') }>Daily</DropdownItem>
+          <DropdownItem onClick={ () => this.updateDateJump('day') }>Today</DropdownItem>
+          <DropdownItem onClick={ () => this.updateDateJump('week') }>This Week</DropdownItem>
+          <DropdownItem onClick={ () => this.updateDateJump('month') }>This Month</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );

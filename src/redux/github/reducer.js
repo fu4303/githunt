@@ -30,10 +30,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         // Append the fetched repositories to existing list
-        repositories: [
-          ...state.repositories,
-          action.payload
-        ],
+        repositories: action.payload,
         processing: false,
         error: null
       };

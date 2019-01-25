@@ -5,16 +5,10 @@ const GithubTransform = createTransform(
   (inboundState, key) => {
     inboundState = inboundState || {};
 
-    // Keep the first group only to avoid overflowing the storage
-    if (inboundState.repositories && inboundState.repositories.length > 1) {
-      inboundState = {
-        ...inboundState,
-        repositories: [
-          inboundState.repositories[0]
-        ]
-      };
+    if (!(inboundState.repositories && inboundState.repositories.length)) {
+      // reject to persist state with empty reposities
+      return null
     }
-
     // Do not persist `processing` flag or `error` information,
     // as we want to start fresh on reload in such cases
     inboundState = {

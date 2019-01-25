@@ -43,16 +43,9 @@ class FeedContainer extends React.Component {
 
   getFilters() {
     const filters = {};
-
-    filters.dateRange = this.getNextDateRange();
-    if (this.props.preference.language) {
-      filters.language = this.props.preference.language;
-    }
-
-    if (this.props.preference.options.token) {
-      filters.token = this.props.preference.options.token;
-    }
-
+    filters.language = this.props.preference.language;
+    filters.token = this.props.preference.options.token;
+    filters.dateJump = this.props.preference.dateJump
     return filters;
   }
 
@@ -110,7 +103,7 @@ class FeedContainer extends React.Component {
 
     return (
       <Alert type='danger'>
-        { message }
+        {message}
       </Alert>
     );
   }
@@ -134,14 +127,14 @@ class FeedContainer extends React.Component {
   renderRepositoriesList() {
     if (this.props.preference.viewType === 'grid') {
       return <RepositoryGrid
-        repositories={ this.props.github.repositories || [] }
-        dateJump={ this.props.preference.dateJump }
+        repositories={this.props.github.repositories || []}
+        dateJump={this.props.preference.dateJump}
       />;
     }
 
     return <RepositoryList
-      repositories={ this.props.github.repositories || [] }
-      dateJump={ this.props.preference.dateJump }
+      repositories={this.props.github.repositories || []}
+      dateJump={this.props.preference.dateJump}
     />;
   }
 
@@ -152,49 +145,45 @@ class FeedContainer extends React.Component {
   render() {
     return (
       <div className="page-wrap">
-        <TopNav/>
-
-        { this.renderAlerts() }
+        <TopNav />
 
         <div className="container mb-5 pb-4">
           <div className="header-row clearfix">
-            {
-              this.hasRepositories() && <GroupHeading
-                start={ this.props.github.repositories[0].start }
-                end={ this.props.github.repositories[0].end }
-                dateJump={ this.props.preference.dateJump }
-              />
-            }
+            <GroupHeading dateJump={this.props.preference.dateJump} />
             <div className="group-filters">
-              {
-                this.hasRepositories() && <Filters
-                  selectedLanguage={ this.props.preference.language }
-                  selectedViewType={ this.props.preference.viewType }
-                  updateLanguage={ this.props.updateLanguage }
-                  updateViewType={ this.props.updateViewType }
-                  updateDateJump={ this.props.updateDateJump }
-                  selectedDateJump={ this.props.preference.dateJump }
-                />
-              }
+              <Filters
+                selectedLanguage={this.props.preference.language}
+                selectedViewType={this.props.preference.viewType}
+                updateLanguage={this.props.updateLanguage}
+                updateViewType={this.props.updateViewType}
+                updateDateJump={this.props.updateDateJump}
+                selectedDateJump={this.props.preference.dateJump}
+              />
             </div>
           </div>
           <div className="body-row">
-            { this.renderRepositoriesList() }
+            {this.hasRepositories() && this.renderRepositoriesList()}
 
-            { this.props.github.processing && <Loader/> }
+            {this.props.github.processing && <Loader />}
 
             {
+              false &&
               !this.props.github.processing &&
               this.hasRepositories() &&
               (
                 <button className="btn btn-primary shadow load-next-date"
-                        onClick={ () => this.fetchNextRepositories() }>
+                  onClick={() => this.fetchNextRepositories()}>
                   <i className="fa fa-refresh mr-2"></i>
-                  Load next { this.props.preference.dateJump }
+                  Load next {this.props.preference.dateJump}
                 </button>
               )
             }
           </div>
+          {!this.props.github.processing && !this.hasRepositories()
+            && <Alert type="warning" className="no-trending-data">
+              Trending repositories results are currently being dissected.
+              This may be a few minutes. Now would be a great time to write that novel you’ve always been talking about.
+            </Alert>}
         </div>
       </div>
     );

@@ -39,11 +39,9 @@ class RepositoryList extends React.Component {
 
   render() {
     return (
-      <div className="repositories-list">
+      <div className="row list-container">
         {
-          this.props.repositories.map((repositoryGroup, counter) => {
-            return this.renderGroup(repositoryGroup, counter);
-          })
+          this.props.repositories.map(repository => <ListItem dateJump={ this.props.dateJump } repository={repository} key={repository.url} />)
         }
       </div>
     );

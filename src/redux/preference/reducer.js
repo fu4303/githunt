@@ -1,7 +1,7 @@
 import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE } from './types';
 
 const initialState = {
-  viewType: 'list',
+  viewType: 'grid',
   dateJump: 'week',
   language: '',
   options: {

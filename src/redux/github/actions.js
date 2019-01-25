@@ -1,5 +1,4 @@
 import axios from 'axios';
-import moment from 'moment';
 
 import {
   FETCH_TRENDING_FAILED,
@@ -7,23 +6,32 @@ import {
   PROCESS_FETCH_TRENDING,
 } from './types';
 
-const API_URL = 'https://api.github.com/search/repositories';
+// const TRENDING_API_URL = 'https://api.github.com/search/repositories';
+const TRENDING_API_URL = 'https://github-trending-api.now.sh/repositories';
 
 const transformFilters = (filters) => {
   const transformedFilters = {};
 
-  const startMoment = moment(filters.dateRange.start);
-  const endMoment = moment(filters.dateRange.end);
-  const reposDate = `created:${startMoment.format()}..${endMoment.format()}`;
-  const reposLanguage = filters.language ? `language:${filters.language} ` : '';
+  // const startMoment = moment(filters.dateRange.start);
+  // const endMoment = moment(filters.dateRange.end);
+  // const reposDate = `created:${startMoment.format()}..${endMoment.format()}`;
+  // const reposLanguage = filters.language ? `language:${filters.language} ` : '';
 
   if (filters.token) {
     transformedFilters.access_token = filters.token;
   }
 
-  transformedFilters.q = reposLanguage + reposDate;
-  transformedFilters.sort = 'stars';
-  transformedFilters.order = 'desc';
+  // transformedFilters.q = reposLanguage + reposDate;
+  // transformedFilters.sort = 'stars';
+  // transformedFilters.order = 'desc';
+
+  transformedFilters.language = filters.language
+  transformedFilters.since = {
+    'week': 'weekly',
+    'month': 'monthly',
+    // 'year': '',
+    'day': 'daily'
+  }[filters.dateJump]
 
   return transformedFilters;
 };
@@ -36,16 +44,26 @@ export const fetchTrending = function (filters) {
   return dispatch => {
     dispatch({ type: PROCESS_FETCH_TRENDING });
 
-    axios.get(API_URL, {
+    axios.get(TRENDING_API_URL, {
       params: transformFilters(filters)
     }).then(response => {
+      let reposities = response.data;
+
+      if (!response.data || response.data.length < 1) {
+        throw new Error('no response data.')
+      }
+      reposities.forEach((repo) => {
+        let ownerLogin = repo.author;
+        repo.html_url = repo.url;
+        repo.owner = {
+          login: ownerLogin,
+          html_url: `https://github.com/${ownerLogin}`,
+          avatar_url: `https://avatars.githubusercontent.com/${ownerLogin}?s=200&v=4`,
+        }
+      })
       dispatch({
         type: FETCH_TRENDING_SUCCESS,
-        payload: {
-          start: moment(filters.dateRange.start).format(),
-          end: moment(filters.dateRange.end).format(),
-          data: response.data
-        }
+        payload: reposities
       });
     }).catch(error => {
       let message = error.response &&

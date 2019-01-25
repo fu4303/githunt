@@ -12,7 +12,7 @@ import rootReducer from './redux/reducers';
 
 const persistedReducers = persistReducer(
   {
-    key: 'githunt:root',
+    key: 'hitup:root',
     storage: storage,
     stateReconciler: autoMergeLevel2,
     transforms: [

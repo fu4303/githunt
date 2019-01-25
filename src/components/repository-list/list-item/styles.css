@@ -38,6 +38,7 @@
   top: -1px;
   margin-right: 6px;
   fill: #6c757d;
+  vertical-align: text-top;
 }
 
 .list-item-container .repo-meta a {

@@ -1,5 +1,5 @@
 <h1 align="center">
-  	<img height="100" src="https://raw.github.com/kamranahmedse/githunt/master/public/img/logo.svg?sanitize=true" alt="Githunt" /> <br> GitHunt
+  	<img height="100" src="https://raw.github.com/kamranahmedse/githunt/master/public/img/logo.svg?sanitize=true" alt="Githunt" /> <br> HitUP
 </h1>
 
 <p align="center">
@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <br><b>GitHunt</b> is a react application and<br>a chrome extension that lets you explore
+  <br><b>HitUP</b> is a react application and<br>a chrome extension that lets you explore
   <br>the most starred projects on GitHub<br><a href="https://kamranahmed.info/githunt">Use Online</a> • <a href="https://bit.ly/githunt-chrome">Install Extension</a>
   <br><br><img alt="githunt" src="./.github/list.png">
   <b>Weekly Trending Projects – List View</b><br>

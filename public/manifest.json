@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Githunt",
-  "short_name": "Githunt",
+  "name": "HitUP",
+  "short_name": "HitUP",
   "description": "Replace the new tab with a list of trending repositories on github belonging to any technology that you chose.",
   "version": "3.4",
   "permissions": [
@@ -19,7 +19,7 @@
   },
   "homepage_url": "http://kamranahmed.info/githunt",
   "browser_action": {
-    "default_title": "Githunt",
+    "default_title": "HitUP",
     "default_icon": "/img/icon128.png"
   }
 }
