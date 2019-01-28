@@ -4,8 +4,44 @@
     "value": ""
   },
   {
+    "title": "C++",
+    "value": "C++"
+  },
+  {
+    "title": "HTML",
+    "value": "HTML"
+  },
+  {
+    "title": "Java",
+    "value": "Java"
+  },
+  {
+    "title": "JavaScript",
+    "value": "JavaScript"
+  },
+  {
+    "title": "PHP",
+    "value": "PHP"
+  },
+  {
+    "title": "Python",
+    "value": "Python"
+  },
+  {
+    "title": "Ruby",
+    "value": "Ruby"
+  },
+  {
+    "title": "1C Enterprise",
+    "value": "1C-Enterprise"
+  },
+  {
     "title": "ABAP",
     "value": "ABAP"
+  },
+  {
+    "title": "ABNF",
+    "value": "ABNF"
   },
   {
     "title": "ActionScript",
@@ -16,20 +52,36 @@
     "value": "Ada"
   },
   {
+    "title": "Adobe Font Metrics",
+    "value": "Adobe-Font-Metrics"
+  },
+  {
     "title": "Agda",
     "value": "Agda"
   },
   {
-    "title": "AGS",
-    "value": "AGS"
+    "title": "AGS Script",
+    "value": "AGS-Script"
   },
   {
     "title": "Alloy",
     "value": "Alloy"
   },
   {
+    "title": "Alpine Abuild",
+    "value": "Alpine-Abuild"
+  },
+  {
     "title": "AMPL",
     "value": "AMPL"
+  },
+  {
+    "title": "AngelScript",
+    "value": "AngelScript"
+  },
+  {
+    "title": "Ant Build System",
+    "value": "Ant-Build-System"
   },
   {
     "title": "ANTLR",
@@ -44,12 +96,16 @@
     "value": "Apex"
   },
   {
-    "title": "API",
-    "value": "API"
+    "title": "API Blueprint",
+    "value": "API-Blueprint"
   },
   {
     "title": "APL",
     "value": "APL"
+  },
+  {
+    "title": "Apollo Guidance Computer",
+    "value": "Apollo-Guidance-Computer"
   },
   {
     "title": "AppleScript",
@@ -60,8 +116,12 @@
     "value": "Arc"
   },
   {
-    "title": "Arduino",
-    "value": "Arduino"
+    "title": "AsciiDoc",
+    "value": "AsciiDoc"
+  },
+  {
+    "title": "ASN.1",
+    "value": "ASN.1"
   },
   {
     "title": "ASP",
@@ -96,6 +156,10 @@
     "value": "Awk"
   },
   {
+    "title": "Ballerina",
+    "value": "Ballerina"
+  },
+  {
     "title": "Batchfile",
     "value": "Batchfile"
   },
@@ -110,6 +174,10 @@
   {
     "title": "BitBake",
     "value": "BitBake"
+  },
+  {
+    "title": "Blade",
+    "value": "Blade"
   },
   {
     "title": "BlitzBasic",
@@ -144,16 +212,20 @@
     "value": "C"
   },
   {
-    "title": "CSharp",
-    "value": "CSharp"
+    "title": "C#",
+    "value": "C#"
   },
   {
-    "title": "C++",
-    "value": "C++"
+    "title": "C-ObjDump",
+    "value": "C-ObjDump"
   },
   {
-    "title": "Cap",
-    "value": "Cap"
+    "title": "C2hs Haskell",
+    "value": "C2hs-Haskell"
+  },
+  {
+    "title": "Cap'n Proto",
+    "value": "Cap'n-Proto"
   },
   {
     "title": "CartoCSS",
@@ -200,6 +272,14 @@
     "value": "Clojure"
   },
   {
+    "title": "Closure Templates",
+    "value": "Closure-Templates"
+  },
+  {
+    "title": "Cloud Firestore Security Rules",
+    "value": "Cloud-Firestore-Security-Rules"
+  },
+  {
     "title": "CMake",
     "value": "CMake"
   },
@@ -216,12 +296,28 @@
     "value": "ColdFusion"
   },
   {
-    "title": "Common",
-    "value": "Common"
+    "title": "ColdFusion CFC",
+    "value": "ColdFusion-CFC"
   },
   {
-    "title": "Component",
-    "value": "Component"
+    "title": "COLLADA",
+    "value": "COLLADA"
+  },
+  {
+    "title": "Common Lisp",
+    "value": "Common-Lisp"
+  },
+  {
+    "title": "Common Workflow Language",
+    "value": "Common-Workflow-Language"
+  },
+  {
+    "title": "Component Pascal",
+    "value": "Component-Pascal"
+  },
+  {
+    "title": "CoNLL-U",
+    "value": "CoNLL-U"
   },
   {
     "title": "Cool",
@@ -232,48 +328,100 @@
     "value": "Coq"
   },
   {
+    "title": "Cpp-ObjDump",
+    "value": "Cpp-ObjDump"
+  },
+  {
+    "title": "Creole",
+    "value": "Creole"
+  },
+  {
     "title": "Crystal",
     "value": "Crystal"
+  },
+  {
+    "title": "CSON",
+    "value": "CSON"
+  },
+  {
+    "title": "Csound",
+    "value": "Csound"
+  },
+  {
+    "title": "Csound Document",
+    "value": "Csound-Document"
+  },
+  {
+    "title": "Csound Score",
+    "value": "Csound-Score"
   },
   {
     "title": "CSS",
     "value": "CSS"
   },
   {
-    "title": "Cucumber",
-    "value": "Cucumber"
+    "title": "CSV",
+    "value": "CSV"
   },
   {
     "title": "Cuda",
     "value": "Cuda"
   },
   {
+    "title": "CWeb",
+    "value": "CWeb"
+  },
+  {
     "title": "Cycript",
     "value": "Cycript"
+  },
+  {
+    "title": "Cython",
+    "value": "Cython"
   },
   {
     "title": "D",
     "value": "D"
   },
   {
-    "title": "Darcs",
-    "value": "Darcs"
+    "title": "D-ObjDump",
+    "value": "D-ObjDump"
+  },
+  {
+    "title": "Darcs Patch",
+    "value": "Darcs-Patch"
   },
   {
     "title": "Dart",
     "value": "Dart"
   },
   {
+    "title": "DataWeave",
+    "value": "DataWeave"
+  },
+  {
+    "title": "desktop",
+    "value": "desktop"
+  },
+  {
     "title": "Diff",
     "value": "Diff"
   },
   {
-    "title": "DIGITAL",
-    "value": "DIGITAL"
+    "title": "DIGITAL Command Language",
+    "value": "DIGITAL-Command-Language"
   },
   {
     "title": "DM",
     "value": "DM"
+  },
+  {
+    "title": "DNS Zone",
+    "value": "DNS-Zone"
+  },
+  {
+    "title": "Dockerfile",
+    "value": "Dockerfile"
   },
   {
     "title": "Dogescript",
@@ -296,16 +444,44 @@
     "value": "Eagle"
   },
   {
+    "title": "Easybuild",
+    "value": "Easybuild"
+  },
+  {
+    "title": "EBNF",
+    "value": "EBNF"
+  },
+  {
     "title": "eC",
     "value": "eC"
+  },
+  {
+    "title": "Ecere Projects",
+    "value": "Ecere-Projects"
   },
   {
     "title": "ECL",
     "value": "ECL"
   },
   {
+    "title": "ECLiPSe",
+    "value": "ECLiPSe"
+  },
+  {
+    "title": "Edje Data Collection",
+    "value": "Edje-Data-Collection"
+  },
+  {
+    "title": "edn",
+    "value": "edn"
+  },
+  {
     "title": "Eiffel",
     "value": "Eiffel"
+  },
+  {
+    "title": "EJS",
+    "value": "EJS"
   },
   {
     "title": "Elixir",
@@ -316,12 +492,20 @@
     "value": "Elm"
   },
   {
-    "title": "Emacs",
-    "value": "Emacs"
+    "title": "Emacs Lisp",
+    "value": "Emacs-Lisp"
   },
   {
     "title": "EmberScript",
     "value": "EmberScript"
+  },
+  {
+    "title": "EML",
+    "value": "EML"
+  },
+  {
+    "title": "EQ",
+    "value": "EQ"
   },
   {
     "title": "Erlang",
@@ -330,6 +514,10 @@
   {
     "title": "F#",
     "value": "F#"
+  },
+  {
+    "title": "F*",
+    "value": "F*"
   },
   {
     "title": "Factor",
@@ -344,16 +532,36 @@
     "value": "Fantom"
   },
   {
+    "title": "FIGlet Font",
+    "value": "FIGlet-Font"
+  },
+  {
+    "title": "Filebench WML",
+    "value": "Filebench-WML"
+  },
+  {
+    "title": "Filterscript",
+    "value": "Filterscript"
+  },
+  {
+    "title": "fish",
+    "value": "fish"
+  },
+  {
     "title": "FLUX",
     "value": "FLUX"
+  },
+  {
+    "title": "Formatted",
+    "value": "Formatted"
   },
   {
     "title": "Forth",
     "value": "Forth"
   },
   {
-    "title": "FORTRAN",
-    "value": "FORTRAN"
+    "title": "Fortran",
+    "value": "Fortran"
   },
   {
     "title": "FreeMarker",
@@ -364,8 +572,12 @@
     "value": "Frege"
   },
   {
-    "title": "Game",
-    "value": "Game"
+    "title": "G-code",
+    "value": "G-code"
+  },
+  {
+    "title": "Game Maker Language",
+    "value": "Game-Maker-Language"
   },
   {
     "title": "GAMS",
@@ -376,16 +588,44 @@
     "value": "GAP"
   },
   {
+    "title": "GCC Machine Description",
+    "value": "GCC-Machine-Description"
+  },
+  {
+    "title": "GDB",
+    "value": "GDB"
+  },
+  {
     "title": "GDScript",
     "value": "GDScript"
+  },
+  {
+    "title": "Genie",
+    "value": "Genie"
   },
   {
     "title": "Genshi",
     "value": "Genshi"
   },
   {
-    "title": "Gettext",
-    "value": "Gettext"
+    "title": "Gentoo Ebuild",
+    "value": "Gentoo-Ebuild"
+  },
+  {
+    "title": "Gentoo Eclass",
+    "value": "Gentoo-Eclass"
+  },
+  {
+    "title": "Gerber Image",
+    "value": "Gerber-Image"
+  },
+  {
+    "title": "Gettext Catalog",
+    "value": "Gettext-Catalog"
+  },
+  {
+    "title": "Gherkin",
+    "value": "Gherkin"
   },
   {
     "title": "GLSL",
@@ -394,6 +634,14 @@
   {
     "title": "Glyph",
     "value": "Glyph"
+  },
+  {
+    "title": "Glyph Bitmap Distribution Format",
+    "value": "Glyph-Bitmap-Distribution-Format"
+  },
+  {
+    "title": "GN",
+    "value": "GN"
   },
   {
     "title": "Gnuplot",
@@ -416,24 +664,48 @@
     "value": "Grace"
   },
   {
-    "title": "Grammatical",
-    "value": "Grammatical"
+    "title": "Gradle",
+    "value": "Gradle"
   },
   {
-    "title": "Groff",
-    "value": "Groff"
+    "title": "Grammatical Framework",
+    "value": "Grammatical-Framework"
+  },
+  {
+    "title": "Graph Modeling Language",
+    "value": "Graph-Modeling-Language"
+  },
+  {
+    "title": "GraphQL",
+    "value": "GraphQL"
+  },
+  {
+    "title": "Graphviz (DOT)",
+    "value": "Graphviz-(DOT)"
   },
   {
     "title": "Groovy",
     "value": "Groovy"
   },
   {
+    "title": "Groovy Server Pages",
+    "value": "Groovy-Server-Pages"
+  },
+  {
     "title": "Hack",
     "value": "Hack"
   },
   {
+    "title": "Haml",
+    "value": "Haml"
+  },
+  {
     "title": "Handlebars",
     "value": "Handlebars"
+  },
+  {
+    "title": "HAProxy",
+    "value": "HAProxy"
   },
   {
     "title": "Harbour",
@@ -452,12 +724,44 @@
     "value": "HCL"
   },
   {
+    "title": "HiveQL",
+    "value": "HiveQL"
+  },
+  {
     "title": "HLSL",
     "value": "HLSL"
   },
   {
-    "title": "HTML",
-    "value": "HTML"
+    "title": "HTML+Django",
+    "value": "HTML+Django"
+  },
+  {
+    "title": "HTML+ECR",
+    "value": "HTML+ECR"
+  },
+  {
+    "title": "HTML+EEX",
+    "value": "HTML+EEX"
+  },
+  {
+    "title": "HTML+ERB",
+    "value": "HTML+ERB"
+  },
+  {
+    "title": "HTML+PHP",
+    "value": "HTML+PHP"
+  },
+  {
+    "title": "HTML+Razor",
+    "value": "HTML+Razor"
+  },
+  {
+    "title": "HTTP",
+    "value": "HTTP"
+  },
+  {
+    "title": "HXML",
+    "value": "HXML"
   },
   {
     "title": "Hy",
@@ -476,16 +780,20 @@
     "value": "Idris"
   },
   {
-    "title": "IGOR",
-    "value": "IGOR"
+    "title": "IGOR Pro",
+    "value": "IGOR-Pro"
   },
   {
-    "title": "Inform",
-    "value": "Inform"
+    "title": "Inform 7",
+    "value": "Inform-7"
   },
   {
-    "title": "Inno",
-    "value": "Inno"
+    "title": "INI",
+    "value": "INI"
+  },
+  {
+    "title": "Inno Setup",
+    "value": "Inno-Setup"
   },
   {
     "title": "Io",
@@ -496,8 +804,16 @@
     "value": "Ioke"
   },
   {
+    "title": "IRC log",
+    "value": "IRC-log"
+  },
+  {
     "title": "Isabelle",
     "value": "Isabelle"
+  },
+  {
+    "title": "Isabelle ROOT",
+    "value": "Isabelle-ROOT"
   },
   {
     "title": "J",
@@ -508,32 +824,72 @@
     "value": "Jasmin"
   },
   {
-    "title": "Java",
-    "value": "Java"
+    "title": "Java Properties",
+    "value": "Java-Properties"
   },
   {
-    "title": "JavaScript",
-    "value": "JavaScript"
+    "title": "Java Server Pages",
+    "value": "Java-Server-Pages"
   },
   {
     "title": "JFlex",
     "value": "JFlex"
   },
   {
+    "title": "Jison",
+    "value": "Jison"
+  },
+  {
+    "title": "Jison Lex",
+    "value": "Jison-Lex"
+  },
+  {
+    "title": "Jolie",
+    "value": "Jolie"
+  },
+  {
+    "title": "JSON",
+    "value": "JSON"
+  },
+  {
+    "title": "JSON with Comments",
+    "value": "JSON-with-Comments"
+  },
+  {
+    "title": "JSON5",
+    "value": "JSON5"
+  },
+  {
     "title": "JSONiq",
     "value": "JSONiq"
+  },
+  {
+    "title": "JSONLD",
+    "value": "JSONLD"
+  },
+  {
+    "title": "JSX",
+    "value": "JSX"
   },
   {
     "title": "Julia",
     "value": "Julia"
   },
   {
-    "title": "Jupyter",
-    "value": "Jupyter"
+    "title": "Jupyter Notebook",
+    "value": "Jupyter-Notebook"
   },
   {
-    "title": "KiCad",
-    "value": "KiCad"
+    "title": "KiCad Layout",
+    "value": "KiCad-Layout"
+  },
+  {
+    "title": "KiCad Legacy Layout",
+    "value": "KiCad-Legacy-Layout"
+  },
+  {
+    "title": "KiCad Schematic",
+    "value": "KiCad-Schematic"
   },
   {
     "title": "Kit",
@@ -556,12 +912,24 @@
     "value": "Lasso"
   },
   {
+    "title": "Latte",
+    "value": "Latte"
+  },
+  {
     "title": "Lean",
     "value": "Lean"
   },
   {
+    "title": "Less",
+    "value": "Less"
+  },
+  {
     "title": "Lex",
     "value": "Lex"
+  },
+  {
+    "title": "LFE",
+    "value": "LFE"
   },
   {
     "title": "LilyPond",
@@ -572,8 +940,28 @@
     "value": "Limbo"
   },
   {
+    "title": "Linker Script",
+    "value": "Linker-Script"
+  },
+  {
+    "title": "Linux Kernel Module",
+    "value": "Linux-Kernel-Module"
+  },
+  {
     "title": "Liquid",
     "value": "Liquid"
+  },
+  {
+    "title": "Literate Agda",
+    "value": "Literate-Agda"
+  },
+  {
+    "title": "Literate CoffeeScript",
+    "value": "Literate-CoffeeScript"
+  },
+  {
+    "title": "Literate Haskell",
+    "value": "Literate-Haskell"
   },
   {
     "title": "LiveScript",
@@ -620,6 +1008,10 @@
     "value": "M4"
   },
   {
+    "title": "M4Sugar",
+    "value": "M4Sugar"
+  },
+  {
     "title": "Makefile",
     "value": "Makefile"
   },
@@ -632,6 +1024,10 @@
     "value": "Markdown"
   },
   {
+    "title": "Marko",
+    "value": "Marko"
+  },
+  {
     "title": "Mask",
     "value": "Mask"
   },
@@ -640,8 +1036,12 @@
     "value": "Mathematica"
   },
   {
-    "title": "Matlab",
-    "value": "Matlab"
+    "title": "MATLAB",
+    "value": "MATLAB"
+  },
+  {
+    "title": "Maven POM",
+    "value": "Maven-POM"
   },
   {
     "title": "Max",
@@ -652,8 +1052,16 @@
     "value": "MAXScript"
   },
   {
+    "title": "MediaWiki",
+    "value": "MediaWiki"
+  },
+  {
     "title": "Mercury",
     "value": "Mercury"
+  },
+  {
+    "title": "Meson",
+    "value": "Meson"
   },
   {
     "title": "Metal",
@@ -672,12 +1080,16 @@
     "value": "Modelica"
   },
   {
-    "title": "Modula",
-    "value": "Modula"
+    "title": "Modula-2",
+    "value": "Modula-2"
   },
   {
-    "title": "Module",
-    "value": "Module"
+    "title": "Modula-3",
+    "value": "Modula-3"
+  },
+  {
+    "title": "Module Management System",
+    "value": "Module-Management-System"
   },
   {
     "title": "Monkey",
@@ -692,8 +1104,20 @@
     "value": "MoonScript"
   },
   {
+    "title": "MQL4",
+    "value": "MQL4"
+  },
+  {
+    "title": "MQL5",
+    "value": "MQL5"
+  },
+  {
     "title": "MTML",
     "value": "MTML"
+  },
+  {
+    "title": "MUF",
+    "value": "MUF"
   },
   {
     "title": "mupad",
@@ -708,6 +1132,10 @@
     "value": "NCL"
   },
   {
+    "title": "Nearley",
+    "value": "Nearley"
+  },
+  {
     "title": "Nemerle",
     "value": "Nemerle"
   },
@@ -720,8 +1148,8 @@
     "value": "NetLinx"
   },
   {
-    "title": "NetLinx",
-    "value": "NetLinx"
+    "title": "NetLinx+ERB",
+    "value": "NetLinx+ERB"
   },
   {
     "title": "NetLogo",
@@ -732,12 +1160,20 @@
     "value": "NewLisp"
   },
   {
+    "title": "Nextflow",
+    "value": "Nextflow"
+  },
+  {
     "title": "Nginx",
     "value": "Nginx"
   },
   {
-    "title": "Nimrod",
-    "value": "Nimrod"
+    "title": "Nim",
+    "value": "Nim"
+  },
+  {
+    "title": "Ninja",
+    "value": "Ninja"
   },
   {
     "title": "Nit",
@@ -748,6 +1184,10 @@
     "value": "Nix"
   },
   {
+    "title": "NL",
+    "value": "NL"
+  },
+  {
     "title": "NSIS",
     "value": "NSIS"
   },
@@ -756,8 +1196,24 @@
     "value": "Nu"
   },
   {
+    "title": "NumPy",
+    "value": "NumPy"
+  },
+  {
+    "title": "ObjDump",
+    "value": "ObjDump"
+  },
+  {
     "title": "Objective-C",
     "value": "Objective-C"
+  },
+  {
+    "title": "Objective-C++",
+    "value": "Objective-C++"
+  },
+  {
+    "title": "Objective-J",
+    "value": "Objective-J"
   },
   {
     "title": "OCaml",
@@ -780,12 +1236,28 @@
     "value": "Opal"
   },
   {
-    "title": "OpenEdge",
-    "value": "OpenEdge"
+    "title": "OpenCL",
+    "value": "OpenCL"
+  },
+  {
+    "title": "OpenEdge ABL",
+    "value": "OpenEdge-ABL"
+  },
+  {
+    "title": "OpenRC runscript",
+    "value": "OpenRC-runscript"
   },
   {
     "title": "OpenSCAD",
     "value": "OpenSCAD"
+  },
+  {
+    "title": "OpenType Feature File",
+    "value": "OpenType-Feature-File"
+  },
+  {
+    "title": "Org",
+    "value": "Org"
   },
   {
     "title": "Ox",
@@ -800,6 +1272,10 @@
     "value": "Oz"
   },
   {
+    "title": "P4",
+    "value": "P4"
+  },
+  {
     "title": "Pan",
     "value": "Pan"
   },
@@ -812,24 +1288,40 @@
     "value": "Parrot"
   },
   {
+    "title": "Parrot Assembly",
+    "value": "Parrot-Assembly"
+  },
+  {
+    "title": "Parrot Internal Representation",
+    "value": "Parrot-Internal-Representation"
+  },
+  {
     "title": "Pascal",
     "value": "Pascal"
   },
   {
-    "title": "PAWN",
-    "value": "PAWN"
+    "title": "Pawn",
+    "value": "Pawn"
+  },
+  {
+    "title": "Pep8",
+    "value": "Pep8"
   },
   {
     "title": "Perl",
     "value": "Perl"
   },
   {
-    "title": "Perl6",
-    "value": "Perl6"
+    "title": "Perl 6",
+    "value": "Perl-6"
   },
   {
-    "title": "PHP",
-    "value": "PHP"
+    "title": "Pic",
+    "value": "Pic"
+  },
+  {
+    "title": "Pickle",
+    "value": "Pickle"
   },
   {
     "title": "PicoLisp",
@@ -852,6 +1344,14 @@
     "value": "PLSQL"
   },
   {
+    "title": "Pod",
+    "value": "Pod"
+  },
+  {
+    "title": "Pod 6",
+    "value": "Pod-6"
+  },
+  {
     "title": "PogoScript",
     "value": "PogoScript"
   },
@@ -860,12 +1360,20 @@
     "value": "Pony"
   },
   {
+    "title": "PostCSS",
+    "value": "PostCSS"
+  },
+  {
     "title": "PostScript",
     "value": "PostScript"
   },
   {
-    "title": "POV",
-    "value": "POV"
+    "title": "POV-Ray SDL",
+    "value": "POV-Ray-SDL"
+  },
+  {
+    "title": "PowerBuilder",
+    "value": "PowerBuilder"
   },
   {
     "title": "PowerShell",
@@ -880,20 +1388,28 @@
     "value": "Prolog"
   },
   {
-    "title": "Propeller",
-    "value": "Propeller"
+    "title": "Propeller Spin",
+    "value": "Propeller-Spin"
   },
   {
-    "title": "Protocol",
-    "value": "Protocol"
+    "title": "Protocol Buffer",
+    "value": "Protocol-Buffer"
+  },
+  {
+    "title": "Public Key",
+    "value": "Public-Key"
+  },
+  {
+    "title": "Pug",
+    "value": "Pug"
   },
   {
     "title": "Puppet",
     "value": "Puppet"
   },
   {
-    "title": "Pure",
-    "value": "Pure"
+    "title": "Pure Data",
+    "value": "Pure-Data"
   },
   {
     "title": "PureBasic",
@@ -904,8 +1420,16 @@
     "value": "PureScript"
   },
   {
-    "title": "Python",
-    "value": "Python"
+    "title": "Python console",
+    "value": "Python-console"
+  },
+  {
+    "title": "Python traceback",
+    "value": "Python-traceback"
+  },
+  {
+    "title": "q",
+    "value": "q"
   },
   {
     "title": "QMake",
@@ -914,6 +1438,10 @@
   {
     "title": "QML",
     "value": "QML"
+  },
+  {
+    "title": "Quake",
+    "value": "Quake"
   },
   {
     "title": "R",
@@ -932,12 +1460,24 @@
     "value": "RAML"
   },
   {
+    "title": "Rascal",
+    "value": "Rascal"
+  },
+  {
+    "title": "Raw token data",
+    "value": "Raw-token-data"
+  },
+  {
     "title": "RDoc",
     "value": "RDoc"
   },
   {
     "title": "REALbasic",
     "value": "REALbasic"
+  },
+  {
+    "title": "Reason",
+    "value": "Reason"
   },
   {
     "title": "Rebol",
@@ -952,28 +1492,68 @@
     "value": "Redcode"
   },
   {
-    "title": "Ren",
-    "value": "Ren"
+    "title": "Regular Expression",
+    "value": "Regular-Expression"
+  },
+  {
+    "title": "Ren'Py",
+    "value": "Ren'Py"
   },
   {
     "title": "RenderScript",
     "value": "RenderScript"
   },
   {
+    "title": "reStructuredText",
+    "value": "reStructuredText"
+  },
+  {
+    "title": "REXX",
+    "value": "REXX"
+  },
+  {
+    "title": "RHTML",
+    "value": "RHTML"
+  },
+  {
+    "title": "Ring",
+    "value": "Ring"
+  },
+  {
+    "title": "RMarkdown",
+    "value": "RMarkdown"
+  },
+  {
     "title": "RobotFramework",
     "value": "RobotFramework"
+  },
+  {
+    "title": "Roff",
+    "value": "Roff"
   },
   {
     "title": "Rouge",
     "value": "Rouge"
   },
   {
-    "title": "Ruby",
-    "value": "Ruby"
+    "title": "RPC",
+    "value": "RPC"
+  },
+  {
+    "title": "RPM Spec",
+    "value": "RPM-Spec"
+  },
+  {
+    "title": "RUNOFF",
+    "value": "RUNOFF"
   },
   {
     "title": "Rust",
     "value": "Rust"
+  },
+  {
+    "title": "Sage",
+    "value": "Sage"
   },
   {
     "title": "SaltStack",
@@ -984,8 +1564,16 @@
     "value": "SAS"
   },
   {
+    "title": "Sass",
+    "value": "Sass"
+  },
+  {
     "title": "Scala",
     "value": "Scala"
+  },
+  {
+    "title": "Scaml",
+    "value": "Scaml"
   },
   {
     "title": "Scheme",
@@ -996,8 +1584,20 @@
     "value": "Scilab"
   },
   {
+    "title": "SCSS",
+    "value": "SCSS"
+  },
+  {
+    "title": "sed",
+    "value": "sed"
+  },
+  {
     "title": "Self",
     "value": "Self"
+  },
+  {
+    "title": "ShaderLab",
+    "value": "ShaderLab"
   },
   {
     "title": "Shell",
@@ -1016,6 +1616,14 @@
     "value": "Slash"
   },
   {
+    "title": "Slice",
+    "value": "Slice"
+  },
+  {
+    "title": "Slim",
+    "value": "Slim"
+  },
+  {
     "title": "Smali",
     "value": "Smali"
   },
@@ -1032,8 +1640,20 @@
     "value": "SMT"
   },
   {
+    "title": "Solidity",
+    "value": "Solidity"
+  },
+  {
     "title": "SourcePawn",
     "value": "SourcePawn"
+  },
+  {
+    "title": "SPARQL",
+    "value": "SPARQL"
+  },
+  {
+    "title": "Spline Font Database",
+    "value": "Spline-Font-Database"
   },
   {
     "title": "SQF",
@@ -1052,20 +1672,44 @@
     "value": "Squirrel"
   },
   {
+    "title": "SRecode Template",
+    "value": "SRecode-Template"
+  },
+  {
     "title": "Stan",
     "value": "Stan"
   },
   {
-    "title": "Standard",
-    "value": "Standard"
+    "title": "Standard ML",
+    "value": "Standard-ML"
   },
   {
     "title": "Stata",
     "value": "Stata"
   },
   {
+    "title": "STON",
+    "value": "STON"
+  },
+  {
+    "title": "Stylus",
+    "value": "Stylus"
+  },
+  {
+    "title": "SubRip Text",
+    "value": "SubRip-Text"
+  },
+  {
+    "title": "SugarSS",
+    "value": "SugarSS"
+  },
+  {
     "title": "SuperCollider",
     "value": "SuperCollider"
+  },
+  {
+    "title": "SVG",
+    "value": "SVG"
   },
   {
     "title": "Swift",
@@ -1080,28 +1724,80 @@
     "value": "Tcl"
   },
   {
+    "title": "Tcsh",
+    "value": "Tcsh"
+  },
+  {
     "title": "Tea",
     "value": "Tea"
+  },
+  {
+    "title": "Terra",
+    "value": "Terra"
   },
   {
     "title": "TeX",
     "value": "TeX"
   },
   {
+    "title": "Text",
+    "value": "Text"
+  },
+  {
+    "title": "Textile",
+    "value": "Textile"
+  },
+  {
     "title": "Thrift",
     "value": "Thrift"
+  },
+  {
+    "title": "TI Program",
+    "value": "TI-Program"
+  },
+  {
+    "title": "TLA",
+    "value": "TLA"
+  },
+  {
+    "title": "TOML",
+    "value": "TOML"
   },
   {
     "title": "Turing",
     "value": "Turing"
   },
   {
+    "title": "Turtle",
+    "value": "Turtle"
+  },
+  {
+    "title": "Twig",
+    "value": "Twig"
+  },
+  {
     "title": "TXL",
     "value": "TXL"
   },
   {
+    "title": "Type Language",
+    "value": "Type-Language"
+  },
+  {
     "title": "TypeScript",
     "value": "TypeScript"
+  },
+  {
+    "title": "Unified Parallel C",
+    "value": "Unified-Parallel-C"
+  },
+  {
+    "title": "Unity3D Asset",
+    "value": "Unity3D-Asset"
+  },
+  {
+    "title": "Unix Assembly",
+    "value": "Unix-Assembly"
   },
   {
     "title": "Uno",
@@ -1132,12 +1828,12 @@
     "value": "VHDL"
   },
   {
-    "title": "VimL",
-    "value": "VimL"
+    "title": "Vim script",
+    "value": "Vim-script"
   },
   {
-    "title": "Visual",
-    "value": "Visual"
+    "title": "Visual Basic",
+    "value": "Visual-Basic"
   },
   {
     "title": "Volt",
@@ -1148,16 +1844,52 @@
     "value": "Vue"
   },
   {
-    "title": "Web",
-    "value": "Web"
+    "title": "Wavefront Material",
+    "value": "Wavefront-Material"
+  },
+  {
+    "title": "Wavefront Object",
+    "value": "Wavefront-Object"
+  },
+  {
+    "title": "wdl",
+    "value": "wdl"
+  },
+  {
+    "title": "Web Ontology Language",
+    "value": "Web-Ontology-Language"
+  },
+  {
+    "title": "WebAssembly",
+    "value": "WebAssembly"
   },
   {
     "title": "WebIDL",
     "value": "WebIDL"
   },
   {
+    "title": "Windows Registry Entries",
+    "value": "Windows-Registry-Entries"
+  },
+  {
     "title": "wisp",
     "value": "wisp"
+  },
+  {
+    "title": "World of Warcraft Addon Data",
+    "value": "World-of-Warcraft-Addon-Data"
+  },
+  {
+    "title": "X BitMap",
+    "value": "X-BitMap"
+  },
+  {
+    "title": "X Font Directory Index",
+    "value": "X-Font-Directory-Index"
+  },
+  {
+    "title": "X PixMap",
+    "value": "X-PixMap"
   },
   {
     "title": "X10",
@@ -1170,6 +1902,10 @@
   {
     "title": "XC",
     "value": "XC"
+  },
+  {
+    "title": "XCompose",
+    "value": "XCompose"
   },
   {
     "title": "XML",
@@ -1206,6 +1942,22 @@
   {
     "title": "Yacc",
     "value": "Yacc"
+  },
+  {
+    "title": "YAML",
+    "value": "YAML"
+  },
+  {
+    "title": "YANG",
+    "value": "YANG"
+  },
+  {
+    "title": "YARA",
+    "value": "YARA"
+  },
+  {
+    "title": "YASnippet",
+    "value": "YASnippet"
   },
   {
     "title": "Zephir",
