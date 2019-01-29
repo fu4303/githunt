@@ -4,14 +4,17 @@
   padding: 15px 0;
   margin-bottom: 35px;
   position: relative;
+  height: 106px;
 }
 
 .top-nav .logo {
+  margin-top: 5px;
   margin-left: -10px;
 }
 
-.top-nav .logo svg {
-  height: 75px;
+.top-nav .logo img {
+  width: 64px;
+  height: 64px;
   float: left;
 }
 
@@ -41,4 +44,3 @@
   background: #01aced;
   border-color: #01aced;
 }
-

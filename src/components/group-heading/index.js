@@ -6,7 +6,7 @@ import './styles.css';
 
 class GroupHeading extends React.Component {
   getTitle() {
-    return "The most exciting about " + {
+    return "The most exciting from GitHup " + {
       'day': 'today',
       'week': 'this week',
       'month': 'this month',

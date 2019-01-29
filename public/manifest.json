@@ -17,7 +17,7 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "homepage_url": "http://kamranahmed.info/githunt",
+  "homepage_url": "https://github.com/wonderbeyond/hitup",
   "browser_action": {
     "default_title": "HitUP",
     "default_icon": "/img/icon128.png"

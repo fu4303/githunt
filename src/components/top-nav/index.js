@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './styles.css';
-import Logo from '../icons/logo';
 
 class TopNav extends React.Component {
   tweet = 'HitUP – Most starred projects on Github by @kamranahmedse https://github.com/kamranahmedse/githunt';
@@ -19,7 +18,7 @@ class TopNav extends React.Component {
              rel="noopener noreferrer"
              target='_blank'
              className="logo clearfix float-left">
-            <Logo/>
+             <img alt="logo" src={process.env.PUBLIC_URL + "/img/logo.svg"} />
           </a>
           <div className="logo-text">
             <h4>HitUP</h4>
