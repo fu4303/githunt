@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build-chrome": "react-scripts build",
+    "build-chrome": "react-scripts build && cd build && zip -r hitup.zip .",
     "build-web": "cross-env PUBLIC_URL=/githunt react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",

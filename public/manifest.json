@@ -3,7 +3,7 @@
   "name": "HitUP",
   "short_name": "HitUP",
   "description": "Replace the new tab with a list of trending repositories on github belonging to any technology that you chose.",
-  "version": "3.4",
+  "version": "4.0.0",
   "permissions": [
     "tabs",
     "storage",
