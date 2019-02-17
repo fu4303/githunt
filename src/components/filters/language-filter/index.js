@@ -109,6 +109,11 @@ class LanguageFilter extends React.Component {
   };
 
   selectLanguage = (selectedIndex) => {
+    let availableLanguages = this.getFilteredLanguages();
+    if (this.props.selectedLanguage === (availableLanguages[selectedIndex].value)) {
+      // selected prev language
+      return
+    }
     const filteredLanguages = this.getFilteredLanguages();
     const selectedLanguage = filteredLanguages[selectedIndex];
     if (!selectedLanguage) {
@@ -116,6 +121,7 @@ class LanguageFilter extends React.Component {
     }
 
     this.setState({
+      selectedIndex: selectedIndex,
       filterText: '',
       showDropdown: false
     });
