@@ -182,7 +182,8 @@ class FeedContainer extends React.Component {
           {!this.props.github.processing && !this.hasRepositories()
             && <Alert type="warning" className="no-trending-data">
               Trending repositories results are currently being dissected.
-              This may be a few minutes. Now would be a great time to write that novel you’ve always been talking about.
+              This may be a few minutes. {/*<a href={"https://github.com/trending/" + this.props.preference.language + "?since=" + this.props.preference.dateJump}>
+              You can visit GitHub's trending page instead.</a>*/}
             </Alert>}
         </div>
       </div>

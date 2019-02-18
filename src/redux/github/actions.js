@@ -6,8 +6,8 @@ import {
   PROCESS_FETCH_TRENDING,
 } from './types';
 
-// const TRENDING_API_URL = 'https://api.github.com/search/repositories';
 const TRENDING_API_URL = 'https://github-trending-api.now.sh/repositories';
+// const TRENDING_API_URL = 'http://localhost:8080/repositories';
 
 const transformFilters = (filters) => {
   const transformedFilters = {};

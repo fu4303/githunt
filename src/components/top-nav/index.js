@@ -18,11 +18,11 @@ class TopNav extends React.Component {
              rel="noopener noreferrer"
              target='_blank'
              className="logo clearfix float-left">
-             <img alt="logo" src={process.env.PUBLIC_URL + "/img/logo.svg"} />
+             <img alt="logo" src={process.env.PUBLIC_URL + "/img/top-star.svg"} />
           </a>
           <div className="logo-text">
             <h4>HitUP</h4>
-            <p className="text-muted d-none d-sm-inline-block d-md-inline-block d-xl-inline-block d-lg-inline-block">Pick up top things</p>
+            <p className="text-muted d-none d-sm-inline-block d-md-inline-block d-xl-inline-block d-lg-inline-block">Find top things</p>
             <p className="text-muted d-inline-block d-sm-none d-md-none d-xl-none d-lg-none">Top Github Projects</p>
           </div>
           <div className="float-right external-btns">
