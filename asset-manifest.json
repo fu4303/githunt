@@ -1,7 +1,7 @@
 {
   "main.css": "/hitup/static/css/main.538e803c.chunk.css",
-  "main.js": "/hitup/static/js/main.eec318f2.chunk.js",
-  "main.js.map": "/hitup/static/js/main.eec318f2.chunk.js.map",
+  "main.js": "/hitup/static/js/main.81f70938.chunk.js",
+  "main.js.map": "/hitup/static/js/main.81f70938.chunk.js.map",
   "static/css/1.85145b10.chunk.css": "/hitup/static/css/1.85145b10.chunk.css",
   "static/js/1.c66e0000.chunk.js": "/hitup/static/js/1.c66e0000.chunk.js",
   "static/js/1.c66e0000.chunk.js.map": "/hitup/static/js/1.c66e0000.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/css/main.538e803c.chunk.css.map": "/hitup/static/css/main.538e803c.chunk.css.map",
   "static/css/1.85145b10.chunk.css.map": "/hitup/static/css/1.85145b10.chunk.css.map",
   "index.html": "/hitup/index.html",
-  "precache-manifest.f9d1f785428543b0a572c6dee4b82719.js": "/hitup/precache-manifest.f9d1f785428543b0a572c6dee4b82719.js",
+  "precache-manifest.7004d3a6a0f5a701d4e0db5eb8f139f5.js": "/hitup/precache-manifest.7004d3a6a0f5a701d4e0db5eb8f139f5.js",
   "service-worker.js": "/hitup/service-worker.js"
 }
