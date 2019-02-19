@@ -32,7 +32,7 @@ class TopNav extends React.Component {
                className="btn btn-dark"><i className="fa fa-github mr-1"></i> View Source</a>
             {
               !isRunningExtension && (
-                <a href='https://goo.gl/e7YP1h'
+                <a href='https://wonder.page.link/hitup-chrome'
                    target='_blank'
                    rel="noopener noreferrer"
                    className="btn btn-danger d-none d-sm-none d-md-inline-block d-xl-inline-block d-lg-inline-block">
