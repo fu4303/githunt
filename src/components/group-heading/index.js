@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {trendingPeriodDefs} from 'lib/gh-trending';
 
 import './styles.css';
 
@@ -9,11 +10,7 @@ class GroupHeading extends React.Component {
   }
 
   getSubtitle() {
-    let periodText = {
-      'day': 'today',
-      'week': 'this week',
-      'month': 'this month',
-    }[this.props.dateJump];
+    let periodText = trendingPeriodDefs[this.props.dateJump].heading;
     return `${periodText}`;
   }
 

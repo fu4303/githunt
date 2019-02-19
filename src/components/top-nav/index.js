@@ -22,9 +22,7 @@ class TopNav extends React.Component {
           </a>
           <div className="logo-text">
             <h4>HitUP</h4>
-            <p className="text-muted">Find&nbsp;
-              to<span className="top-text"><span className="top-arrow"></span>p</span>
-              &nbsp;things
+            <p className="text-muted">Find to<span className="top-text"><span className="top-arrow"></span>p</span> things
             </p>
           </div>
           <div className="float-right external-btns">
