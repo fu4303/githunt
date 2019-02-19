@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/hitup/static/media/fontawesome-webfont.af7ae505.woff2"
   },
   {
-    "revision": "4423ffd222239132eb94",
-    "url": "/hitup/static/css/main.daeabf7d.chunk.css"
+    "revision": "cdfcf8f2df99ab6da4f9",
+    "url": "/hitup/static/css/main.65a2104e.chunk.css"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/hitup/static/js/runtime~main.1ebf2258.js"
   },
   {
-    "revision": "4423ffd222239132eb94",
-    "url": "/hitup/static/js/main.4423ffd2.chunk.js"
+    "revision": "cdfcf8f2df99ab6da4f9",
+    "url": "/hitup/static/js/main.cdfcf8f2.chunk.js"
   },
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/hitup/static/css/1.85145b10.chunk.css"
   },
   {
-    "revision": "597d4db317aee87b66bc01d13e638c4f",
+    "revision": "5aadb3dbf6db423f41c035498ef556c5",
     "url": "/hitup/index.html"
   }
 ];
