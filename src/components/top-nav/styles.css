@@ -30,6 +30,22 @@
   color: #2d2d2d;
 }
 
+
+.top-nav .logo-text .top-text {
+  position: relative;
+}
+.top-nav .logo-text .top-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -4px; left: 50%; transform: translate(-50%, 0);
+  border-top: 4px solid #eee0;
+  border-left: 4px solid #eee0;
+  border-right: 4px solid #eee0;
+  border-bottom: 4px solid #e46773;
+}
+
 .top-nav .logo-text p {
   margin-bottom: 0;
 }
