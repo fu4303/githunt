@@ -9,11 +9,12 @@ class GroupHeading extends React.Component {
   }
 
   getSubtitle() {
-    return {
+    let periodText = {
       'day': 'today',
       'week': 'this week',
       'month': 'this month',
-    }[this.props.dateJump]
+    }[this.props.dateJump];
+    return `${periodText}`;
   }
 
   render() {

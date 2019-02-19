@@ -149,7 +149,9 @@ class FeedContainer extends React.Component {
 
         <div className="container mb-5 pb-4">
           <div className="header-row clearfix">
-            <GroupHeading dateJump={this.props.preference.dateJump} />
+            <GroupHeading
+              dateJump={this.props.preference.dateJump}
+              language={this.props.preference.language} />
             <div className="group-filters">
               <Filters
                 selectedLanguage={this.props.preference.language}
