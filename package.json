@@ -31,8 +31,8 @@
 
     "eject": "react-scripts eject",
 
-    "gh-pages": "yarn gh-pages:build && yarn gh-pages:release",
-    "gh-pages:build": "cross-env PUBLIC_URL=/HitUP react-scripts build",
+    "gh-pages": "yarn gh-pages:build && echo hitup.wondertools.top > build/CNAME && yarn gh-pages:release",
+    "gh-pages:build": "cross-env PUBLIC_URL=/ react-scripts build",
     "gh-pages:release": "NODE_DEBUG=gh-pages gh-pages -d build"
   },
   "devDependencies": {
