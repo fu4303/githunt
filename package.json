@@ -30,7 +30,7 @@
 
     "eject": "react-scripts eject",
 
-    "gh-pages:build": "cross-env PUBLIC_URL=/hitup react-scripts build",
+    "gh-pages:build": "cross-env PUBLIC_URL=/HitUP react-scripts build",
     "gh-pages:release": "NODE_DEBUG=gh-pages gh-pages -d build"
   },
   "devDependencies": {
