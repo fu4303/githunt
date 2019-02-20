@@ -13,6 +13,7 @@ import { fetchTrending } from '../../redux/github/actions';
 import RepositoryList from '../../components/repository-list';
 import RepositoryGrid from '../../components/repository-grid';
 import { updateDateJump, updateLanguage, updateViewType } from '../../redux/preference/actions';
+import {trendingPeriodDefs} from 'lib/gh-trending';
 
 class FeedContainer extends React.Component {
   componentDidMount() {
@@ -65,6 +66,13 @@ class FeedContainer extends React.Component {
     }
 
     return dateRange;
+  }
+
+  getCorrespondingGitHubLink() {
+    return "https://github.com/trending/" +
+      this.props.preference.language +
+      "?since=" +
+      trendingPeriodDefs[this.props.preference.dateJump].ghParamKey;
   }
 
   renderTokenWarning() {
@@ -184,8 +192,8 @@ class FeedContainer extends React.Component {
           {!this.props.github.processing && !this.hasRepositories()
             && <Alert type="warning" className="no-trending-data">
               Trending repositories results are currently being dissected.
-              This may be a few minutes. {/*<a href={"https://github.com/trending/" + this.props.preference.language + "?since=" + this.props.preference.dateJump}>
-              You can visit GitHub's trending page instead.</a>*/}
+              This may be a few minutes. <a href={this.getCorrespondingGitHubLink()}>
+              You can visit GitHub's trending page instead.</a>
             </Alert>}
         </div>
       </div>

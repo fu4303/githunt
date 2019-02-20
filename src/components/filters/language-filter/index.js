@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './styles.css';
-import languages from './languages';
+import {languages} from 'lib/gh-trending';
 
 class LanguageFilter extends React.Component {
   filterInputRef = React.createRef();

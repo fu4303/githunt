@@ -1,15 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
+import {trendingPeriodDefs} from 'lib/gh-trending';
 
 import './styles.css';
-
-const dateJumpDefs = {
-  'day': 'Today',
-  'week': 'This Week',
-  'month': 'This Month',
-  'year': 'This Year',
-}
 
 class DateJumpFilter extends React.Component {
   state = {
@@ -31,7 +25,7 @@ class DateJumpFilter extends React.Component {
   };
 
   getSelectedDateJump() {
-    return dateJumpDefs[this.props.selectedDateJump]
+    return trendingPeriodDefs[this.props.selectedDateJump].heading
   }
 
   render() {

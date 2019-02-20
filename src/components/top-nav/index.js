@@ -22,9 +22,7 @@ class TopNav extends React.Component {
           </a>
           <div className="logo-text">
             <h4>HitUP</h4>
-            <p className="text-muted">Find&nbsp;
-              to<span className="top-text"><span className="top-arrow"></span>p</span>
-              &nbsp;things
+            <p className="text-muted">Find to<span className="top-text"><span className="top-arrow"></span>p</span> things
             </p>
           </div>
           <div className="float-right external-btns">
@@ -34,7 +32,7 @@ class TopNav extends React.Component {
                className="btn btn-dark"><i className="fa fa-github mr-1"></i> View Source</a>
             {
               !isRunningExtension && (
-                <a href='https://goo.gl/e7YP1h'
+                <a href='https://wonder.page.link/hitup-chrome'
                    target='_blank'
                    rel="noopener noreferrer"
                    className="btn btn-danger d-none d-sm-none d-md-inline-block d-xl-inline-block d-lg-inline-block">
