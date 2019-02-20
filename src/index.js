@@ -1,3 +1,5 @@
+import * as _ from './ga';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
