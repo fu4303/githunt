@@ -5,7 +5,6 @@ import './styles.css';
 import moment from 'moment';
 import Star, {HalfStar} from '../../icons/star';
 import Fork from '../../icons/fork';
-import Watcher from '../../icons/watcher';
 
 class ListItem extends React.Component {
   render() {

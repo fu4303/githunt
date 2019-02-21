@@ -5,7 +5,6 @@ import moment from 'moment';
 import './styles.css';
 import Star, {HalfStar} from '../../icons/star';
 import Fork from '../../icons/fork';
-// import Watcher from '../../icons/watcher';
 
 class GridItem extends React.Component {
   render() {

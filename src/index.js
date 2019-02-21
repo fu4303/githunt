@@ -1,4 +1,4 @@
-import * as _ from './ga';
+import './ga';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
