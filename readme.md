@@ -59,3 +59,8 @@
 
 ## License
 MIT © [wonderbeyond](https://github.com/wonderbeyond), [Kamran Ahmed](https://kamranahmed.info)
+
+## Acknowledgments
+
+* [kamranahmedse/githunt](https://github.com/kamranahmedse/githunt)
+* HitUP is using [huchenme/github-trending-api](https://github.com/huchenme/github-trending-api)
