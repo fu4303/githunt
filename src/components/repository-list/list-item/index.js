@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './styles.css';
-import Star, {HalfStar} from '../../icons/star';
+
+import ReactTooltip from 'react-tooltip';
+import {trendingPeriodDefs} from 'lib/gh-trending';
+import Star, {Stars} from '../../icons/star';
 import Fork from '../../icons/fork';
 import BuiltByMembers from "components/built-by-members";
 
 class ListItem extends React.Component {
   render() {
+    let itemKey = `${this.props.repository.owner.login}/${this.props.repository.name}`;
+    let periodStarsTargetID = `${itemKey}:period-stars`;
+
     return (
       <div className="col-12 list-item-container">
         <div className="list-item-body">
@@ -50,14 +56,12 @@ class ListItem extends React.Component {
               <Fork/>
               { this.props.repository.forks.toLocaleString() }
             </a>
-            <span style={{cursor: "help"}} className="text-muted d-inline-block mr-3" title={ `${this.props.repository.currentPeriodStars} stars ` + {
-                'day': 'today',
-                'week': 'this week',
-                'month': 'this month',
-              }[this.props.dateJump]}>
-              <HalfStar/>
-              { this.props.repository.currentPeriodStars }
+            <span style={{cursor: "help"}} className="text-muted d-inline-block mr-3" data-tip data-for={periodStarsTargetID}>
+              <Stars />{`${this.props.repository.currentPeriodStars}`}
             </span>
+            <ReactTooltip id={periodStarsTargetID} place="top" type="dark" effect="solid">
+              {`${this.props.repository.currentPeriodStars} stars ${trendingPeriodDefs[this.props.dateJump].heading}`}
+            </ReactTooltip>
           </div>
         </div>
 
