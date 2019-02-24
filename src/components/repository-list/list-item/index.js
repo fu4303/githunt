@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './styles.css';
-import moment from 'moment';
 import Star, {HalfStar} from '../../icons/star';
 import Fork from '../../icons/fork';
+import BuiltByMembers from "components/built-by-members";
 
 class ListItem extends React.Component {
   render() {
@@ -18,7 +18,9 @@ class ListItem extends React.Component {
                 { this.props.repository.name }
               </a>
             </h3>
-            <p className="repo-meta text-muted small">Built by &middot; <a href={ this.props.repository.owner.html_url } rel="noopener noreferrer" target="_blank">{ this.props.repository.owner.login }</a> &middot; { moment(this.props.repository.created_at).format('MMMM D YYYY') }</p>
+            <div className="repo-meta text-muted small">Built by
+              <BuiltByMembers repository={this.props.repository} members={this.props.repository.builtBy}/>
+            </div>
           </div>
           <div className="repo-body">
             <p>{ this.props.repository.description || 'No description given.' }</p>

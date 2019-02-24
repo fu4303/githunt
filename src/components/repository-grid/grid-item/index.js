@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 
 import './styles.css';
 import Star, {HalfStar} from '../../icons/star';
 import Fork from '../../icons/fork';
+
+// import {UncontrolledTooltip} from 'reactstrap';
+import BuiltByMembers from "components/built-by-members";
 
 class GridItem extends React.Component {
   render() {
@@ -32,13 +34,15 @@ class GridItem extends React.Component {
                 <span className="repo-name">{ this.props.repository.name }</span>
               </a>
             </h5>
-            <p className="repo-meta text-muted small">
+            <div className="repo-meta text-muted small">
               {this.props.repository.languageColor && <span className="d-inline-block mr-3 repo-meta-language">
                 <span className="repo-language-color ml-0" style={{backgroundColor: this.props.repository.languageColor}}></span>
                 &nbsp;{ this.props.repository.language }
               </span>}
-              <span className="d-inline-block repo-meta-created-at">Built at { moment(this.props.repository.created_at).format('MMMM D, YYYY') }</span>
-            </p>
+              <span className="d-inline-block repo-meta-built-by">Built by
+                <BuiltByMembers repository={this.props.repository} members={this.props.repository.builtBy}/>
+              </span>
+            </div>
           </div>
           <div className="repo-body">
             <p>{ (this.props.repository.description && this.props.repository.description.slice(0, 140)) || 'No description given.' }</p>
