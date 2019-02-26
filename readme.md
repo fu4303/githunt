@@ -20,13 +20,13 @@
 </p>
 
 <p align="center">
-  <b>Find top things, including GitHub Trending Repositories</b></br>
+  <b>Find top things in New Tab, including GitHub Trending Repositories</b></br>
   <sub>✨ Use it <a href="https://hitup.wondertools.top" target="_blank">online</a> or as a <a href="https://wonder.page.link/hitup-chrome" target="_blank">chrome extension</a> ✨<sub>
 </p>
 
 <p align="center">
   <br><b>HitUP</b> is a react app and a browser extension that helps you
-  <br>explore top things, including the most popular projects on GitHub
+  <br>explore top things in New Tab, including the most popular projects on GitHub
   <br><a href="https://hitup.wondertools.top">Use Online</a> • <a href="https://wonder.page.link/hitup-chrome">Install Extension</a>
   <br><br><img alt="HitUP" src="./screenshots/trending-repo-grid.png">
   <br><b>▲ Trending Repositories This Week – Grid View</b><br>
@@ -63,4 +63,6 @@ MIT © [wonderbeyond](https://github.com/wonderbeyond), [Kamran Ahmed](https://k
 ## Acknowledgments
 
 * [kamranahmedse/githunt](https://github.com/kamranahmedse/githunt)
+  HitUP starts from a fork of GitHunt.
+  I totaly changed the data logic to present the real trending repositories.
 * HitUP is using [huchenme/github-trending-api](https://github.com/huchenme/github-trending-api)
