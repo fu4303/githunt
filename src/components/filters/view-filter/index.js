@@ -8,7 +8,9 @@ class ViewFilter extends React.Component {
   state = {};
 
   changeSelected = (viewType) => {
-    this.props.updateViewType(viewType);
+    if (this.props.selectedViewType !== viewType) {
+      this.props.updateViewType(viewType);
+    }
   };
 
   render() {

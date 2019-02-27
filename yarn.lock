@@ -8155,6 +8155,11 @@ react-error-overlay@^5.1.3:
   resolved "http://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-5.1.3.tgz#16fcbde75ed4dc6161dc6dc959b48e92c6ffa9ad"
   integrity sha1-Fvy9517U3GFh3G3JWbSOksb/qa0=
 
+react-ga@^2.5.7:
+  version "2.5.7"
+  resolved "http://registry.npm.taobao.org/react-ga/download/react-ga-2.5.7.tgz#1c80a289004bf84f84c26d46f3a6a6513081bf2e"
+  integrity sha1-HICiiQBL+E+Ewm1G86amUTCBvy4=
+
 react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.2:
   version "16.8.3"
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"

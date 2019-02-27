@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import axios from 'axios';
 
 import {
@@ -65,6 +66,11 @@ export const fetchTrending = function (filters) {
         type: FETCH_TRENDING_SUCCESS,
         payload: reposities
       });
+      ReactGA.event({
+        category: 'API',
+        label: 'Trending API Call',
+        action: `Done Fetch from ${response.request.responseURL}`
+      });
     }).catch(error => {
       let message = error.response &&
         error.response.data &&
@@ -77,6 +83,11 @@ export const fetchTrending = function (filters) {
       dispatch({
         type: FETCH_TRENDING_FAILED,
         payload: message
+      });
+
+      ReactGA.exception({
+        description: `Failed to Fetch Trending Data: ${message}. detail: ${JSON.stringify(error)}`,
+        fatal: true
       });
     });
   };
