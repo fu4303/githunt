@@ -136,6 +136,10 @@
     "value": "Assembly"
   },
   {
+    "title": "Asymptote",
+    "value": "Asymptote"
+  },
+  {
     "title": "ATS",
     "value": "ATS"
   },
@@ -1962,6 +1966,10 @@
   {
     "title": "Zephir",
     "value": "Zephir"
+  },
+  {
+    "title": "Zig",
+    "value": "Zig"
   },
   {
     "title": "Zimpl",
