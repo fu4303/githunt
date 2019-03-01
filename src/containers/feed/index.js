@@ -101,8 +101,14 @@ class FeedContainer extends React.Component {
           </span>
         );
         break;
-      case 'network error':
-        message = 'Error trying to connect to GitHub servers';
+      case 'empty list':
+        message = (
+          <span>
+            Trending repositories results are currently being dissected.
+            This may be a few minutes. <a href={this.getCorrespondingGitHubLink()}>
+            You can visit GitHub's trending page instead.</a>
+          </span>
+        );
         break;
       default:
         message = this.props.github.error;
@@ -110,7 +116,7 @@ class FeedContainer extends React.Component {
     }
 
     return (
-      <Alert type='danger'>
+      <Alert type='warning' className="no-trending-data">
         {message}
       </Alert>
     );
@@ -189,12 +195,7 @@ class FeedContainer extends React.Component {
               )
             }
           </div>
-          {!this.props.github.processing && !this.hasRepositories()
-            && <Alert type="warning" className="no-trending-data">
-              Trending repositories results are currently being dissected.
-              This may be a few minutes. <a href={this.getCorrespondingGitHubLink()}>
-              You can visit GitHub's trending page instead.</a>
-            </Alert>}
+          {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()}
         </div>
       </div>
     );

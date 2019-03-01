@@ -14,6 +14,7 @@ const persistedReducers = persistReducer(
   {
     key: 'hitup:root',
     storage: storage,
+    whitelist: ['preference'],
     stateReconciler: autoMergeLevel2,
     transforms: [
       GithubTransform,
