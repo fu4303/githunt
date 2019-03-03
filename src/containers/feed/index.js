@@ -162,7 +162,8 @@ class FeedContainer extends React.Component {
             {this.hasRepositories() && this.renderRepositoriesList()}
             {this.props.github.processing && <Loader />}
           </div>
-          {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()}
+          {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()
+          }
         </div>
       </div>
     );
