@@ -21,11 +21,11 @@ class FeedContainer extends React.Component {
 
     // If there are no loaded repositories before, fetch them
     if (existingRepositories.length === 0) {
-      this.fetchNextRepositories();
+      this.loadTrendingRepositories();
     }
   }
 
-  fetchNextRepositories() {
+  loadTrendingRepositories() {
     const filters = this.getFilters();
     this.props.fetchTrending(filters);
   }
@@ -38,7 +38,7 @@ class FeedContainer extends React.Component {
     // the repositories
     if (currPreferences.language !== prevPreferences.language ||
       currPreferences.dateJump !== prevPreferences.dateJump) {
-      this.fetchNextRepositories();
+      this.loadTrendingRepositories();
     }
   }
 
@@ -48,24 +48,6 @@ class FeedContainer extends React.Component {
     filters.token = this.props.preference.options.token;
     filters.dateJump = this.props.preference.dateJump
     return filters;
-  }
-
-  getNextDateRange() {
-    const repositories = this.props.github.repositories || [];
-    const dateJump = this.props.preference.dateJump;
-
-    const dateRange = {};
-    const lastRecords = repositories[repositories.length - 1];
-
-    if (lastRecords) {
-      dateRange.start = moment(lastRecords.start).subtract(1, dateJump).startOf('day');
-      dateRange.end = lastRecords.start;
-    } else {
-      dateRange.start = moment().subtract(1, dateJump).startOf('day');
-      dateRange.end = moment().startOf('day');
-    }
-
-    return dateRange;
   }
 
   getCorrespondingGitHubLink() {
@@ -101,8 +83,14 @@ class FeedContainer extends React.Component {
           </span>
         );
         break;
-      case 'network error':
-        message = 'Error trying to connect to GitHub servers';
+      case 'empty list':
+        message = (
+          <span>
+            Trending repositories results are currently being dissected.
+            This may be a few minutes. <a href={this.getCorrespondingGitHubLink()}>
+            You can visit GitHub's trending page instead.</a>
+          </span>
+        );
         break;
       default:
         message = this.props.github.error;
@@ -110,7 +98,7 @@ class FeedContainer extends React.Component {
     }
 
     return (
-      <Alert type='danger'>
+      <Alert type='warning' className="no-trending-data">
         {message}
       </Alert>
     );
@@ -173,28 +161,9 @@ class FeedContainer extends React.Component {
           </div>
           <div className="body-row">
             {this.hasRepositories() && this.renderRepositoriesList()}
-
             {this.props.github.processing && <Loader />}
-
-            {
-              false &&
-              !this.props.github.processing &&
-              this.hasRepositories() &&
-              (
-                <button className="btn btn-primary shadow load-next-date"
-                  onClick={() => this.fetchNextRepositories()}>
-                  <i className="fa fa-refresh mr-2"></i>
-                  Load next {this.props.preference.dateJump}
-                </button>
-              )
-            }
           </div>
-          {!this.props.github.processing && !this.hasRepositories()
-            && <Alert type="warning" className="no-trending-data">
-              Trending repositories results are currently being dissected.
-              This may be a few minutes. <a href={this.getCorrespondingGitHubLink()}>
-              You can visit GitHub's trending page instead.</a>
-            </Alert>}
+          {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()}
         </div>
       </div>
     );
