@@ -3,11 +3,10 @@
   "name": "HitUP",
   "short_name": "HitUP",
   "description": "Replace the new tab with a list of trending repositories on github belonging to any technology that you chose.",
-  "version": "4.3.2",
+  "version": "4.4.0",
   "permissions": [
     "tabs",
-    "storage",
-    "*://*.github.com/*"
+    "storage"
   ],
   "icons": {
     "16": "/img/icon16.png",
@@ -22,5 +21,5 @@
     "default_title": "HitUP",
     "default_icon": "/img/icon128.png"
   },
-  "content_security_policy": "script-src 'self' https://*.googletagmanager.com https://*.google-analytics.com; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://disqus.com https://*.disqus.com https://*.disquscdn.com; object-src 'self'"
 }
