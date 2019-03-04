@@ -52,13 +52,42 @@
   margin-bottom: 0;
 }
 
-.top-nav .external-btns .btn {
-  margin-left: 10px;
-  margin-top: 24px;
-  box-shadow: none;
+.top-nav .nav-icon-links {
+  margin: 10px 10px 0 0;
+}
+.top-nav .nav-icon-links .nav-link-item {
+  color: #2d2d2d;
+  float: left;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  margin-left: 8px;
+  font-size: 20px;
+  border-radius: 3px;
+}
+.top-nav .nav-icon-links .nav-link-item:hover {
+  text-decoration: none;
+  box-shadow: 0px 1px 3px #666;
+  position: relative;
+  top: -1px;
 }
 
-.btn-tweet {
+.top-nav .nav-icon-links .fa-github {
+  background: #24292e;
+  color: #fff;
+}
+.top-nav .nav-icon-links .fa-comments {
+  font-size: 18px;
+  background: #393e46;
+  color: #aaef39;
+}
+.top-nav .nav-icon-links .fa-chrome {
+  font-size: 16px;
+  background: #4C8CF5;
+  color: #fff;
+}
+.top-nav .nav-icon-links .fa-twitter {
   background: #01aced;
-  border-color: #01aced;
+  color: #fff;
 }

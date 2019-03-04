@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip'
 
 import './styles.css';
 
 class TopNav extends React.Component {
-  tweet = 'HitUP – Most starred projects on Github by @kamranahmedse https://github.com/kamranahmedse/githunt';
+  tweet = 'HitUP – Find Top Things in New Tab https://www.producthunt.com/posts/hitup';
 
   render() {
     // We need that to show the extension button only if not running in extension
@@ -14,7 +16,7 @@ class TopNav extends React.Component {
     return (
       <div className='top-nav'>
         <div className="container clearfix">
-          <a href='https://github.com/wonderbeyond/hitup'
+          <a href='https://github.com/wonderbeyond/HitUP'
              rel="noopener noreferrer"
              target='_blank'
              className="logo clearfix float-left">
@@ -25,37 +27,40 @@ class TopNav extends React.Component {
             <p className="text-muted">Find to<span className="top-text"><span className="top-arrow"></span>p</span> things
             </p>
           </div>
-          <div className="float-right external-btns">
-            <a href='http://github.com/wonderbeyond/hitup'
+          <div className="float-right nav-icon-links">
+            <Link to="/comments"
+              className="nav-link-item fa fa-comments"
+              data-tip data-for="nav-link-discuss"
+              rel="noopener noreferrer">
+            </Link>
+            <ReactTooltip id="nav-link-discuss" place="bottom">Let's discuss here</ReactTooltip>
+
+            <a href='http://github.com/wonderbeyond/HitUP'
+               className="nav-link-item fa fa-github"
+               data-tip data-for="nav-link-github"
                target='_blank'
-               rel="noopener noreferrer"
-               className="btn btn-dark"><i className="fa fa-github mr-1"></i> View Source</a>
+               rel="noopener noreferrer">
+            </a>
+            <ReactTooltip id="nav-link-github" place="bottom">View source on GitHub</ReactTooltip>
+
             {
               !isRunningExtension && (
                 <a href='https://wonder.page.link/hitup-chrome'
+                   className="nav-link-item fa fa-chrome"
+                   data-tip data-for="nav-link-extension"
                    target='_blank'
-                   rel="noopener noreferrer"
-                   className="btn btn-danger d-none d-sm-none d-md-inline-block d-xl-inline-block d-lg-inline-block">
-                  <i className="fa fa-chrome mr-1"></i> Use Extension
+                   rel="noopener noreferrer">
                 </a>
               )
             }
-            {
-              isRunningExtension && (
-                <a href='https://github.com/wonderbeyond/hitup/issues'
-                   target='_blank'
-                   rel="noopener noreferrer"
-                   className="btn btn-danger d-none d-sm-none d-md-inline-block d-xl-inline-block d-lg-inline-block">
-                  <i className="fa fa-comment mr-1"></i> Give Feedback
-                </a>
-              )
-            }
-            {/* <a href={ `https://twitter.com/intent/tweet?text=${this.tweet}` }
+            <ReactTooltip id="nav-link-extension" place="bottom">Get a browser extension</ReactTooltip>
+
+            <a href={ `https://twitter.com/intent/tweet?text=${this.tweet}` }
+               data-tip data-for="nav-link-tweet"
                target='_blank'
                rel="noopener noreferrer"
-               className="btn btn-primary btn-tweet d-none d-sm-none d-md-none d-xl-inline-block d-lg-inline-block">
-              <i className="fa fa-twitter mr-1"></i> Tweet
-            </a> */}
+               className="nav-link-item fa fa-twitter">
+            </a>
           </div>
         </div>
       </div>
