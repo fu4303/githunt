@@ -77,6 +77,11 @@
   background: #24292e;
   color: #fff;
 }
+.top-nav .nav-icon-links .fa-heart {
+  font-size: 18px;
+  background: #f0d5aa;
+  color: #FC3C3C;
+}
 .top-nav .nav-icon-links .fa-comments {
   font-size: 18px;
   background: #393e46;

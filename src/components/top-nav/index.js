@@ -35,6 +35,18 @@ class TopNav extends React.Component {
             </Link>
             <ReactTooltip id="nav-link-discuss" place="bottom">Let's discuss here</ReactTooltip>
 
+            {
+              isRunningExtension && (
+                <a href='https://wonder.page.link/hitup-chrome'
+                   className="nav-link-item fa fa-heart"
+                   data-tip data-for="nav-link-rate"
+                   target='_blank'
+                   rel="noopener noreferrer">
+                </a>
+              )
+            }
+            <ReactTooltip id="nav-link-rate" place="bottom">Rate HitUP in Chrome Web Store</ReactTooltip>
+
             <a href='http://github.com/wonderbeyond/HitUP'
                className="nav-link-item fa fa-github"
                data-tip data-for="nav-link-github"
