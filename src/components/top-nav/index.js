@@ -1,11 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip'
+import {GemmyClient} from 'gemmy-client';
+import snarkdown from 'snarkdown';
 
 import './styles.css';
 
 class TopNav extends React.Component {
   tweet = 'HitUP – Find Top Things in New Tab https://www.producthunt.com/posts/hitup';
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      hitGem: ''
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(async () => {
+      let gmc = new GemmyClient()
+      let hitGem = await gmc.randomGet()
+      this.setState({hitGem: hitGem});
+    }, 0);
+  }
 
   render() {
     // We need that to show the extension button only if not running in extension
@@ -74,6 +91,13 @@ class TopNav extends React.Component {
                className="nav-link-item fa fa-twitter">
             </a>
           </div>
+          {this.state.hitGem && <div className="gemmy-words">
+            <span data-tip data-for="gemmy-words-tooltip" dangerouslySetInnerHTML={{__html: snarkdown(this.state.hitGem.content || "Mew~")}}></span>
+            <ReactTooltip id="gemmy-words-tooltip" place="top"
+              delayHide={200}
+              delayShow={200}
+              delayUpdate={200}>Powered by <a target='_blank' rel="noopener noreferrer" href="https://github.com/wonderbeyond/gemmy">wonderbeyond/gemmy</a>.<br/>You are welcome to contribute items.</ReactTooltip>
+          </div>}
         </div>
       </div>
     );

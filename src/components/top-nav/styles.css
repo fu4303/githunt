@@ -1,10 +1,13 @@
 .top-nav {
   background: #fff;
   border-bottom: 1px solid #e8e8e8;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
   margin-bottom: 35px;
   position: relative;
-  height: 106px;
+}
+.top-nav .container {
+  position: relative;
+  height: 90px;
 }
 
 .top-nav .logo {
@@ -53,7 +56,7 @@
 }
 
 .top-nav .nav-icon-links {
-  margin: 10px 10px 0 0;
+  margin: 10px 5px 0 0;
 }
 .top-nav .nav-icon-links .nav-link-item {
   color: #2d2d2d;
@@ -95,4 +98,10 @@
 .top-nav .nav-icon-links .fa-twitter {
   background: #01aced;
   color: #fff;
+}
+.top-nav .gemmy-words {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  font-size: 0.8em;
 }
