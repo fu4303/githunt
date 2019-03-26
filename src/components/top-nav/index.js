@@ -91,7 +91,7 @@ class TopNav extends React.Component {
                className="nav-link-item fa fa-twitter">
             </a>
           </div>
-          {this.state.hitGem && <div className="gemmy-words">
+          {this.state.hitGem && <div className="gemmy-words d-none d-md-block">
             <span data-tip data-for="gemmy-words-tooltip" dangerouslySetInnerHTML={{__html: snarkdown(this.state.hitGem.content || "Mew~")}}></span>
             <ReactTooltip id="gemmy-words-tooltip" place="top"
               delayHide={200}
