@@ -96,7 +96,11 @@ class TopNav extends React.Component {
             <ReactTooltip id="gemmy-words-tooltip" place="top"
               delayHide={200}
               delayShow={200}
-              delayUpdate={200}>Powered by <a target='_blank' rel="noopener noreferrer" href="https://github.com/wonderbeyond/gemmy">wonderbeyond/gemmy</a>.<br/>You are welcome to contribute items.</ReactTooltip>
+              delayUpdate={200}>
+              Powered by <a target='_blank' rel="noopener noreferrer" href="https://github.com/wonderbeyond/gemmy">wonderbeyond/gemmy</a>.<br/>
+              You are welcome to contribute items. ❤️❤️❤️<br/>
+              <Link to="/comments">Any ideas or questions?</Link>
+            </ReactTooltip>
           </div>}
         </div>
       </div>

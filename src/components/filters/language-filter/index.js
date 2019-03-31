@@ -64,7 +64,10 @@ class LanguageFilter extends React.Component {
     let availableLanguages = this.getFilteredLanguages();
 
     return availableLanguages.map((language, counter) => {
-      const isSelectedIndex = counter === this.state.selectedIndex;
+
+      const isSelectedIndex = (
+        this.props.selectedLanguage === language.value
+      );
 
       // This will be used in making sure of the element visibility
       const refProp = isSelectedIndex ? { ref: 'activeItem' } : {};
