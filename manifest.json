@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "HitUP",
   "short_name": "HitUP",
-  "description": "Replace the new tab with a list of trending repositories on github belonging to any technology that you chose.",
-  "version": "4.5.0",
+  "description": "Find top things in ➕New Tab instead of “blank page”, including the most popular projects on GitHub.",
+  "version": "4.6.0",
   "permissions": [
     "tabs",
     "storage"
