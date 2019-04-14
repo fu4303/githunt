@@ -11,9 +11,8 @@
     <img src="https://img.shields.io/chrome-web-store/v/eiokaohkigpbonodjcbjpecbnccijkjb.svg" alt="version" />
   </a>
   <a href="https://wonder.page.link/hitup-chrome">
-    <img src="https://img.shields.io/chrome-web-store/stars/eiokaohkigpbonodjcbjpecbnccijkjb.svg?label=rating%20%28chrome%29" alt="rating" />
+    <img src="https://img.shields.io/chrome-web-store/stars/eiokaohkigpbonodjcbjpecbnccijkjb.svg?label=rating" alt="rating" />
   </a>
-  <img src="https://img.shields.io/librariesio/github/wonderbeyond/HitUP.svg" alt="dependencies" />
   <a href="https://github.com/wonderbeyond/HitUP/blob/master/license.md">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="license-mit" />
   </a>
@@ -21,7 +20,7 @@
 
 <p align="center">
   <b>Find top things in New Tab, including GitHub Trending Repositories</b></br>
-  <sub>✨ Use it <a href="https://hitup.wondertools.top" target="_blank">online</a> or as a <a href="https://wonder.page.link/hitup-chrome" target="_blank">chrome extension</a> ✨<sub>
+  <sub>✨ Use HitUP as a <a href="https://wonder.page.link/hitup-chrome" target="_blank">Chrome Extension</a> or just <a href="https://hitup.wondertools.top" target="_blank">Online</a> ✨<sub>
 </p>
 
 <p align="center">
