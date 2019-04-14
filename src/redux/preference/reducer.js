@@ -1,6 +1,9 @@
 import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE } from './types';
 
-const initialState = {
+let chrome = window.chrome;
+let isChromeExt = chrome && chrome.storage && chrome.storage.sync;
+
+let initialState = {
   viewType: 'grid',
   dateJump: 'week',
   language: '',
@@ -8,6 +11,18 @@ const initialState = {
     token: '',
   },
 };
+
+// if upgrated from previous version using localstorage for settings,
+// migrate old settings to chrome.storage.sync
+if (isChromeExt) {
+  let persistKey = 'persist:hitup:root';
+  let lsSettingsData = localStorage.getItem(persistKey);
+
+  if (lsSettingsData) {
+    initialState = JSON.parse(JSON.parse(lsSettingsData)['preference'])
+    localStorage.removeItem(persistKey)
+  }
+}
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {

@@ -8548,6 +8548,11 @@ redux-devtools-extension@^2.13.5:
   resolved "http://registry.npm.taobao.org/redux-devtools-extension/download/redux-devtools-extension-2.13.8.tgz#37b982688626e5e4993ff87220c9bbb7cd2d96e1"
   integrity sha1-N7mCaIYm5eSZP/hyIMm7t80tluE=
 
+redux-persist-chrome-storage@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/redux-persist-chrome-storage/-/redux-persist-chrome-storage-1.0.1.tgz#751adfc8cbb8906d90d7428c23df46dcaf3f6682"
+  integrity sha1-dRrfyMu4kG2Q10KMI99G3K8/ZoI=
+
 redux-persist@^5.10.0:
   version "5.10.0"
   resolved "http://registry.npm.taobao.org/redux-persist/download/redux-persist-5.10.0.tgz#5d8d802c5571e55924efc1c3a9b23575283be62b"

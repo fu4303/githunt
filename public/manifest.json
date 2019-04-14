@@ -3,7 +3,7 @@
   "name": "HitUP",
   "short_name": "HitUP",
   "description": "Find top things in ➕New Tab instead of “blank page”, including the most popular projects on GitHub.",
-  "version": "4.5.1",
+  "version": "4.6.0",
   "permissions": [
     "tabs",
     "storage"
