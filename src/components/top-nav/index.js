@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip'
 import {GemmyClient} from 'gemmy-client';
 import snarkdown from 'snarkdown';
 
-import './styles.css';
+import './styles.scss';
 
 class TopNav extends React.Component {
   tweet = 'HitUP – Find Top Things in New Tab https://www.producthunt.com/posts/hitup';
