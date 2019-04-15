@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.theme-light {
+  --background-primary-color: #f4f4f4;
+  --text-primary-color: #{$gray-900};
+  --text-secondary-color: #{$gray-600};
+  --box-shadow-color :rgba(0, 0, 0, 0.20);
+}
+
+.theme-dark {
+  --background-primary-color: #000;
+  --text-primary-color: #{$gray-300};
+  --text-secondary-color: #{$gray-600};
+  --box-shadow-color :rgba(0, 0, 0, 0.20);
+}

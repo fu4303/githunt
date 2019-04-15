@@ -4,6 +4,7 @@ let chrome = window.chrome;
 let isChromeExt = chrome && chrome.storage && chrome.storage.sync;
 
 let initialState = {
+  theme: 'light',
   viewType: 'grid',
   dateJump: 'week',
   language: '',

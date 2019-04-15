@@ -1,5 +1,15 @@
-body {
+@import 'theme.scss';
+
+
+// We apply themes from here!
+.page-wrap {
   min-height: 100vh;
+  background: var(--background-primary-color);
+  color: var(--text-primary-color);
+}
+
+.text-muted {
+  color: var(--text-secondary-color) !important;
 }
 
 .btn {
@@ -12,5 +22,5 @@ body {
 }
 
 .shadowed {
-  box-shadow: 0 9px 62px -13px rgba(0, 0, 0, 0.20) !important;
+  box-shadow: 0 9px 62px -13px var(--box-shadow-color) !important;
 }
