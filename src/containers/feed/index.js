@@ -139,9 +139,8 @@ class FeedContainer extends React.Component {
 
   render() {
     return (
-      <div className={`page-wrap theme-${this.props.preference.theme}`}>
+      <>
         <TopNav />
-
         <div className="container pb-4">
           <div className="header-row clearfix">
             <GroupHeading
@@ -165,7 +164,7 @@ class FeedContainer extends React.Component {
           {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()
           }
         </div>
-      </div>
+      </>
     );
   }
 }

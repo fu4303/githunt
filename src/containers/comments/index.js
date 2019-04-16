@@ -8,7 +8,7 @@ import TopNav from 'components/top-nav';
 export default class CommentsContainer extends React.Component {
   render() {
     return (
-      <div className="page-wrap">
+      <>
         <TopNav />
 
         <div className="container">
@@ -18,7 +18,7 @@ export default class CommentsContainer extends React.Component {
             title: "HitUP - Find Top Things"
           }} />
         </div>
-      </div>
+      </>
     );
   }
 }

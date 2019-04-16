@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 
 import Launcher from './components/launcher';
@@ -11,11 +12,16 @@ class App extends Component {
     return (
       <Provider store={ store }>
         <PersistGate loading={ <Launcher/> } persistor={ persist }>
-          <AppRoutes/>
+          <PageWrapper/>
         </PersistGate>
       </Provider>
     );
   }
 }
+
+// for containing theme switch class
+const PageWrapper = connect(store => ({
+  preference: store.preference,
+}))(props => <div className={`page-wrap theme-${props.preference.theme}`}><AppRoutes/></div>)
 
 export default App;
