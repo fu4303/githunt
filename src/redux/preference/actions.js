@@ -1,5 +1,10 @@
 import ReactGA from 'react-ga';
-import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE } from './types';
+import {
+  UPDATE_DATE_TYPE,
+  UPDATE_LANGUAGE,
+  UPDATE_OPTIONS,
+  UPDATE_VIEW_TYPE
+} from "./types";
 
 export const updateOptions = function (options) {
   return dispatch => {

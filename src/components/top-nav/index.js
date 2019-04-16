@@ -1,4 +1,5 @@
 import React from 'react';
+import ToggleTheme from 'components/icons/toggle-theme';
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip'
 import {GemmyClient} from 'gemmy-client';
@@ -44,6 +45,7 @@ class TopNav extends React.Component {
             <p className="text-muted">Find to<span className="top-text"><span className="top-arrow"></span>p</span> things
             </p>
           </div>
+          <div title="Toggle theme" className="theme-toggle"><ToggleTheme/></div>
           <div className="float-right nav-icon-links">
             <Link to="/comments"
               className="nav-link-item fa fa-comments"
