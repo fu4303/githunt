@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './styles.css';
+import './styles.scss';
 import ListItem from './list-item';
 import GroupHeading from '../group-heading';
 import RepositoryGrid from '../repository-grid';

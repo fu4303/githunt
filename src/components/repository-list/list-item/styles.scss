@@ -1,7 +1,9 @@
+@import 'theme.scss';
+
 .list-item-container {
   padding: 0 0 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--border-primary-color);
   position: relative;
 }
 
