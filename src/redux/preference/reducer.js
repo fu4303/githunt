@@ -1,4 +1,4 @@
-import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE } from './types';
+import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE, SET_COLOR_THEME } from './types';
 
 let chrome = window.chrome;
 let isChromeExt = chrome && chrome.storage && chrome.storage.sync;
@@ -46,6 +46,11 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         language: action.payload
+      };
+    case SET_COLOR_THEME:
+      return {
+        ...state,
+        theme: action.payload
       };
     default:
       return state;

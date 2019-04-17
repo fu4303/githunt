@@ -1,8 +1,9 @@
 @import "variables.scss";
+@import 'theme.scss';
 
 .top-nav {
-  background: #fff;
-  border-bottom: 1px solid #e8e8e8;
+  background: var(--top-nav-background-color);
+  border-bottom: 1px solid var(--top-nav-border-color);
   padding: 0;
   margin-bottom: 35px;
   position: relative;
@@ -30,7 +31,6 @@
     h4 {
       margin: 3px 0 0;
       font-weight: 700;
-      color: #2d2d2d;
     }
 
     .top-text {
@@ -73,7 +73,6 @@
     margin: 25px 5px 0 0;
 
     .nav-link-item {
-      color: #2d2d2d;
       float: left;
       text-align: center;
       width: 24px;

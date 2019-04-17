@@ -3,7 +3,8 @@ import {
   UPDATE_DATE_TYPE,
   UPDATE_LANGUAGE,
   UPDATE_OPTIONS,
-  UPDATE_VIEW_TYPE
+  UPDATE_VIEW_TYPE,
+  SET_COLOR_THEME
 } from "./types";
 
 export const updateOptions = function (options) {
@@ -53,3 +54,17 @@ export const updateDateJump = function (dateJump) {
     });
   };
 };
+
+
+export function toggleColorTheme(theme) {
+  return dispatch => {
+    dispatch({
+      type: SET_COLOR_THEME,
+      payload: theme
+    });
+    ReactGA.event({
+      category: 'Preference',
+      action: `Color Theme Set to ${theme}`
+    });
+  };
+}

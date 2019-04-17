@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './styles.css';
+import './styles.scss';
 
 class ViewFilter extends React.Component {
   state = {};

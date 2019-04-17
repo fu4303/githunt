@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './styles.css';
+import './styles.scss';
 import {languages} from 'lib/gh-trending';
 
 class LanguageFilter extends React.Component {
@@ -180,7 +180,7 @@ class LanguageFilter extends React.Component {
   render() {
     return (
       <div className='language-filter-wrap'>
-        <button onClick={ this.toggleDropdown } className="btn btn-light language-filter shadowed">
+        <button onClick={ this.toggleDropdown } className="btn btn-primary language-filter shadowed">
           <i className="fa fa-filter mr-2"></i>
           { this.props.selectedLanguage || 'All Languages' }
         </button>

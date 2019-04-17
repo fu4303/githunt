@@ -4,7 +4,7 @@
 }
 
 .grid-item-body {
-  background: white;
+  background: var(--background-secondary-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: -5px 10px 60px -13px rgba(0, 0, 0, 0.20);
@@ -27,12 +27,8 @@
 .grid-item-container .author-details h5 {
   margin-bottom: 2px;
   font-weight: 600;
-  color: #6c7583;
+  color: var(--text-secondary-color);
   font-size: 14px;
-}
-
-.grid-item-container .author-details a {
-  color: #6c7583;
 }
 
 .grid-item-container .author-details p {
@@ -87,7 +83,8 @@
 .grid-item-container .repo-body p {
   font-size: 14px;
   margin-bottom: 0;
-  color: #6e7583;
+  color: var(--text-secondary-color);
+  // color: var(--text-primary-color);
   max-height: 100px;
   overflow: hidden;
 }
@@ -98,19 +95,19 @@
   bottom: 20px;
   left: 20px;
   right: 25px;
-  background: white;
+  // background: white;
   padding: 10px;
 }
 
 .grid-item-container .repo-footer a {
   text-decoration: none;
-  color: #6c757d;
+  color: var(--text-secondary-color);
   font-weight: 500;
 }
 
 .grid-item-container .repo-footer svg {
   position: relative;
   top: -2px;
-  fill: #6c757d;
+  fill: var(--text-secondary-color);
   margin-right: 5px;
 }

@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import ToggleTheme from 'components/icons/toggle-theme';
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip'
 import {GemmyClient} from 'gemmy-client';
 import snarkdown from 'snarkdown';
+import { toggleColorTheme } from 'redux/preference/actions';
 
 import './styles.scss';
 
@@ -23,6 +25,13 @@ class TopNav extends React.Component {
       let hitGem = await gmc.randomGet()
       this.setState({hitGem: hitGem});
     }, 0);
+  }
+
+  toggleTheme = () => {
+    let prev = this.props.preference.theme;
+    let right = (prev === 'light'? 'dark': 'light');
+    console.log(`Toggling color theme from ${prev} to ${right}`);
+    this.props.toggleColorTheme(right);
   }
 
   render() {
@@ -45,7 +54,7 @@ class TopNav extends React.Component {
             <p className="text-muted">Find to<span className="top-text"><span className="top-arrow"></span>p</span> things
             </p>
           </div>
-          <div title="Toggle theme" className="theme-toggle"><ToggleTheme/></div>
+          <div title="Toggle theme" className="theme-toggle" onClick={this.toggleTheme}><ToggleTheme/></div>
           <div className="float-right nav-icon-links">
             <Link to="/comments"
               className="nav-link-item fa fa-comments"
@@ -110,4 +119,15 @@ class TopNav extends React.Component {
   }
 }
 
-export default TopNav;
+const mapStateToProps = store => {
+  return {
+    preference: store.preference,
+    github: store.github
+  };
+};
+
+const mapDispatchToProps = {
+  toggleColorTheme
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TopNav);

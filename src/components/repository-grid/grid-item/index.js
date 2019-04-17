@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './styles.css';
+import './styles.scss';
 
 import ReactTooltip from 'react-tooltip';
 import {trendingPeriodDefs} from 'lib/gh-trending';

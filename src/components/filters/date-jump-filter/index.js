@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
 import {trendingPeriodDefs} from 'lib/gh-trending';
 
-import './styles.css';
+import './styles.scss';
 
 class DateJumpFilter extends React.Component {
   state = {

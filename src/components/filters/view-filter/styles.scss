@@ -1,0 +1,27 @@
+@import 'theme.scss';
+
+.view-type {
+  border-radius: 8px;
+  padding: 10px;
+  cursor: default;
+
+  button {
+    color: var(--text-disabled-color);
+    text-decoration: none;
+    margin: 0 0 0 10px;
+    padding: 0 5px;
+    list-style: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    box-shadow: none;
+    outline: none;
+    &.active, &:hover {
+      color: var(--text-primary-color);
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
