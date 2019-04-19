@@ -1,5 +1,8 @@
 @import 'theme.scss';
 
+body {
+  background: var(--background-primary-color);
+}
 
 // We apply themes from here!
 .page-wrap {
