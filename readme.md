@@ -27,10 +27,19 @@
   <br><b>HitUP</b> is a react app and a browser extension that helps you
   <br>explore top things in New Tab, including the most popular projects on GitHub
   <br><a href="https://hitup.wondertools.top">Use Online</a> • <a href="https://wonder.page.link/hitup-chrome">Install Extension</a>
-  <br><br><img alt="HitUP" src="./screenshots/trending-repo-grid.png">
-  <br><b>▲ Trending Repositories This Week – Grid View</b><br>
+  <br><br>
 </p>
 
+<p align="center">
+  <img alt="HitUP" src="./screenshots/dark-theme-trending-repo-grid.png">
+  <br><b>▲ Awesome! HitUP have Dark Theme now 🎉 🎉 🎉</b><br>
+</p>
+
+
+<p align="center">
+  <img alt="HitUP" src="./screenshots/trending-repo-grid.png">
+  <br><b>▲ Trending Repositories This Week – Grid View</b><br>
+</p>
 
 <p align="center">
   <img alt="HitUP" src="./screenshots/trending-repo-list.png">
