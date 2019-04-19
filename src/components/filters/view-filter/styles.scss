@@ -6,7 +6,7 @@
   cursor: default;
 
   button {
-    color: var(--text-disabled-color);
+    color: var(--text-faded-color);
     text-decoration: none;
     margin: 0 0 0 10px;
     padding: 0 5px;
@@ -18,7 +18,7 @@
     box-shadow: none;
     outline: none;
     &.active, &:hover {
-      color: var(--text-primary-color);
+      color: var(--text-main-color);
     }
     &:first-child {
       margin-left: 0;

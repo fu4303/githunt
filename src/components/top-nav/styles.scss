@@ -61,7 +61,7 @@
     position: absolute;
     right: 20px;
     top: -10px;
-    opacity: 0.05;
+    opacity: 0.4;
     transition: all 0.3s ease-out;
     &:hover {
       top: -3px;
@@ -119,5 +119,6 @@
     right: 20px;
     bottom: 0px;
     font-size: 13px;
+    color: var(--text-main-color);
   }
 }

@@ -7,7 +7,7 @@
   background: var(--background-secondary-color);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: -5px 10px 60px -13px rgba(0, 0, 0, 0.20);
+  box-shadow: -5px 10px 60px -13px rgba(0, 0, 0, 0.2);
   height: 270px;
 }
 
@@ -36,57 +36,53 @@
   font-size: 12px;
 }
 
-.grid-item-container .author-header, .repo-header, .repo-body {
-  margin-bottom: 15px;
-}
-
-.grid-item-container .author-header a {
-  text-decoration: none;
-}
-
-.grid-item-container .repo-header h5 {
-  font-size: 19px;
-  margin-bottom: 5px;
-}
-
-.grid-item-container .repo-header p {
-  margin-bottom: 0;
-}
-
-.grid-item-container .repo-header a {
-  text-decoration: none;
-}
-
-.grid-item-container .repo-header .repo-meta a {
-  color: currentColor;
-  font-weight: 500;
-}
-
-.repo-language-color {
-  border-radius: 50%;
-  display: inline-block;
-  height: 12px;
-  position: relative;
-  top: 1px;
-  width: 12px;
-}
-
-.grid-item-container .author-name {
-  font-weight: 400;
-}
-
-.grid-item-container .repo-name {
-  font-weight: 700;
-  word-wrap: break-all;
-}
-
-.grid-item-container .repo-body p {
-  font-size: 14px;
-  margin-bottom: 0;
-  color: var(--text-secondary-color);
-  // color: var(--text-primary-color);
-  max-height: 100px;
-  overflow: hidden;
+.grid-item-container {
+  .author-header,
+  .repo-header,
+  .repo-body {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--text-main-color);
+  }
+  .repo-header a,
+  .author-header a {
+    text-decoration: none;
+  }
+  .repo-header h5 {
+    font-size: 19px;
+    margin-bottom: 5px;
+  }
+  .repo-header p {
+    margin-bottom: 0;
+  }
+  .repo-meta a {
+    color: currentColor;
+    font-weight: 500;
+  }
+  .repo-language-color {
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    position: relative;
+    top: 1px;
+    width: 12px;
+  }
+  .author-name {
+    font-weight: 400;
+  }
+  .repo-name {
+    font-weight: 700;
+    word-wrap: break-all;
+  }
+  .repo-body {
+    $line-height: 1.5em;
+    max-height: $line-height * 4;
+    overflow: hidden;
+    p {
+      line-height: $line-height;
+      margin: 0;
+    }
+  }
 }
 
 .grid-item-container .repo-footer {

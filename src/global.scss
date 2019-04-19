@@ -5,7 +5,7 @@
 .page-wrap {
   min-height: 100vh;
   background: var(--background-primary-color);
-  color: var(--text-primary-color);
+  color: var(--text-head-color);
 }
 
 .text-muted {
@@ -20,7 +20,7 @@ button,
   outline: 0;
   background-color: var(--primary-button-background-color);
   border: 1px solid var(--primary-button-background-color);
-  color: var(--text-primary-color);
+  color: var(--text-main-color);
  // border: 1px solid #ccc;
   &:focus, &:active {
     outline: 0;
