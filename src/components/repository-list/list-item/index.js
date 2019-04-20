@@ -24,9 +24,9 @@ class ListItem extends React.Component {
                 { this.props.repository.name }
               </a>
             </h3>
-            <div className="repo-meta text-muted small">Built by
+            {this.props.repository.builtBy && this.props.repository.builtBy.length > 0 && <div className="repo-meta text-muted small">Built by
               <BuiltByMembers repository={this.props.repository} members={this.props.repository.builtBy}/>
-            </div>
+            </div>}
           </div>
           <div className="repo-body">
             <p>{ this.props.repository.description || 'No description given.' }</p>
