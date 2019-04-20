@@ -55,10 +55,19 @@
   .repo-header p {
     margin-bottom: 0;
   }
-  .repo-meta a {
-    color: currentColor;
-    font-weight: 500;
+  .repo-meta {
+    a {
+      color: currentColor;
+      font-weight: 500;
+    }
+
+    height: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
   }
+
   .repo-language-color {
     border-radius: 50%;
     display: inline-block;
@@ -67,12 +76,16 @@
     top: 1px;
     width: 12px;
   }
+  .repo-header {
+    overflow: hidden;
+  }
   .author-name {
     font-weight: 400;
   }
   .repo-name {
     font-weight: 700;
-    word-wrap: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .repo-body {
     $line-height: 1.5em;

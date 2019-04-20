@@ -45,9 +45,9 @@ class GridItem extends React.Component {
                 <span className="repo-language-color ml-0" style={{backgroundColor: this.props.repository.languageColor}}></span>
                 &nbsp;{ this.props.repository.language }
               </span>}
-              <span className="d-inline-block repo-meta-built-by">Built by
+              {this.props.repository.builtBy && this.props.repository.builtBy.length > 0 && <span className="d-inline-block repo-meta-built-by">Built by
                 <BuiltByMembers repository={this.props.repository} members={this.props.repository.builtBy}/>
-              </span>
+              </span>}
             </div>
           </div>
           <div className="repo-body">

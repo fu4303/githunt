@@ -1,0 +1,42 @@
+@import "theme.scss";
+
+.built-by-member-item {
+  &:first-of-type {
+    margin-left: 4px;
+  }
+  &:not(:last-of-type) {
+    margin-right: 2px;
+  }
+
+  .built-by-member-avatar img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  .built-by-member-avatar:hover img {
+    box-shadow: 0px 2px 3px var(--box-shadow-color);
+  }
+
+  .built-by-member-popup {
+      opacity: 1!important;
+      background-color: rgba(0, 0, 0, 0.9)!important;
+      padding: 10px 10px 0 10px;
+      text-align: center;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        display: block;
+        margin: auto;
+      }
+      .username {
+        display: inline-block;
+        font-weight: bold;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+      }
+    }
+}

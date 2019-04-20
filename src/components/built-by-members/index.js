@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip'
 
 
-import './styles.css';
+import './styles.scss';
 
 class BuiltByMembers extends React.Component {
   state = {
