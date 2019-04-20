@@ -37,57 +37,59 @@
 }
 
 .grid-item-container {
+  a {
+    text-decoration: none;
+  }
   .author-header,
   .repo-header,
   .repo-body {
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     font-size: 14px;
     color: var(--text-main-color);
   }
-  .repo-header a,
-  .author-header a {
-    text-decoration: none;
+
+  .author-header {
+    margin-bottom: 15px;
   }
-  .repo-header h5 {
-    font-size: 19px;
-    margin-bottom: 5px;
-  }
-  .repo-header p {
-    margin-bottom: 0;
-  }
-  .repo-meta {
-    a {
-      color: currentColor;
-      font-weight: 500;
+
+  .repo-header {
+    margin-bottom: 8px;
+    overflow: hidden;
+
+    h5 {
+      font-size: 19px;
+      margin-bottom: 5px;
+      .repo-name {
+        font-weight: 700;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
 
-    height: 24px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
+    .repo-meta {
+      a {
+        color: currentColor;
+        font-weight: 500;
+      }
+
+      height: 24px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      .repo-language-color {
+        border-radius: 50%;
+        display: inline-block;
+        height: 12px;
+        position: relative;
+        top: 1px;
+        width: 12px;
+      }
+    }
   }
 
-  .repo-language-color {
-    border-radius: 50%;
-    display: inline-block;
-    height: 12px;
-    position: relative;
-    top: 1px;
-    width: 12px;
-  }
-  .repo-header {
-    overflow: hidden;
-  }
-  .author-name {
-    font-weight: 400;
-  }
-  .repo-name {
-    font-weight: 700;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
   .repo-body {
+    margin-bottom: 0;
     $line-height: 1.5em;
     max-height: $line-height * 4;
     overflow: hidden;
@@ -96,27 +98,25 @@
       margin: 0;
     }
   }
-}
 
-.grid-item-container .repo-footer {
-  font-size: 12px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 25px;
-  // background: white;
-  padding: 10px;
-}
-
-.grid-item-container .repo-footer a {
-  text-decoration: none;
-  color: var(--text-secondary-color);
-  font-weight: 500;
-}
-
-.grid-item-container .repo-footer svg {
-  position: relative;
-  top: -2px;
-  fill: var(--text-secondary-color);
-  margin-right: 5px;
+  .repo-footer {
+    font-size: 12px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 25px;
+    // background: white;
+    padding: 10px;
+    a {
+      text-decoration: none;
+      color: var(--text-secondary-color);
+      font-weight: 500;
+    }
+    svg {
+      position: relative;
+      top: -2px;
+      fill: var(--text-secondary-color);
+      margin-right: 5px;
+    }
+  }
 }
