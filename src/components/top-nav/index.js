@@ -10,7 +10,9 @@ import { toggleColorTheme } from 'redux/preference/actions';
 import './styles.scss';
 
 class TopNav extends React.Component {
-  tweet = 'HitUP – Find Top Things in New Tab https://www.producthunt.com/posts/hitup';
+  tweet = `HitUP – a Chrome extension help you find top things in New Tab
+  https://github.com/wonderbeyond/HitUP
+  `;
 
   constructor(props) {
     super(props);
@@ -94,6 +96,7 @@ class TopNav extends React.Component {
                rel="noopener noreferrer"
                className="nav-link-item fa fa-twitter">
             </a>
+            <ReactTooltip id="nav-link-tweet" place="bottom">Share HitUP on Twitter</ReactTooltip>
 
             <Link to="/comments"
               className="nav-link-item fa fa-comments"

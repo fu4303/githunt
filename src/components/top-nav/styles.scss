@@ -87,7 +87,11 @@
       top: -1px;
     }
 
-    .fa-github {
+    .fa {
+      color: var(--text-secondary-color);
+      &:hover {
+        color: var(--text-main-color);
+      }
     }
     .fa-heart {
       font-size: 18px;
@@ -97,14 +101,6 @@
     }
     .fa-chrome {
       font-size: 17px;
-    }
-    .fa-twitter {
-    }
-    .fa {
-      color: var(--text-secondary-color) !important;
-      &:hover {
-        color: var(--text-main-color) !important;
-      }
     }
   }
   .gemmy-words {
