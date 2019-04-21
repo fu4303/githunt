@@ -80,39 +80,32 @@
       line-height: 24px;
       margin-left: 8px;
       font-size: 20px;
-      border-radius: 3px;
     }
     .nav-link-item:hover {
       text-decoration: none;
-      box-shadow: 0px 1px 3px #666;
       position: relative;
       top: -1px;
     }
 
     .fa-github {
-      background: #24292e;
-      color: #fff;
     }
     .fa-heart {
       font-size: 18px;
-      background: #f0d5aa;
-      color: #FC3C3C;
     }
     .fa-comments {
       font-size: 18px;
-      background: #393e46;
-      color: #aaef39;
     }
     .fa-chrome {
-      font-size: 16px;
-      background: #4C8CF5;
-      color: #fff;
+      font-size: 17px;
     }
     .fa-twitter {
-      background: #01aced;
-      color: #fff;
     }
-
+    .fa {
+      color: var(--text-secondary-color) !important;
+      &:hover {
+        color: var(--text-main-color) !important;
+      }
+    }
   }
   .gemmy-words {
     position: absolute;

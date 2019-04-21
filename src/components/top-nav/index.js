@@ -56,13 +56,6 @@ class TopNav extends React.Component {
           </div>
           <div title="Toggle theme" className="theme-toggle" onClick={this.toggleTheme}><ToggleTheme/></div>
           <div className="float-right nav-icon-links">
-            <Link to="/comments"
-              className="nav-link-item fa fa-comments"
-              data-tip data-for="nav-link-discuss"
-              rel="noopener noreferrer">
-            </Link>
-            <ReactTooltip id="nav-link-discuss" place="bottom">Let's discuss here</ReactTooltip>
-
             {
               isRunningExtension && (
                 <a href='https://wonder.page.link/hitup-chrome'
@@ -93,7 +86,7 @@ class TopNav extends React.Component {
                 </a>
               )
             }
-            <ReactTooltip id="nav-link-extension" place="bottom">Get a browser extension</ReactTooltip>
+            <ReactTooltip id="nav-link-extension" place="bottom">Get HitUP as Chrome extension</ReactTooltip>
 
             <a href={ `https://twitter.com/intent/tweet?text=${this.tweet}` }
                data-tip data-for="nav-link-tweet"
@@ -101,6 +94,13 @@ class TopNav extends React.Component {
                rel="noopener noreferrer"
                className="nav-link-item fa fa-twitter">
             </a>
+
+            <Link to="/comments"
+              className="nav-link-item fa fa-comments"
+              data-tip data-for="nav-link-discuss"
+              rel="noopener noreferrer">
+            </Link>
+            <ReactTooltip id="nav-link-discuss" place="bottom">Let's discuss here</ReactTooltip>
           </div>
           {this.state.hitGem && <div className="gemmy-words d-none d-md-block">
             <span data-tip data-for="gemmy-words-tooltip" dangerouslySetInnerHTML={{__html: snarkdown(this.state.hitGem.content || "Mew~")}}></span>
