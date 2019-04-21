@@ -1,25 +1,29 @@
 {
   "manifest_version": 2,
+  "version": "4.7.2",
   "name": "HitUP",
   "short_name": "HitUP",
   "description": "Find top things in ➕New Tab instead of “blank page”, including the most popular projects on GitHub.",
-  "version": "4.7.1",
-  "permissions": [
-    "tabs",
-    "storage"
-  ],
+  "homepage_url": "https://github.com/wonderbeyond/hitup",
   "icons": {
     "16": "/img/icon16.png",
     "48": "/img/icon48.png",
     "128": "/img/icon128.png"
   },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "homepage_url": "https://github.com/wonderbeyond/hitup",
   "browser_action": {
-    "default_title": "HitUP",
+    "default_title": "HitUP\nFind Top Things (in new tab)",
     "default_icon": "/img/icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "content_security_policy": "script-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://disqus.com https://*.disqus.com https://*.disquscdn.com; object-src 'self'"
 }
