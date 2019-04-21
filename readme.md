@@ -44,20 +44,18 @@
 <p align="center">
   <img alt="HitUP" src="./screenshots/trending-repo-list.png">
   <br><b>▲ Trending Repositories This Week – List View</b><br>
-  <sub>💥 Change the view options from the filters list 💥</sub>
 </p>
 
 <p align="center">
   <img alt="HitUP" src="./screenshots/filter-by-lang.png">
   <br><b>▲ Filter by Language</b><br>
-  <sub>💥 Will remember your selection of language 💥</sub>
 </p>
 
 
 ## Installation
 
-* Use Online – https://hitup.wondertools.top
 * Chrome Extension – https://wonder.page.link/hitup-chrome
+* Use Online – https://hitup.wondertools.top
 
 ## Contributions
 
