@@ -30,7 +30,7 @@ class TopNav extends React.Component {
   }
 
   toggleTheme = () => {
-    let prev = this.props.preference.theme;
+    let prev = this.props.theme;
     let right = (prev === 'light'? 'dark': 'light');
     console.log(`Toggling color theme from ${prev} to ${right}`);
     this.props.toggleColorTheme(right);
@@ -124,8 +124,9 @@ class TopNav extends React.Component {
 
 const mapStateToProps = store => {
   return {
-    preference: store.preference,
-    github: store.github
+    theme: store.preference.theme,
+    // preference: store.preference,
+    // github: store.github
   };
 };
 
