@@ -11,27 +11,40 @@ import AppRoutes from './routes';
 import SideBar from "components/sidebar";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isSideBarOpen: false
+    };
+  }
+
   render() {
     return (
       <Provider store={ store }>
         <PersistGate loading={ <Launcher/> } persistor={ persist }>
-          <SideBar isOpen={false}/>
-          <PageWrapper/>
+          <ThemeWrapper/>
         </PersistGate>
       </Provider>
     );
   }
 }
 
-// for containing theme switch class
-const PageWrapper = connect(store => ({
-  preference: store.preference,
-}))(props => (
-  <div id="page-wrap" className={`theme-${props.preference.theme}`}>
+const PageWrapper = props => (
+  <div id="page-wrap">
     <HashRouter>
       <TopNav />
       <AppRoutes/>
     </HashRouter>
+  </div>
+)
+
+
+const ThemeWrapper = connect(store => ({
+  theme: store.preference.theme,
+}))(props => (
+  <div id="theme-wrap" className={`theme-${props.theme}`}>
+    <SideBar/>
+    <PageWrapper/>
   </div>
 ))
 

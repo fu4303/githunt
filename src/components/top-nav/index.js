@@ -6,6 +6,7 @@ import ReactTooltip from 'react-tooltip'
 import {GemmyClient} from 'gemmy-client';
 import snarkdown from 'snarkdown';
 import { toggleColorTheme } from 'redux/preference/actions';
+import {toggleSideBar} from 'components/sidebar/sidebar-toggle-bus';
 
 import './styles.scss';
 
@@ -57,6 +58,10 @@ class TopNav extends React.Component {
             </p>
           </div>
           <div title="Toggle theme" className="theme-toggle" onClick={this.toggleTheme}><ToggleTheme/></div>
+
+          <span title="Open setttings" className="float-right sidebar-toggle fa fa-bars"
+            onClick={toggleSideBar}></span>
+
           <div className="float-right nav-icon-links">
             {
               isRunningExtension && (
@@ -81,7 +86,7 @@ class TopNav extends React.Component {
             {
               !isRunningExtension && (
                 <a href='https://wonder.page.link/hitup-chrome'
-                   className="nav-link-item fa fa-chrome"
+                   className="d-none d-md-block nav-link-item fa fa-chrome"
                    data-tip data-for="nav-link-extension"
                    target='_blank'
                    rel="noopener noreferrer">
@@ -105,6 +110,7 @@ class TopNav extends React.Component {
             </Link>
             <ReactTooltip id="nav-link-discuss" place="bottom">Let's discuss here</ReactTooltip>
           </div>
+
           {this.state.hitGem && <div className="gemmy-words d-none d-md-block">
             <span data-tip data-for="gemmy-words-tooltip" dangerouslySetInnerHTML={{__html: snarkdown(this.state.hitGem.content || "Mew~")}}></span>
             <ReactTooltip id="gemmy-words-tooltip" place="top"
@@ -125,8 +131,6 @@ class TopNav extends React.Component {
 const mapStateToProps = store => {
   return {
     theme: store.preference.theme,
-    // preference: store.preference,
-    // github: store.github
   };
 };
 
