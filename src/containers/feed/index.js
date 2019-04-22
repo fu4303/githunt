@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 import Alert from '../../components/alert';
 import Loader from '../../components/loader';
-import TopNav from '../../components/top-nav';
 import Filters from '../../components/filters';
 import GroupHeading from '../../components/group-heading';
 import { fetchTrending } from '../../redux/github/actions';
@@ -139,32 +138,29 @@ class FeedContainer extends React.Component {
 
   render() {
     return (
-      <>
-        <TopNav />
-        <div className="container pb-4">
-          <div className="header-row clearfix">
-            <GroupHeading
-              dateJump={this.props.preference.dateJump}
-              language={this.props.preference.language} />
-            <div className="group-filters">
-              <Filters
-                selectedLanguage={this.props.preference.language}
-                selectedViewType={this.props.preference.viewType}
-                updateLanguage={this.props.updateLanguage}
-                updateViewType={this.props.updateViewType}
-                updateDateJump={this.props.updateDateJump}
-                selectedDateJump={this.props.preference.dateJump}
-              />
-            </div>
+      <div className="container pb-4">
+        <div className="header-row clearfix">
+          <GroupHeading
+            dateJump={this.props.preference.dateJump}
+            language={this.props.preference.language} />
+          <div className="group-filters">
+            <Filters
+              selectedLanguage={this.props.preference.language}
+              selectedViewType={this.props.preference.viewType}
+              updateLanguage={this.props.updateLanguage}
+              updateViewType={this.props.updateViewType}
+              updateDateJump={this.props.updateDateJump}
+              selectedDateJump={this.props.preference.dateJump}
+            />
           </div>
-          <div className="body-row">
-            {this.hasRepositories() && this.renderRepositoriesList()}
-            {this.props.github.processing && <Loader />}
-          </div>
-          {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()
-          }
         </div>
-      </>
+        <div className="body-row">
+          {this.hasRepositories() && this.renderRepositoriesList()}
+          {this.props.github.processing && <Loader />}
+        </div>
+        {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()
+        }
+      </div>
     );
   }
 }
