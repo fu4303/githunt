@@ -23,22 +23,15 @@ export default props => {
           outerContainerId={ "theme-wrap" }
           customBurgerIcon={false}
     {...props}>
-      <p>SIDE BAR PLACEHOLDER</p>
-      <a className="menu-item" href="/">
-        Home
-      </a>
+      <h4>Settings</h4>
 
-      <a className="menu-item" href="/burgers">
-        Burgers
-      </a>
+      <span className="menu-item">
+        Color Theme: Light/Dark
+      </span>
 
-      <a className="menu-item" href="/pizzas">
-        Pizzas
-      </a>
-
-      <a className="menu-item" href="/desserts">
-        Desserts
-      </a>
+      <span className="menu-item">
+        Not Occupy New Tab
+      </span>
     </Menu>
   );
 };
