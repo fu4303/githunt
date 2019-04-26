@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { reveal as Menu } from "react-burger-menu";
 import { setColorTheme } from 'redux/preference/actions';
 import {registerToggleSideBarHandler} from 'components/sidebar/sidebar-toggle-bus';
+import Toggle from 'react-toggle';
+
+import "react-toggle/style.css";
 import './styles.scss';
 
 const SideBar = props => {
@@ -34,14 +37,17 @@ const SideBar = props => {
       <h4>Settings</h4>
 
       <span className="menu-item">
-        Color Theme: <select value={props.theme} onChange={setThemeHandler}>
+        Color Theme <select value={props.theme} onChange={setThemeHandler}>
           <option value="light">Light</option>
           <option value="dark">Dark</option>
         </select>
       </span>
 
       <span className="menu-item">
-        Not Occupy New Tab
+        <label>
+          <span>Not Occupy New Tab</span>
+          <Toggle defaultChecked={true} onChange={null} />
+        </label>
       </span>
     </Menu>
   );
