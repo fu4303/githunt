@@ -56,7 +56,7 @@ export const updateDateJump = function (dateJump) {
 };
 
 
-export function toggleColorTheme(theme) {
+export function setColorTheme(theme) {
   return dispatch => {
     dispatch({
       type: SET_COLOR_THEME,

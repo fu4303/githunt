@@ -22,10 +22,15 @@
     background: var(--background-secondary-color);
     padding: 1em 1.5em;
     .bm-item-list {
-      color: #b8b7ad;
+      color: var(--text-main-color);
       .bm-item {
         display: inline-block;
         outline: 0;
+        select {
+          background: var(--background-secondary-color);
+          color: var(--text-main-color);
+          border: 1px solid var(--border-primary-color);
+        }
       }
       h4.bm-item {
         // font-weight: normal;

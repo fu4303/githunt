@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip'
 import {GemmyClient} from 'gemmy-client';
 import snarkdown from 'snarkdown';
-import { toggleColorTheme } from 'redux/preference/actions';
+import { setColorTheme } from 'redux/preference/actions';
 import {toggleSideBar} from 'components/sidebar/sidebar-toggle-bus';
 
 import './styles.scss';
@@ -34,7 +34,7 @@ class TopNav extends React.Component {
     let prev = this.props.theme;
     let right = (prev === 'light'? 'dark': 'light');
     console.log(`Toggling color theme from ${prev} to ${right}`);
-    this.props.toggleColorTheme(right);
+    this.props.setColorTheme(right);
   }
 
   render() {
@@ -135,7 +135,7 @@ const mapStateToProps = store => {
 };
 
 const mapDispatchToProps = {
-  toggleColorTheme
+  setColorTheme
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopNav);
