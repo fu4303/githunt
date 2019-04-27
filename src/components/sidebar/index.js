@@ -6,6 +6,7 @@ import {
 } from 'redux/preference/actions';
 import {registerToggleSideBarHandler} from 'components/sidebar/sidebar-toggle-bus';
 import Toggle from 'react-toggle';
+import {isRunningExtension} from 'lib/runtime';
 
 import "react-toggle/style.css";
 import './styles.scss';
@@ -52,12 +53,12 @@ const SideBar = props => {
         </label>
       </span>
 
-      <span className="ont-option">
+      {isRunningExtension && <span className="ont-option">
         <label>
           <span>Occupy New Tab&nbsp;</span>
           <Toggle defaultChecked={props.whether_occupy_newtab} onChange={setONTHandler} />
         </label>
-      </span>
+      </span>}
     </Menu>
   );
 };
