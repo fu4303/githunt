@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
 import { connect } from 'react-redux';
 import { reveal as Menu } from "react-burger-menu";
-import { setColorTheme } from 'redux/preference/actions';
+import {
+  setColorTheme, setWhetherOccupyNewTab
+} from 'redux/preference/actions';
 import {registerToggleSideBarHandler} from 'components/sidebar/sidebar-toggle-bus';
 import Toggle from 'react-toggle';
 
@@ -27,6 +29,10 @@ const SideBar = props => {
     console.debug('theme set to', selected);
   }
 
+  const setONTHandler = event => {
+    props.setWhetherOccupyNewTab(event.target.checked);
+  }
+
   return (
     <Menu right isOpen={isOpen}
           onStateChange={syncSideBarState}
@@ -34,19 +40,22 @@ const SideBar = props => {
           outerContainerId={ "theme-wrap" }
           customBurgerIcon={false}
     {...props}>
-      <h4>Settings</h4>
+      <h2>Settings</h2>
 
-      <span className="menu-item">
-        Color Theme <select value={props.theme} onChange={setThemeHandler}>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
+      <span className="">
+        <label>
+          <span>Color Theme&nbsp;</span>
+          <select value={props.theme} onChange={setThemeHandler}>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </label>
       </span>
 
-      <span className="menu-item">
+      <span className="ont-option">
         <label>
-          <span>Not Occupy New Tab</span>
-          <Toggle defaultChecked={true} onChange={null} />
+          <span>Occupy New Tab&nbsp;</span>
+          <Toggle defaultChecked={props.whether_occupy_newtab} onChange={setONTHandler} />
         </label>
       </span>
     </Menu>
@@ -56,11 +65,13 @@ const SideBar = props => {
 const mapStateToProps = store => {
   return {
     theme: store.preference.theme,
+    whether_occupy_newtab: store.preference.whether_occupy_newtab,
   };
 };
 
 const mapDispatchToProps = {
-  setColorTheme
+  setColorTheme,
+  setWhetherOccupyNewTab
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SideBar);

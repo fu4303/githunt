@@ -1,9 +1,17 @@
-import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE, SET_COLOR_THEME } from './types';
+import {
+  UPDATE_DATE_TYPE,
+  UPDATE_LANGUAGE,
+  UPDATE_OPTIONS,
+  UPDATE_VIEW_TYPE,
+  SET_COLOR_THEME,
+  SET_WHETHER_OCCUPY_NEWTAB,
+} from './types';
 
 let chrome = window.chrome;
 let isChromeExt = chrome && chrome.storage && chrome.storage.sync;
 
 let initialState = {
+  whether_occupy_newtab: true,
   theme: 'light',
   viewType: 'grid',
   dateJump: 'week',
@@ -51,6 +59,11 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         theme: action.payload
+      };
+    case SET_WHETHER_OCCUPY_NEWTAB:
+      return {
+        ...state,
+        whether_occupy_newtab: action.payload
       };
     default:
       return state;

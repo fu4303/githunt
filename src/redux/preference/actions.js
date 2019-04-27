@@ -4,7 +4,8 @@ import {
   UPDATE_LANGUAGE,
   UPDATE_OPTIONS,
   UPDATE_VIEW_TYPE,
-  SET_COLOR_THEME
+  SET_COLOR_THEME,
+  SET_WHETHER_OCCUPY_NEWTAB,
 } from "./types";
 
 export const updateOptions = function (options) {
@@ -65,6 +66,19 @@ export function setColorTheme(theme) {
     ReactGA.event({
       category: 'Preference',
       action: `Color Theme Set to ${theme}`
+    });
+  };
+}
+
+export function setWhetherOccupyNewTab(b) {
+  return dispatch => {
+    dispatch({
+      type: SET_WHETHER_OCCUPY_NEWTAB,
+      payload: b
+    });
+    ReactGA.event({
+      category: 'Preference',
+      action: b? 'OK to Occupy New Tab' : 'Not Occupy New Tab'
     });
   };
 }
