@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "4.7.2",
+  "version": "4.8.0",
   "name": "HitUP",
   "short_name": "HitUP",
   "description": "Find top things in ➕New Tab instead of “blank page”, including the most popular projects on GitHub.",
