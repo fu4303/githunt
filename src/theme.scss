@@ -21,6 +21,25 @@
 }
 
 .theme-dark {
+  --background-primary-color: #1e2024;
+  --background-secondary-color: #131313;
+
+  --text-main-color: #{$gray-500};  // main text, e..g repo description
+  --text-head-color: #{$gray-300};
+  --text-secondary-color: #{$gray-600};
+  --text-faded-color: #{$gray-700};
+
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+  --border-primary-color: #313131;
+
+  --top-nav-background-color: #010101;
+  --top-nav-border-color: var(--border-primary-color);
+
+  --primary-button-background-color: #131313;
+  --primary-button-border-color: #131313;
+}
+
+.theme-dark-blue {
   --background-primary-color: #01385c;
   --background-secondary-color: #131313;
 

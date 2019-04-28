@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { connect } from 'react-redux';
-import { reveal as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import {
   setColorTheme, setWhetherOccupyNewTab
 } from 'redux/preference/actions';
@@ -49,6 +49,7 @@ const SideBar = props => {
           <select value={props.theme} onChange={setThemeHandler}>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
+            <option value="dark-blue">Dark Blue</option>
           </select>
         </label>
       </span>
