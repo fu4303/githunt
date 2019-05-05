@@ -1,16 +1,18 @@
 <h1 align="center">
+  <a href="https://github.com/wonderbeyond/HitUP">
   <img height="100" src="https://raw.github.com/wonderbeyond/HitUP/master/public/img/logo.svg?sanitize=true" alt="HitUP" />
   <br>HitUP
+  </a>
 </h1>
 
 <p align="center">
   <a href="https://github.com/wonderbeyond/HitUP">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" alt="contributions" />
   </a>
-  <a href="https://wonder.page.link/hitup-chrome">
+  <a href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?utm_source=GitHub&utm_medium=wonderbeyond/HitUP">
     <img src="https://img.shields.io/chrome-web-store/v/eiokaohkigpbonodjcbjpecbnccijkjb.svg" alt="version" />
   </a>
-  <a href="https://wonder.page.link/hitup-chrome">
+  <a href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?utm_source=GitHub&utm_medium=wonderbeyond/HitUP">
     <img src="https://img.shields.io/chrome-web-store/stars/eiokaohkigpbonodjcbjpecbnccijkjb.svg?label=rating" alt="rating" />
   </a>
   <a href="https://github.com/wonderbeyond/HitUP/blob/master/license.md">
@@ -19,14 +21,17 @@
 </p>
 
 <p align="center">
-  <b>Find top things in New Tab, including GitHub Trending Repositories</b></br>
-  <sub>✨ Use HitUP as a <a href="https://wonder.page.link/hitup-chrome" target="_blank">Chrome Extension</a> or just <a href="https://hitup.wondertools.top" target="_blank">Online</a> ✨<sub>
+  <b>Find top things in New Tab, including GitHub Trending Repositories</b>
+  <br>
+  <a href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?utm_source=GitHub&utm_medium=wonderbeyond/HitUP"><img src="https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png" /></a>
+  <br>
+  <sub>✨ You can either use HitUP as <a href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?utm_source=GitHub&utm_medium=wonderbeyond/HitUP" target="_blank">Chrome extension</a> or just <a href="https://hitup.wondertools.top" target="_blank">online</a></sub>
 </p>
 
+
 <p align="center">
-  <br><b>HitUP</b> is a react app and a browser extension that helps you
+  <b>HitUP</b> is a react app and a browser extension that helps you
   <br>explore top things in New Tab, including the most popular projects on GitHub
-  <br><a href="https://hitup.wondertools.top">Use Online</a> • <a href="https://wonder.page.link/hitup-chrome">Install Extension</a>
   <br><br>
 </p>
 
@@ -54,7 +59,7 @@
 
 ## Installation
 
-* Chrome Extension – https://wonder.page.link/hitup-chrome
+* Chrome Extension – https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?utm_source=GitHub&utm_medium=wonderbeyond/HitUP
 * Use Online – https://hitup.wondertools.top
 
 ## Contributions
