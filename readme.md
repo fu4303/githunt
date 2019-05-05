@@ -1,8 +1,6 @@
 <h1 align="center">
-  <a href="https://github.com/wonderbeyond/HitUP">
   <img height="100" src="https://raw.github.com/wonderbeyond/HitUP/master/public/img/logo.svg?sanitize=true" alt="HitUP" />
   <br>HitUP
-  </a>
 </h1>
 
 <p align="center">
@@ -73,7 +71,6 @@ MIT © [wonderbeyond](https://github.com/wonderbeyond), [Kamran Ahmed](https://k
 
 ## Acknowledgments
 
-* [kamranahmedse/githunt](https://github.com/kamranahmedse/githunt)
-  HitUP starts from a fork of GitHunt.
-  I totaly changed the data logic to present the real trending repositories.
+* [kamranahmedse/githunt](https://github.com/kamranahmedse/githunt):
+  HitUP started as a fork of GitHunt, then I totaly changed the data logic to present the real trending repositories.
 * HitUP is using [huchenme/github-trending-api](https://github.com/huchenme/github-trending-api)
