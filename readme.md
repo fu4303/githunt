@@ -60,17 +60,26 @@
 * Chrome Extension – https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?utm_source=GitHub&utm_medium=wonderbeyond/HitUP
 * Use Online – https://hitup.wondertools.top
 
-## Contributions
+## Supporting HitUP
+
+Support HitUP by becoming a backer or sponsor. Your avatar or logo will show up here with a link to your website.
+
+[Support HitUP on Patreon](https://www.patreon.com/wonderbeyond)
+
+
+## Contributing
 
 * Spread the word
-* Open pull requests
-* Reach out with any feedback
+* Open an issue
+* Submit a pull request
+* Give HitUP a star ⭐ on [GitHub](https://github.com/wonderbeyond/HitUP)
 
-## License
-MIT © [wonderbeyond](https://github.com/wonderbeyond), [Kamran Ahmed](https://kamranahmed.info)
-
-## Acknowledgments
+## Thanks
 
 * [kamranahmedse/githunt](https://github.com/kamranahmedse/githunt):
   HitUP started as a fork of GitHunt, then I totaly changed the data logic to present the real trending repositories.
 * HitUP is using [huchenme/github-trending-api](https://github.com/huchenme/github-trending-api)
+
+## License
+
+This project is licensed under the terms of the [MIT license](https://github.com/wonderbeyond/HitUP/blob/master/license.md).
