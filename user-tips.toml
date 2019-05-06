@@ -8,6 +8,7 @@ message = """
   href="https://github.com/wonderbeyond/HitUP/wiki/Dark-Theme-Support">
   color theme support</a> now?
   """
-[[tips.env_requires]]
+[tips.env_requires]
   version = ">=4.8.1"
   stage = "development"
+  is_maintainer = true
