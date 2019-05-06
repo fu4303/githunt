@@ -1,0 +1,13 @@
+title = "This file maintains notifications to HitUP users"
+
+[[tips]]
+id = 'inform-color-theme'
+message = """
+  Do you know HitUP has
+  <a rel="noopener noreferrer" target="_blank"
+  href="https://github.com/wonderbeyond/HitUP/wiki/Dark-Theme-Support">
+  color theme support</a> now?
+  """
+[[tips.env_requires]]
+  version = ">=4.8.1"
+  stage = "development"
