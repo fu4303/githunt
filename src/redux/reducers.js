@@ -1,9 +1,3 @@
-import { combineReducers } from 'redux';
-
-import preference from './preference/reducer';
-import github from './github/reducer';
-
-export default combineReducers({
-  github,
-  preference,
-});
+export {default as preference} from './preference/reducer';
+export {default as github} from './github/reducer';
+export {default as userData} from './user-data/reducer';

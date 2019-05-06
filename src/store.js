@@ -1,30 +1,43 @@
-import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { combineReducers, applyMiddleware, createStore } from 'redux';
+
 import { persistReducer, persistStore } from 'redux-persist';
-import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import reduxLocalStorage from 'redux-persist/lib/storage';
 import createChromeStorage from 'redux-persist-chrome-storage'
-import thunk from 'redux-thunk';
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 
-import rootReducer from './redux/reducers';
+import {isRunningChromeExtension} from 'lib/runtime';
+import * as reducers from './redux/reducers';
 
-let chrome = window.chrome;
-let isChromeExt = chrome && chrome.storage && chrome.storage.sync;
+const preferredStorage = isRunningChromeExtension ? createChromeStorage(window.chrome, 'sync') : reduxLocalStorage;
 
-const persistedReducers = persistReducer(
+const rootReducer = combineReducers({
+  'github': reducers.github,
+  'preference': reducers.preference,
+  'userData': persistReducer(
+    {
+      key: 'hitup:user-data',
+      storage: preferredStorage,
+      timeout: null,
+      blacklist: [],
+      stateReconciler: autoMergeLevel2,
+    },
+    reducers.userData
+  ),
+});
+
+const persistedRootReducer = persistReducer(
   {
     key: 'hitup:root',
-    storage: isChromeExt ? createChromeStorage(chrome, 'sync') : reduxLocalStorage,
+    storage: preferredStorage,
+    timeout: null,
     whitelist: ['preference'],
+    // blacklist: ['userData'],
     stateReconciler: autoMergeLevel2,
   },
   rootReducer,
 );
 
-export const store = createStore(persistedReducers, composeWithDevTools(
-  applyMiddleware(
-    thunk,
-  ),
-));
-
+export const store = createStore(persistedRootReducer, composeWithDevTools(applyMiddleware(thunk)));
 export const persist = persistStore(store);

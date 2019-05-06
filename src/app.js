@@ -8,6 +8,7 @@ import TopNav from 'components/top-nav';
 import Launcher from './components/launcher';
 import { persist, store } from './store';
 import AppRoutes from './routes';
+import TopTip from 'components/top-tip';
 import SideBar from "components/sidebar";
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
 const PageWrapper = props => (
   <div id="page-wrap">
     <HashRouter>
+      <TopTip />
       <TopNav />
       <AppRoutes/>
     </HashRouter>

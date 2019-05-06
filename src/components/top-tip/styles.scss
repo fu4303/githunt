@@ -1,0 +1,67 @@
+$background: #2D3E50;
+$color: #F4CB89;
+$linkColor: #4698F5;
+
+.top-tip {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 36px;
+  padding: 0.5em;
+  background: $background;
+  color: $color;
+
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  display: flex;
+  transition: all 0.3s ease;
+
+  &-empty {
+    display: none;
+  }
+
+  &-enter {
+    opacity: 0;
+  }
+  &-enter-active, &-enter-done {
+    opacity: 1;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+  }
+  &-exit-done {
+    opacity: 0;
+    display: none;
+  }
+
+  .message {
+    a {
+      color: $linkColor;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    height: 20px;
+    width: 36px;
+    line-height: 20px;
+    padding: 0 0 0 6px;
+    color: #ccc;
+    &:hover {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
