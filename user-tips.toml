@@ -12,3 +12,5 @@ message = """
   version = ">=4.8.1"
   stage = "development"
   is_maintainer = true
+  # web_extension = true
+  media_min_width = 768  # window.innerWidth
