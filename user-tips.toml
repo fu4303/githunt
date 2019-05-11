@@ -5,8 +5,8 @@ id = 'inform-color-theme'
 message = """
   Do you know HitUP has
   <a target="_blank"
-  href="https://github.com/wonderbeyond/HitUP/wiki/Dark-Theme-Support">
-  color theme support</a> now?
+  href="https://github.com/wonderbeyond/HitUP/wiki/Color-Theme-Support">
+  color theme support</a> now ?
   """
 [tips.env_requires]
   version = ">=4.9.0"
