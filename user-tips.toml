@@ -18,7 +18,7 @@ message = """
 [[tips]]
 id = 'ask-rating-on-chrome-web-store'
 message = """
-  Hi, do you like HitUP? Could you
+  Hi, do you like HitUP ? Could you
   <a target="_blank" href="https://github.com/wonderbeyond/HitUP/wiki/Dark-Theme-Support">
     give a rating on chrome web store
   </a>?
