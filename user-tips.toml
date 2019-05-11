@@ -4,14 +4,14 @@ title = "This file maintains notifications to HitUP users"
 id = 'inform-color-theme'
 message = """
   Do you know HitUP has
-  <a rel="noopener noreferrer" target="_blank"
+  <a target="_blank"
   href="https://github.com/wonderbeyond/HitUP/wiki/Dark-Theme-Support">
   color theme support</a> now?
   """
 [tips.env_requires]
-  version = ">=4.8.1"
-  stage = "development"
-  is_maintainer = true
+  version = ">=4.9.0"
+  # stage = "development"
+  # is_maintainer = true
   # web_extension = true
   media_min_width = 768  # window.innerWidth
 
@@ -24,7 +24,7 @@ message = """
   </a>?
   """
 [tips.env_requires]
-  stage = "development"
-  is_maintainer = true
+  # stage = "development"
+  # is_maintainer = true
   web_extension = true
   media_min_width = 768  # window.innerWidth
