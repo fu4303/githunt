@@ -2,7 +2,7 @@ title = "This file maintains notifications to HitUP users"
 
 [[tips]]
 id = 'inform-color-theme'
-disabled = true
+# disabled = true
 message = """
   Do you know HitUP has
   <a target="_blank" class="action"
