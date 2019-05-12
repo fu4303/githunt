@@ -50,6 +50,9 @@ $linkColor: #4698F5;
   }
 
   .close {
+    @media (pointer: fine) {
+      visibility: hidden;
+    }
     cursor: pointer;
     display: inline-block;
     font-size: 18px;
@@ -62,6 +65,11 @@ $linkColor: #4698F5;
       color: #fff;
       font-weight: bold;
       font-size: 20px;
+    }
+  }
+  &:hover .close {
+    @media (pointer: fine) {
+      visibility: visible;
     }
   }
 }

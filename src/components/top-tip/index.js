@@ -16,6 +16,7 @@ const TopTip = props => {
     mediaWidth: window.innerWidth,
     isRunningExtension: isRunningExtension,
     isRunningChromeExtension: isRunningChromeExtension,
+    isRunningPlainWeb: document.location.href.startsWith('http'),
   }
 
   const [activeTip, setActiveTip] = useState(null);
