@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { createRef, useState, useEffect } from "react";
 import {parse as tomlParse}from 'toml';
 import {isRunningExtension, isRunningChromeExtension} from 'lib/runtime';
 import { connect } from 'react-redux';
@@ -20,6 +20,7 @@ const TopTip = props => {
 
   const [activeTip, setActiveTip] = useState(null);
   const [inProp, setInProp] = useState(false);  // http://reactcommunity.org/react-transition-group/css-transition
+  const tipRef = createRef();
 
   const matchDisplayCondition = tip => {
     // default returns true, unless there is an unmet condition
@@ -49,25 +50,24 @@ const TopTip = props => {
     }
 
     if (envReqs.stage && envReqs.stage !== runtimeEnv.stage) {
-      console.debug(`Stage mismatch for Tip#{$tip.id}`);
+      console.debug(`Stage mismatch for Tip#${tip.id}`);
       return false;
     }
 
     if (envReqs.is_maintainer && !runtimeEnv.isMaintainer) {
-      console.debug(`Tip#{$tip.id} not to dispaly due to maintainer required`);
+      console.debug(`Tip#${tip.id} not to dispaly due to maintainer required`);
       return false;
     }
 
     if (envReqs.web_extension && !runtimeEnv.isRunningExtension) {
-      console.debug(`Tip#{$tip.id} not to dispaly due to require running as web extension`);
+      console.debug(`Tip#${tip.id} not to dispaly due to require running as web extension`);
       return false;
     }
 
     if (envReqs.media_min_width && runtimeEnv.mediaWidth < envReqs.media_min_width) {
-      console.debug(`Tip#{$tip.id} not to dispaly due to mediaWidth>=${envReqs.media_min_width} required`);
+      console.debug(`Tip#${tip.id} not to dispaly due to mediaWidth>=${envReqs.media_min_width} required`);
       return false;
     }
-
 
     return true;
   }
@@ -98,6 +98,19 @@ const TopTip = props => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
+  useEffect(() => {
+    if (tipRef.current) {
+      tipRef.current.addEventListener('click', event => {
+        if (event.target.matches('a.action')) {
+          dismiss();
+          console.debug(`Closed tip#${activeTip.id} after user take action`)
+        }
+      });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeTip]);
+
   const dismiss = () => {
     setInProp(false);
     props.dismissUserTip(activeTip.id);
@@ -107,7 +120,7 @@ const TopTip = props => {
   return (
     <CSSTransition in={inProp} timeout={300} classNames="top-tip">
       {(activeTip && <div className="top-tip">
-        <span className="message" dangerouslySetInnerHTML={{__html: activeTip.message}}></span>
+        <span ref={tipRef} className="message" dangerouslySetInnerHTML={{__html: activeTip.message}}></span>
         <span className="close" aria-hidden="true" onClick={dismiss}>&times;</span>
       </div>) || <div className="top-tip top-tip-empty">
         Mew~
