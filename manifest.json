@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "version": "4.8.0",
-  "name": "HitUP",
+  "version": "4.9.0",
+  "name": "HitUP - Find Top Things",
   "short_name": "HitUP",
-  "description": "Find top things in ➕New Tab instead of “blank page”, including the most popular projects on GitHub.",
+  "description": "Find top things in new tab page, e.g. trending GitHub repositories and more...",
   "homepage_url": "https://github.com/wonderbeyond/hitup",
   "icons": {
     "16": "/img/icon16.png",
