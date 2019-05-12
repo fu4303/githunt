@@ -30,4 +30,5 @@ message = """
   # stage = "development"
   # is_maintainer = true
   web_extension = true
+  use_time = ">3 days"
   media_min_width = 768  # window.innerWidth
