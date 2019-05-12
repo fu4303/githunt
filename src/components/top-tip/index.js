@@ -49,6 +49,55 @@ const TopTip = props => {
       if (!versionMet) {return false}
     }
 
+    if (envReqs.time) {
+      const mat = envReqs.time.match(/^(>|<)(.+)$/);
+      if (!mat) {
+        console.error(`Invalid time spec: ${envReqs.time}`);
+        return false;
+      }
+      const [op, timeReq] = [mat[1], new Date(mat[2])];
+      const now = new Date()
+      const timeMet = (
+        (op === '>' && +now > +timeReq) ||
+        (op === '<' && +now < +timeReq)
+      );
+      console.debug(
+        `Tip#${tip.id} requires(time${op}${timeReq}), time=${now}, met: ${timeMet}`
+      );
+      if (!timeMet) {return false}
+    }
+
+    if (envReqs.use_time) {
+      // match how long has current user been using this app
+      // e.g. ">3 days"
+      const unit2msec = {
+        'seconds': 1000,
+        'minutes': 1000*60,
+        'hours': 1000*60*60,
+        'days': 1000*60*60*24,
+      }
+
+      // eslint-disable-next-line no-useless-escape
+      const mat = envReqs.use_time.match(/^(>|<)([\d\.]+) (seconds|minutes|hours|days)/);
+      const [op, useTimeReq, unit] = [mat[1], mat[2], mat[3]];
+      const useTimeReqInMsec = parseFloat(useTimeReq) * unit2msec[unit];
+      const now = new Date();
+      const firstSeenTime = new Date(props.firstSeenTime);
+      const realUseTime = now - firstSeenTime;
+
+      const useTimeMet = (
+        (op === '>' && realUseTime > useTimeReqInMsec) ||
+        (op === '<' && realUseTime < useTimeReqInMsec)
+      )
+
+      console.debug(
+        `Tip#${tip.id} requires(useTime${op}${useTimeReq} ${unit}),` +
+        ` realUseTime=${realUseTime/unit2msec[unit]} ${unit}, met: ${useTimeMet}`
+      );
+
+      if (!useTimeMet) {return false}
+    }
+
     if (envReqs.stage && envReqs.stage !== runtimeEnv.stage) {
       console.debug(`Stage mismatch for Tip#${tip.id}`);
       return false;
@@ -131,7 +180,8 @@ const TopTip = props => {
 
 const mapStateToProps = store => {
   return {
-    dismissedUserTips: store.userData.dismissedUserTips
+    dismissedUserTips: store.userData.dismissedUserTips,
+    firstSeenTime: store.userData.firstSeenTime,
   };
 };
 
