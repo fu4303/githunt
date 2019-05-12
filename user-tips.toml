@@ -12,6 +12,7 @@ message = """
 [tips.env_requires]
   version = ">=4.9.0"
   time = "<2019-05-13T00:00:00Z"
+  use_time = ">1 hours"
   # stage = "development"
   # is_maintainer = true
   # web_extension = true
