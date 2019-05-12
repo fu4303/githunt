@@ -25,6 +25,9 @@ const TopTip = props => {
   const matchDisplayCondition = tip => {
     // default returns true, unless there is an unmet condition
     // So, only returns false in branch conditon test!
+
+    if (tip.disabled) {return false}
+
     const envReqs = tip.env_requires;
 
     if (envReqs.version) {
