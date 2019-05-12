@@ -4,27 +4,28 @@ import {
 } from './types';
 
 const initialState = {
-  dismissed_user_tips: [],
+  dismissedUserTips: [],
+  firstSeenTime: (new Date()).toISOString(),
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case DISMISS_USER_TIP:
-      let dismissed_user_tips = [...state.dismissed_user_tips] || [];
-      if (!dismissed_user_tips.includes(action.payload)) {
-        dismissed_user_tips.push(action.payload)
-        if (dismissed_user_tips.length > 100) {
-          dismissed_user_tips.shift()
+      let dismissedUserTips = [...state.dismissedUserTips] || [];
+      if (!dismissedUserTips.includes(action.payload)) {
+        dismissedUserTips.push(action.payload)
+        if (dismissedUserTips.length > 100) {
+          dismissedUserTips.shift()
         }
       }
       return {
         ...state,
-        dismissed_user_tips
+        dismissedUserTips
       };
     case EMPTY_DISMISSED_USER_TIPS:
       return {
         ...state,
-        dismissed_user_tips: []
+        dismissedUserTips: []
       };
     default:
       return state;

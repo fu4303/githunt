@@ -81,7 +81,7 @@ const TopTip = props => {
           let parsed = tomlParse(text);
           console.debug(parsed);
           parsed.tips.some(tip => {
-            if (props.dismissed_user_tips.includes(tip.id)) {
+            if (props.dismissedUserTips.includes(tip.id)) {
               return false
             }
             if (matchDisplayCondition(tip)) {
@@ -131,7 +131,7 @@ const TopTip = props => {
 
 const mapStateToProps = store => {
   return {
-    dismissed_user_tips: store.userData.dismissed_user_tips
+    dismissedUserTips: store.userData.dismissedUserTips
   };
 };
 
