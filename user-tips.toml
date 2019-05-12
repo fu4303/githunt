@@ -4,9 +4,10 @@ title = "This file maintains notifications to HitUP users"
 id = 'inform-color-theme'
 message = """
   Do you know HitUP has
-  <a target="_blank"
-  href="https://github.com/wonderbeyond/HitUP/wiki/Color-Theme-Support">
-  color theme support</a> now ?
+  <a target="_blank" class="action"
+    href="https://github.com/wonderbeyond/HitUP/wiki/Color-Theme-Support">
+    color theme support
+  </a> now ?
   """
 [tips.env_requires]
   version = ">=4.9.0"
@@ -19,7 +20,8 @@ message = """
 id = 'ask-rating-on-chrome-web-store'
 message = """
   Hi, do you like HitUP ? Could you please
-  <a target="_blank" href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?ref=HitUP-usertips">
+  <a target="_blank" class="action"
+    href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?ref=HitUP-usertips">
     give a rating on chrome web store
   </a>?
   """
