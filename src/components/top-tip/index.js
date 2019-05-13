@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, { createRef, useState, useEffect } from "react";
 import {parse as tomlParse}from 'toml';
 import {isRunningExtension, isRunningChromeExtension} from 'lib/runtime';
@@ -156,6 +157,11 @@ const TopTip = props => {
     if (tipRef.current) {
       tipRef.current.addEventListener('click', event => {
         if (event.target.matches('a.action')) {
+          ReactGA.event({
+            category: 'User Action',
+            label: 'User Tip',
+            action: `User Responded Tip#${activeTip.id}`,
+          });
           dismiss();
           console.debug(`Closed tip#${activeTip.id} after user take action`)
         }

@@ -11,7 +11,7 @@ export default (WrappedComponent, options = {}) => {
   };
 
   const HOC = props => {
-    useEffect(() => trackPage(props.location.pathname), [
+    useEffect(() => trackPage(props.location.pathname + document.location.search), [
       props.location.pathname
     ]);
 

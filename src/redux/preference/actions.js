@@ -25,6 +25,7 @@ export const updateViewType = function (viewType = 'grid') {
     });
     ReactGA.event({
       category: 'Preference',
+      label: 'Set Trending ViewType',
       action: `Trending ViewType Set to ${viewType}`
     });
   };
@@ -38,6 +39,7 @@ export const updateLanguage = function (language) {
     });
     ReactGA.event({
       category: 'Preference',
+      label: 'Set Trending Language',
       action: `Trending Language Set to ${language || "All"}`
     });
   };
@@ -51,6 +53,7 @@ export const updateDateJump = function (dateJump) {
     });
     ReactGA.event({
       category: 'Preference',
+      label: 'Set Trending Period',
       action: `Trending Period Set to ${dateJump}`
     });
   };
@@ -65,6 +68,7 @@ export function setColorTheme(theme) {
     });
     ReactGA.event({
       category: 'Preference',
+      label: 'Set Color Theme',
       action: `Color Theme Set to ${theme}`
     });
   };
@@ -78,6 +82,7 @@ export function setWhetherOccupyNewTab(b) {
     });
     ReactGA.event({
       category: 'Preference',
+      label: 'Set Whether Occupy New Tab',
       action: b? 'OK to Occupy New Tab' : 'Not Occupy New Tab'
     });
   };
