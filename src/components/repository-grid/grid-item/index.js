@@ -5,8 +5,8 @@ import './styles.scss';
 
 import ReactTooltip from 'react-tooltip';
 import {trendingPeriodDefs} from 'lib/gh-trending';
-import Star, {Stars} from '../../icons/star';
-import Fork from '../../icons/fork';
+import Star, {Stars} from 'icons/star';
+import Fork from 'icons/fork';
 
 // import {UncontrolledTooltip} from 'reactstrap';
 import BuiltByMembers from "components/built-by-members";

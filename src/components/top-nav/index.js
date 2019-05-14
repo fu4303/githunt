@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ToggleTheme from 'components/icons/toggle-theme';
+import ToggleTheme from 'icons/toggle-theme';
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip'
 import {GemmyClient} from 'gemmy-client';
