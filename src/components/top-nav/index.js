@@ -7,6 +7,12 @@ import {GemmyClient} from 'gemmy-client';
 import snarkdown from 'snarkdown';
 import { setColorTheme } from 'redux/preference/actions';
 import {toggleSideBar} from 'components/sidebar/sidebar-toggle-bus';
+import {ReactComponent as Heart} from 'icons/heart-solid.svg';
+import {ReactComponent as GitHub} from 'icons/github-brands.svg';
+import {ReactComponent as Twitter} from 'icons/twitter-brands.svg';
+import {ReactComponent as Chrome} from 'icons/chrome-brands.svg';
+import {ReactComponent as Comments} from 'icons/comments-solid.svg';
+import {ReactComponent as Bars} from 'icons/bars-solid.svg';
 
 import './styles.scss';
 
@@ -59,37 +65,42 @@ class TopNav extends React.Component {
           </div>
           <div title="Toggle theme" className="theme-toggle" onClick={this.toggleTheme}><ToggleTheme/></div>
 
-          <span title="Open setttings" className="float-right sidebar-toggle fa fa-bars"
-            onClick={toggleSideBar}></span>
+          <span title="Open setttings" className="float-right sidebar-toggle"
+            onClick={toggleSideBar}>
+            <Bars width="18" height="18" />
+          </span>
 
           <div className="float-right nav-icon-links">
             {
               isRunningExtension && (
-                <a href='https://wonder.page.link/hitup-chrome'
-                   className="nav-link-item fa fa-heart"
+                <a href='https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb'
+                   className="nav-link-item"
                    data-tip data-for="nav-link-rate"
                    target='_blank'
                    rel="noopener noreferrer">
+                   <Heart width="18" height="18" />
                 </a>
               )
             }
             <ReactTooltip id="nav-link-rate" place="bottom">Rate HitUP in Chrome Web Store</ReactTooltip>
 
             <a href='http://github.com/wonderbeyond/HitUP'
-               className="nav-link-item fa fa-github"
+               className="nav-link-item"
                data-tip data-for="nav-link-github"
                target='_blank'
                rel="noopener noreferrer">
+               <GitHub width="18" height="18" />
             </a>
             <ReactTooltip id="nav-link-github" place="bottom">View source on GitHub</ReactTooltip>
 
             {
               !isRunningExtension && (
-                <a href='https://wonder.page.link/hitup-chrome'
-                   className="d-none d-md-block nav-link-item fa fa-chrome"
+                <a href='https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb'
+                   className="d-none d-md-block nav-link-item"
                    data-tip data-for="nav-link-extension"
                    target='_blank'
                    rel="noopener noreferrer">
+                   <Chrome width="18" height="18" />
                 </a>
               )
             }
@@ -99,14 +110,16 @@ class TopNav extends React.Component {
                data-tip data-for="nav-link-tweet"
                target='_blank'
                rel="noopener noreferrer"
-               className="nav-link-item fa fa-twitter">
+               className="nav-link-item">
+               <Twitter width="18" height="18" />
             </a>
             <ReactTooltip id="nav-link-tweet" place="bottom">Share HitUP on Twitter</ReactTooltip>
 
             <Link to="/comments"
-              className="nav-link-item fa fa-comments"
+              className="nav-link-item"
               data-tip data-for="nav-link-discuss"
               rel="noopener noreferrer">
+              <Comments width="18" height="18" />
             </Link>
             <ReactTooltip id="nav-link-discuss" place="bottom">Let's discuss here</ReactTooltip>
           </div>

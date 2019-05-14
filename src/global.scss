@@ -24,7 +24,14 @@ button,
   background-color: var(--primary-button-background-color);
   border: 1px solid var(--primary-button-background-color);
   color: var(--text-main-color);
- // border: 1px solid #ccc;
+
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    margin-top: -2px;
+  }
+  // border: 1px solid #ccc;
   &:focus, &:active {
     outline: 0;
   }
@@ -36,4 +43,18 @@ button,
 
 .shadowed {
   box-shadow: 0 9px 62px -13px var(--box-shadow-color) !important;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+.spin {
+  animation: spin 2s infinite linear;
 }

@@ -1,5 +1,4 @@
 import 'custom-bootstrap.scss';
-import 'font-awesome/scss/font-awesome.scss';
 import 'global.scss';
 
 import ReactGA from 'react-ga';

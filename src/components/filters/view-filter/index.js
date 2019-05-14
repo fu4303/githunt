@@ -2,6 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import {ReactComponent as Table} from 'icons/table.svg';
+import {ReactComponent as List} from 'icons/list.svg';
+
 import './styles.scss';
 
 class ViewFilter extends React.Component {
@@ -18,12 +21,12 @@ class ViewFilter extends React.Component {
       <div className="view-type-wrap">
         <div className="view-type btn shadowed cursor-default">
           <button onClick={ () => this.changeSelected('grid') } className={ classNames({ active: this.props.selectedViewType === 'grid' }) }>
-            <i className="fa fa-table mr-2"></i>
-            Grid
+            <Table width="14" height="14" className="mr-2" />
+            <span>Grid</span>
           </button>
           <button onClick={ () => this.changeSelected('list') } className={ classNames({ active: this.props.selectedViewType === 'list' }) }>
-            <i className="fa fa-list mr-2"></i>
-            List
+            <List width="14" height="14" className="mr-2" />
+            <span>List</span>
           </button>
         </div>
       </div>

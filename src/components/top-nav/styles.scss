@@ -83,27 +83,17 @@
       &:not(:first-of-type) {
         margin-left: 5px;
       }
+
+      color: var(--text-secondary-color);
+      &:hover {
+        color: var(--text-main-color);
+      }
+
     }
     .nav-link-item:hover {
       text-decoration: none;
       position: relative;
       top: -1px;
-    }
-
-    .fa {
-      color: var(--text-secondary-color);
-      &:hover {
-        color: var(--text-main-color);
-      }
-    }
-    .fa-heart {
-      font-size: 18px;
-    }
-    .fa-comments {
-      font-size: 18px;
-    }
-    .fa-chrome {
-      font-size: 17px;
     }
   }
 

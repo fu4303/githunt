@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import './styles.scss';
 import {languages} from 'lib/gh-trending';
 
+import {ReactComponent as FilterSolid} from 'icons/filter-solid.svg';
+
 class LanguageFilter extends React.Component {
   filterInputRef = React.createRef();
 
@@ -181,8 +183,8 @@ class LanguageFilter extends React.Component {
     return (
       <div className='language-filter-wrap'>
         <button onClick={ this.toggleDropdown } className="btn btn-primary language-filter shadowed">
-          <i className="fa fa-filter mr-2"></i>
-          { this.props.selectedLanguage || 'All Languages' }
+          <FilterSolid width="12" height="12" className="mr-2"/>
+          <span>{ this.props.selectedLanguage || 'All Languages' }</span>
         </button>
         { this.state.showDropdown && this.getLanguageDropdown() }
       </div>
