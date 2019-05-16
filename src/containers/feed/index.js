@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import './styles.css';
+import './styles.scss';
 import Alert from '../../components/alert';
 import Loader from '../../components/loader';
 import Filters from '../../components/filters';
@@ -98,6 +98,12 @@ class FeedContainer extends React.Component {
   render() {
     return (
       <div className="container pb-4">
+        <div className="list-switcher">
+          <span className="list-item A"></span>
+          <span className="list-item B"></span>
+          <span className="list-item C"></span>
+        </div>
+
         <div className="header-row clearfix">
           <GroupHeading
             dateJump={this.props.preference.dateJump}

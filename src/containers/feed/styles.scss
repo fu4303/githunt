@@ -1,3 +1,39 @@
+.list-switcher {
+  height: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+
+  .list-item {
+    cursor: pointer;
+
+    $size: 14px;
+    margin: 2.5px;
+
+    width: $size;
+    height: $size;
+    &:hover {
+      box-shadow: 0 1px 2px currentColor;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    border-radius: 50%;
+
+    &.A {
+      background: orangered;
+    }
+    &.B {
+      background: darkviolet;
+    }
+    &.C {
+      background: limegreen;
+    }
+  }
+}
+
 .group-heading {
   font-size: 22px;
   font-weight: 600;
