@@ -12,7 +12,23 @@ export const trendingPeriodDefs = {
     'month': {heading: 'This Month', ghParamKey: 'monthly'},
 };
 
-export async function fetchTrendingRepositories({language, since}) {
+const adaptFilters = (filters) => {
+  const transformedFilters = {};
+
+  transformedFilters.language = filters.language
+  transformedFilters.since = {
+    'week': 'weekly',
+    'month': 'monthly',
+    // 'year': '',
+    'day': 'daily'
+  }[filters.dateJump]
+
+  return transformedFilters;
+};
+
+export async function fetchTrendingRepositories(filters) {
+  const {language, since} = adaptFilters(filters);
+
   let dataLabel = `${language || "all"}/${since}`;
   let cacheKey = `github-trending-repositories:${dataLabel}`;
   let reposities;

@@ -1,7 +1,6 @@
 import {
   UPDATE_DATE_TYPE,
   UPDATE_LANGUAGE,
-  UPDATE_OPTIONS,
   UPDATE_VIEW_TYPE,
   SET_COLOR_THEME,
   SET_WHETHER_OCCUPY_NEWTAB,
@@ -16,9 +15,6 @@ let initialState = {
   viewType: 'grid',
   dateJump: 'week',
   language: '',
-  options: {
-    token: '',
-  },
 };
 
 // if upgrated from previous version using localstorage for settings,
@@ -35,11 +31,6 @@ if (isChromeExt) {
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_OPTIONS:
-      return {
-        ...state,
-        options: action.payload
-      };
     case UPDATE_DATE_TYPE:
       return {
         ...state,

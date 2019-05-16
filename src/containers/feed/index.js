@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import './styles.css';
 import Alert from '../../components/alert';
@@ -24,7 +23,10 @@ class FeedContainer extends React.Component {
   }
 
   loadTrendingRepositories() {
-    const filters = this.getFilters();
+    const filters = {
+      'language': this.props.preference.language,
+      'dateJump': this.props.preference.dateJump,
+    };
     this.props.fetchTrending(filters);
   }
 
@@ -40,31 +42,11 @@ class FeedContainer extends React.Component {
     }
   }
 
-  getFilters() {
-    const filters = {};
-    filters.language = this.props.preference.language;
-    filters.token = this.props.preference.options.token;
-    filters.dateJump = this.props.preference.dateJump
-    return filters;
-  }
-
   getCorrespondingGitHubLink() {
     return "https://github.com/trending/" +
       this.props.preference.language +
       "?since=" +
       trendingPeriodDefs[this.props.preference.dateJump].ghParamKey;
-  }
-
-  renderTokenWarning() {
-    return !this.props.preference.options.token && (
-      <Alert type='warning'>
-        Make sure to
-        <strong className='ml-1 mr-1'>
-          <Link to='/options'>add a token</Link>
-        </strong>
-        to avoid hitting the rate limit
-      </Alert>
-    );
   }
 
   renderErrors() {
@@ -74,13 +56,6 @@ class FeedContainer extends React.Component {
 
     let message = '';
     switch (this.props.github.error.toLowerCase()) {
-      case 'bad credentials':
-        message = (
-          <span>
-            Token is invalid, try <Link to='/options'>updating the token</Link> on the options page
-          </span>
-        );
-        break;
       case 'empty list':
         message = (
           <span>
@@ -100,22 +75,6 @@ class FeedContainer extends React.Component {
         {message}
       </Alert>
     );
-  }
-
-  renderAlerts() {
-    const tokenWarning = this.renderTokenWarning();
-    const error = this.renderErrors();
-
-    if (tokenWarning || error) {
-      return (
-        <div className="alert-group">
-          { tokenWarning }
-          { error }
-        </div>
-      );
-    }
-
-    return null;
   }
 
   renderRepositoriesList() {
