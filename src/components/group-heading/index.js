@@ -6,7 +6,7 @@ import './styles.css';
 
 class GroupHeading extends React.Component {
   getTitle() {
-    return "Trending repositories on GitHub"
+    return "GitHub Trending Repos"
   }
 
   getSubtitle() {
@@ -17,12 +17,10 @@ class GroupHeading extends React.Component {
   render() {
     return (
       <div className="group-heading">
-        <h4>
-          <span className="text-capitalizes">{ this.getTitle() }</span>
-          <span className="small text-muted ml-2">
-            { this.getSubtitle() }
-          </span>
-        </h4>
+        <span className="text-capitalizes">{ this.getTitle() }</span>
+        <span className="small text-muted ml-2">
+          { this.getSubtitle() }
+        </span>
       </div>
     );
   }

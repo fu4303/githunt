@@ -97,14 +97,14 @@ class FeedContainer extends React.Component {
 
   render() {
     return (
-      <div className="container pb-4">
+      <div className="container pb-5">
         <div className="list-switcher">
           <span className="list-item A"></span>
           <span className="list-item B"></span>
           <span className="list-item C"></span>
         </div>
 
-        <div className="header-row clearfix">
+        <div className="header-row">
           <GroupHeading
             dateJump={this.props.preference.dateJump}
             language={this.props.preference.language} />

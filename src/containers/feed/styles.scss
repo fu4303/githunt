@@ -1,14 +1,14 @@
 .list-switcher {
-  height: 20px;
-  margin-bottom: 15px;
+  margin-bottom: .5rem;
   display: flex;
   align-items: center;
+    visibility: hidden;
 
   .list-item {
     cursor: pointer;
 
-    $size: 14px;
-    margin: 2.5px;
+    $size: .85rem;
+    margin: .2rem;
 
     width: $size;
     height: $size;
@@ -34,28 +34,22 @@
   }
 }
 
-.group-heading {
-  font-size: 22px;
-  font-weight: 600;
-  float: left;
-}
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -1em;
 
-.header-row h4 {
-  margin-top: 8px;
-}
-
-.group-heading h4 {
-  margin-bottom: 0;
-}
-
-.group-heading .small {
-  font-size: 14px;
-  font-weight: 400;
-  margin-left: 3px;
-}
-
-.group-filters {
-  float: right;
+  & > div {
+    margin-top: 1em;
+  }
+  .group-heading {
+    .text-capitalizes {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+  }
 }
 
 .row-group {

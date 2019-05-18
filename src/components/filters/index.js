@@ -7,7 +7,7 @@ import './styles.css';
 import DateJumpFilter from './date-jump-filter';
 
 const Filters = (props) => (
-  <div className="filters-wrap mt-3 mt-sm-3 mt-md-0 mt-xl-0 mt-lg-0">
+  <div className="filters-wrap">
     <div className="filter-item">
       <LanguageFilter
         selectedLanguage={ props.selectedLanguage }
