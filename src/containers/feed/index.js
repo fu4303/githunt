@@ -5,7 +5,6 @@ import './styles.scss';
 import Alert from '../../components/alert';
 import Loader from '../../components/loader';
 import Filters from '../../components/filters';
-import GroupHeading from '../../components/group-heading';
 import { fetchTrending } from '../../redux/github/actions';
 import RepositoryList from '../../components/repository-list';
 import RepositoryGrid from '../../components/repository-grid';
@@ -105,19 +104,21 @@ class FeedContainer extends React.Component {
         </div>
 
         <div className="header-row">
-          <GroupHeading
-            dateJump={this.props.preference.dateJump}
-            language={this.props.preference.language} />
-          <div className="group-filters">
-            <Filters
-              selectedLanguage={this.props.preference.language}
-              selectedViewType={this.props.preference.viewType}
-              updateLanguage={this.props.updateLanguage}
-              updateViewType={this.props.updateViewType}
-              updateDateJump={this.props.updateDateJump}
-              selectedDateJump={this.props.preference.dateJump}
-            />
+          <div className="group-heading">
+            <span className="text-capitalizes">GitHub Trending Repos</span>
+            <span className="small text-muted ml-2">
+              { trendingPeriodDefs[this.props.preference.dateJump].heading }
+            </span>
           </div>
+
+          <Filters
+            selectedLanguage={this.props.preference.language}
+            selectedViewType={this.props.preference.viewType}
+            updateLanguage={this.props.updateLanguage}
+            updateViewType={this.props.updateViewType}
+            updateDateJump={this.props.updateDateJump}
+            selectedDateJump={this.props.preference.dateJump}
+          />
         </div>
         <div className="body-row">
           {this.hasRepositories() && this.renderRepositoriesList()}
