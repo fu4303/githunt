@@ -6,28 +6,15 @@ import {
   SET_WHETHER_OCCUPY_NEWTAB,
 } from './types';
 
-let chrome = window.chrome;
-let isChromeExt = chrome && chrome.storage && chrome.storage.sync;
-
-let initialState = {
+const initialState = {
   whether_occupy_newtab: true,
   theme: 'light',
+
+  // used for repo lists
   viewType: 'grid',
   dateJump: 'week',
   language: '',
 };
-
-// if upgrated from previous version using localstorage for settings,
-// migrate old settings to chrome.storage.sync
-if (isChromeExt) {
-  let persistKey = 'persist:hitup:root';
-  let lsSettingsData = localStorage.getItem(persistKey);
-
-  if (lsSettingsData) {
-    initialState = JSON.parse(JSON.parse(lsSettingsData)['preference'])
-    localStorage.removeItem(persistKey)
-  }
-}
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
