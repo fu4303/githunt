@@ -5,20 +5,21 @@ import './styles.scss';
 import Alert from '../../components/alert';
 import Loader from '../../components/loader';
 import Filters from '../../components/filters';
-import { fetchTrending } from '../../redux/github/actions';
+import {fetchTrendingRepositories} from 'lib/gh-trending';
 import RepositoryList from '../../components/repository-list';
 import RepositoryGrid from '../../components/repository-grid';
 import { updateDateJump, updateLanguage, updateViewType } from '../../redux/preference/actions';
 import {trendingPeriodDefs} from 'lib/gh-trending';
 
 class FeedContainer extends React.Component {
-  componentDidMount() {
-    const existingRepositories = this.props.github.repositories || [];
+  state = {
+    processing: false,
+    repositories: [],
+    error: null,
+  }
 
-    // If there are no loaded repositories before, fetch them
-    if (existingRepositories.length === 0) {
-      this.loadTrendingRepositories();
-    }
+  componentDidMount() {
+    this.loadTrendingRepositories();
   }
 
   loadTrendingRepositories() {
@@ -26,17 +27,48 @@ class FeedContainer extends React.Component {
       'language': this.props.preference.language,
       'dateJump': this.props.preference.dateJump,
     };
-    this.props.fetchTrending(filters);
+
+    this.setState({
+      repositories: [],
+      processing: true,
+      error: null
+    });
+
+    // Ugly:
+    // Let React do re-rendering here, before timeout
+    setTimeout(() => {
+      fetchTrendingRepositories(filters).then(repositories => {
+        if (!(repositories && repositories.length)) {
+          throw new Error("Empty List")
+        }
+
+        this.setState({
+          repositories,
+          processing: false,
+          error: null
+        });
+      }).catch(error => {
+        let message = error.response &&
+          error.response.data &&
+          error.response.data.message;
+
+        if (!message) {
+          message = error.message;
+        }
+
+        this.setState({
+          processing: false,
+          error: message
+        })
+      });
+    }, 0);
   }
 
   componentDidUpdate(prevProps) {
     const currPreferences = this.props.preference;
     const prevPreferences = prevProps.preference;
 
-    // If language or dateJump has been updated, reload
-    // the repositories
-    if (currPreferences.language !== prevPreferences.language ||
-      currPreferences.dateJump !== prevPreferences.dateJump) {
+    if (currPreferences.language !== prevPreferences.language || currPreferences.dateJump !== prevPreferences.dateJump) {
       this.loadTrendingRepositories();
     }
   }
@@ -49,12 +81,12 @@ class FeedContainer extends React.Component {
   }
 
   renderErrors() {
-    if (!this.props.github.error) {
+    if (!this.state.error) {
       return null;
     }
 
     let message = '';
-    switch (this.props.github.error.toLowerCase()) {
+    switch (this.state.error.toLowerCase()) {
       case 'empty list':
         message = (
           <span>
@@ -65,7 +97,7 @@ class FeedContainer extends React.Component {
         );
         break;
       default:
-        message = this.props.github.error;
+        message = this.state.error;
         break;
     }
 
@@ -76,22 +108,8 @@ class FeedContainer extends React.Component {
     );
   }
 
-  renderRepositoriesList() {
-    if (this.props.preference.viewType === 'grid') {
-      return <RepositoryGrid
-        repositories={this.props.github.repositories || []}
-        dateJump={this.props.preference.dateJump}
-      />;
-    }
-
-    return <RepositoryList
-      repositories={this.props.github.repositories || []}
-      dateJump={this.props.preference.dateJump}
-    />;
-  }
-
   hasRepositories() {
-    return this.props.github.repositories && this.props.github.repositories.length !== 0;
+    return this.state.repositories && this.state.repositories.length !== 0;
   }
 
   render() {
@@ -121,10 +139,18 @@ class FeedContainer extends React.Component {
           />
         </div>
         <div className="body-row">
-          {this.hasRepositories() && this.renderRepositoriesList()}
-          {this.props.github.processing && <Loader />}
+          {this.hasRepositories() && (
+            this.props.preference.viewType === 'grid' ? <RepositoryGrid
+              repositories={this.state.repositories}
+              dateJump={this.props.preference.dateJump}
+            /> : <RepositoryList
+              repositories={this.state.repositories}
+              dateJump={this.props.preference.dateJump}
+            />
+          )}
+          {this.state.processing && <Loader />}
         </div>
-        {!this.props.github.processing && !this.hasRepositories() && this.renderErrors()
+        {!this.state.processing && !this.hasRepositories() && this.renderErrors()
         }
       </div>
     );
@@ -134,7 +160,6 @@ class FeedContainer extends React.Component {
 const mapStateToProps = store => {
   return {
     preference: store.preference,
-    github: store.github
   };
 };
 
@@ -142,7 +167,6 @@ const mapDispatchToProps = {
   updateLanguage,
   updateViewType,
   updateDateJump,
-  fetchTrending
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeedContainer);
