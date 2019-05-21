@@ -98,7 +98,7 @@ class FeedContainer extends React.Component {
     }
 
     return (
-      <Alert type='warning' className="no-trending-data">
+      <Alert type='warning' className="mt-3">
         {message}
       </Alert>
     );
@@ -146,8 +146,7 @@ class FeedContainer extends React.Component {
           )}
           {this.state.processing && <Loader />}
         </div>
-        {!this.state.processing && !this.hasRepositories() && this.renderErrors()
-        }
+        {!this.state.processing && !this.hasRepositories() && this.renderErrors()}
       </div>
     );
   }
