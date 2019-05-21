@@ -13,7 +13,6 @@ import * as reducers from './redux/reducers';
 const preferredStorage = isRunningChromeExtension ? createChromeStorage(window.chrome, 'sync') : reduxLocalStorage;
 
 const rootReducer = combineReducers({
-  // 'github': reducers.github,
   'preference': reducers.preference,
   'userData': persistReducer(
     {
