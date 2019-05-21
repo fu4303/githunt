@@ -34,34 +34,30 @@ class FeedContainer extends React.Component {
       error: null
     });
 
-    // Ugly:
-    // Let React do re-rendering here, before timeout
-    setTimeout(() => {
-      fetchTrendingRepositories(filters).then(repositories => {
-        if (!(repositories && repositories.length)) {
-          throw new Error("Empty List")
-        }
+    fetchTrendingRepositories(filters).then(repositories => {
+      if (!(repositories && repositories.length)) {
+        throw new Error("Empty List")
+      }
 
-        this.setState({
-          repositories,
-          processing: false,
-          error: null
-        });
-      }).catch(error => {
-        let message = error.response &&
-          error.response.data &&
-          error.response.data.message;
-
-        if (!message) {
-          message = error.message;
-        }
-
-        this.setState({
-          processing: false,
-          error: message
-        })
+      this.setState({
+        repositories,
+        processing: false,
+        error: null
       });
-    }, 0);
+    }).catch(error => {
+      let message = error.response &&
+        error.response.data &&
+        error.response.data.message;
+
+      if (!message) {
+        message = error.message;
+      }
+
+      this.setState({
+        processing: false,
+        error: message
+      })
+    });
   }
 
   componentDidUpdate(prevProps) {
