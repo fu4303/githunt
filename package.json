@@ -1,6 +1,6 @@
 {
   "name": "hitup",
-  "version": "4.10.1",
+  "version": "4.10.2",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
