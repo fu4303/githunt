@@ -58,21 +58,18 @@
 ## Installation
 
 * Chrome Extension – https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?utm_source=GitHub&utm_medium=wonderbeyond/HitUP
-* Use Online – https://hitup.wondertools.top
+* Online Web – https://hitup.wondertools.top
 
 ## Supporting HitUP
 
-Support HitUP by becoming a backer or sponsor. Your avatar or logo will show up here with a link to your website.
+If you like HitUP, you can give a star ⭐ on [GitHub](https://github.com/wonderbeyond/HitUP),
+or help spread HitUP to more people you know.
+
+If you love HitUP and hope that I can make it better, you can support me by becoming a backer or sponsor.
+Your avatar or logo will show up here with a link to your website.
 
 [Support HitUP on Patreon](https://www.patreon.com/wonderbeyond)
 
-
-## Contributing
-
-* Spread the word
-* Open an issue
-* Submit a pull request
-* Give HitUP a star ⭐ on [GitHub](https://github.com/wonderbeyond/HitUP)
 
 ## Thanks
 
