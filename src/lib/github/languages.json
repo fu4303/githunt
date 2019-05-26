@@ -228,6 +228,10 @@
     "value": "C2hs-Haskell"
   },
   {
+    "title": "Cabal Config",
+    "value": "Cabal-Config"
+  },
+  {
     "title": "Cap'n Proto",
     "value": "Cap'n-Proto"
   },
@@ -632,6 +636,14 @@
     "value": "Gherkin"
   },
   {
+    "title": "Git Attributes",
+    "value": "Git-Attributes"
+  },
+  {
+    "title": "Git Config",
+    "value": "Git-Config"
+  },
+  {
     "title": "GLSL",
     "value": "GLSL"
   },
@@ -872,6 +884,10 @@
     "value": "JSONLD"
   },
   {
+    "title": "Jsonnet",
+    "value": "Jsonnet"
+  },
+  {
     "title": "JSX",
     "value": "JSX"
   },
@@ -1056,6 +1072,10 @@
     "value": "MAXScript"
   },
   {
+    "title": "mcfunction",
+    "value": "mcfunction"
+  },
+  {
     "title": "MediaWiki",
     "value": "MediaWiki"
   },
@@ -1130,6 +1150,10 @@
   {
     "title": "Myghty",
     "value": "Myghty"
+  },
+  {
+    "title": "nanorc",
+    "value": "nanorc"
   },
   {
     "title": "NCL",
@@ -1520,6 +1544,10 @@
     "value": "RHTML"
   },
   {
+    "title": "Rich Text Format",
+    "value": "Rich-Text-Format"
+  },
+  {
     "title": "Ring",
     "value": "Ring"
   },
@@ -1534,6 +1562,10 @@
   {
     "title": "Roff",
     "value": "Roff"
+  },
+  {
+    "title": "Roff Manpage",
+    "value": "Roff-Manpage"
   },
   {
     "title": "Rouge",
@@ -1964,12 +1996,20 @@
     "value": "YASnippet"
   },
   {
+    "title": "ZAP",
+    "value": "ZAP"
+  },
+  {
     "title": "Zephir",
     "value": "Zephir"
   },
   {
     "title": "Zig",
     "value": "Zig"
+  },
+  {
+    "title": "ZIL",
+    "value": "ZIL"
   },
   {
     "title": "Zimpl",

@@ -2,8 +2,6 @@ import axios from 'axios';
 import lscache from 'lscache';
 import ReactGA from 'react-ga';
 
-export {default as languages} from './languages.json';
-
 const TRENDING_API_URL = 'https://github-trending-api.now.sh/repositories';
 
 export const trendingPeriodDefs = {

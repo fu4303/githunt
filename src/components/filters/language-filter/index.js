@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './styles.scss';
-import {languages} from 'lib/gh-trending';
+import {languages} from 'lib/github';
 
 import {ReactComponent as FilterSolid} from 'icons/filter-solid.svg';
 
