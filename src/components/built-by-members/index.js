@@ -33,7 +33,6 @@ class BuiltByMembers extends React.Component {
               delayShow={200}
               delayUpdate={200}
               getContent={(T) => {
-                console.log(`Getting content of ${m.username}`, this);
                 if (!this.state.readyForTooltipImgLoading) { return null }
                 return <>
                   <img alt={m.username} src={`https://avatars.githubusercontent.com/${m.username}?s=200&v=4`} />
