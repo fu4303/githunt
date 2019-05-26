@@ -10,7 +10,7 @@ export default (WrappedComponent, options = {}) => {
     ReactGA.pageview(page);
   };
 
-  const HOC = props => {
+  const WithGATracker = props => {
     useEffect(() => trackPage(props.location.pathname + document.location.search), [
       props.location.pathname
     ]);
@@ -18,5 +18,5 @@ export default (WrappedComponent, options = {}) => {
     return <WrappedComponent {...props} />;
   };
 
-  return HOC;
+  return WithGATracker;
 };
