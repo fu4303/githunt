@@ -19,6 +19,7 @@ body {
 button,
 .btn {
   font-size: 14px;
+  padding: 10px 20px;
   border-radius: 8px;
   outline: 0;
   background-color: var(--primary-button-background-color);
@@ -34,6 +35,16 @@ button,
   // border: 1px solid #ccc;
   &:focus, &:active {
     outline: 0;
+  }
+}
+
+.dropdown-menu {
+  border: 1px solid var(--border-primary-color);
+  box-shadow: 0 3px 12px var(--box-shadow-color);
+  line-height: 2em;
+  top: 3px !important;
+  button {
+    outline: none;
   }
 }
 

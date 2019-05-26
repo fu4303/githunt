@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import LanguageFilter from './language-filter';
 import ViewFilter from './view-filter';
 import './styles.css';
-import DateJumpFilter from './date-jump-filter';
+import TrendingPeriodFilter from './trending-period-filter';
 
 const Filters = (props) => (
   <div className="filters-wrap">
@@ -15,7 +15,7 @@ const Filters = (props) => (
       />
     </div>
     <div className="filter-item">
-      <DateJumpFilter
+      <TrendingPeriodFilter
         updateDateJump={ props.updateDateJump }
         selectedDateJump={ props.selectedDateJump }
       />
