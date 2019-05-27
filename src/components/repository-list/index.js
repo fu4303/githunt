@@ -1,25 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './styles.scss';
+import styles from './styles.module.scss';
 import ListItem from './list-item';
-import RepositoryGrid from '../repository-grid';
 
-class RepositoryList extends React.Component {
-  render() {
-    return (
-      <div className="row list-container">
-        {
-          this.props.repositories.map(repository => <ListItem dateJump={ this.props.dateJump } repository={repository} key={repository.url} />)
-        }
-      </div>
-    );
-  }
+export default function RepositoryList(props) {
+  return (
+    <div className={`row px-4 py-4 mt-4 mx-0 ${styles["list-container"]}`}>
+      {
+        props.repositories.map(repository => <ListItem dateJump={ props.dateJump } repository={repository} key={repository.url} />)
+      }
+    </div>
+  );
 }
 
-RepositoryGrid.propTypes = {
+RepositoryList.propTypes = {
   repositories: PropTypes.array.isRequired,
   dateJump: PropTypes.string.isRequired
 };
-
-export default RepositoryList;

@@ -1,10 +1,10 @@
-.list-switcher {
+.listSwitcher {
   margin-bottom: .5rem;
   display: flex;
   align-items: center;
     visibility: hidden;
 
-  .list-item {
+  .listItem {
     cursor: pointer;
 
     $size: .85rem;
@@ -30,24 +30,6 @@
     }
     &.C {
       background: limegreen;
-    }
-  }
-}
-
-.header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: -1em;
-
-  & > div {
-    margin-top: 1em;
-  }
-  .group-heading {
-    .text-capitalizes {
-      font-size: 1.35rem;
-      white-space: nowrap;
     }
   }
 }
