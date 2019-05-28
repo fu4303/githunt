@@ -63,7 +63,7 @@ function usePreference(initial = {}, options = {}) {
   return { preference: state, setPreference }
 }
 
-export default function GitHubTrending(props) {
+function GitHubTrending(props) {
   const [state, setState] = useState({
     processing: true,
     repositories: [],
@@ -93,11 +93,14 @@ export default function GitHubTrending(props) {
       'dateJump': preference.since,
     };
 
-    setState({
-      repositories: [],
-      processing: true,
-      error: null
-    });
+    if (!state.processing) {
+      // to ignore rerendering by wrap the if-condition test
+      setState({
+        processing: true,
+        repositories: [],
+        error: null
+      });
+    }
 
     fetchTrendingRepositories(filters).then(repositories => {
       if (!(repositories && repositories.length)) {
@@ -105,8 +108,8 @@ export default function GitHubTrending(props) {
       }
 
       setState({
-        repositories,
         processing: false,
+        repositories,
         error: null
       });
     }).catch(error => {
@@ -119,8 +122,8 @@ export default function GitHubTrending(props) {
       }
 
       setState({
-        repositories: [],
         processing: false,
+        repositories: [],
         error: message
       })
     });
@@ -166,7 +169,7 @@ export default function GitHubTrending(props) {
   }
 
   return (
-    <>
+    preference._rehydrated && <>
       <div className="header-row">
         <div className="group-heading">
           <span className="text-capitalizes">GitHub Trending Repos</span>
@@ -200,3 +203,5 @@ export default function GitHubTrending(props) {
     </>
   );
 }
+
+export default GitHubTrending;
