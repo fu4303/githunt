@@ -10,7 +10,8 @@ import {preferredStorage} from 'lib/storages';
 import {prefetch} from 'lib/functools';
 import './styles.scss';
 
-const persistKey = 'HitUP:preference:GitHubTrending';
+const persistKey = 'HitUP:preference:GitHubRanking';
+// TODO: speed up page loading by pre-call this function, make a one time cache
 const loadPrefernce = prefetch(() => preferredStorage
 .getItem(persistKey).then(data => {
   if (!data) {throw new Error('No data')}
@@ -20,17 +21,7 @@ const loadPrefernce = prefetch(() => preferredStorage
 })
 .catch(reason => {
   console.debug('No data from new-style storage')
-  return preferredStorage.getItem('persist:hitup:root').then(data => {
-    // Migrate old preference data from redux-persist
-    const globalPref = JSON.parse(JSON.parse(data).preference);
-    return {
-      language: globalPref.language,
-      since: globalPref.dateJump,
-      viewType: globalPref.viewType,
-    }
-  }).catch(reason => {
-    console.debug('No data at all (ignored, maybe new user).');
-  });
+  return null;
 }))
 
 
@@ -64,7 +55,7 @@ function usePreference(initial = {}, options = {}) {
   return { preference: state, setPreference }
 }
 
-function GitHubTrending(props) {
+function GitHubRanking(props) {
   const [state, setState] = useState({
     processing: true,
     repositories: [],
@@ -173,7 +164,7 @@ function GitHubTrending(props) {
     preference._rehydrated && <>
       <div className="header-row">
         <div className="group-heading">
-          <span className="text-capitalizes">GitHub Trending Repos</span>
+          <span className="text-capitalizes">GitHub Advanced Ranking</span>
           <span className="small text-muted ml-2">
             {trendingPeriodDefs[preference.since].heading.toLocaleLowerCase()}
           </span>
@@ -205,4 +196,4 @@ function GitHubTrending(props) {
   );
 }
 
-export default GitHubTrending;
+export default GitHubRanking;
