@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Alert from 'components/alert';
 import Loader from 'components/loader';
-import Filters from 'components/filters';
+import TrendingFilters from 'components/trending-filters';
 import { fetchTrendingRepositories } from 'lib/gh-trending';
 import RepositoryList from 'components/repository-list';
 import RepositoryGrid from 'components/repository-grid';
@@ -179,7 +179,7 @@ function GitHubTrending(props) {
           </span>
         </div>
 
-        <Filters
+        <TrendingFilters
           selectedLanguage={preference.language}
           selectedViewType={preference.viewType}
           updateLanguage={l => setPreference('language', l)}

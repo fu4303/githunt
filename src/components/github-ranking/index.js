@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Alert from 'components/alert';
 import Loader from 'components/loader';
-import Filters from 'components/filters';
+import RankingFilters from 'components/ranking-filters';
 import { fetchTrendingRepositories } from 'lib/gh-trending';
 import RepositoryList from 'components/repository-list';
 import RepositoryGrid from 'components/repository-grid';
@@ -11,7 +11,6 @@ import {prefetch} from 'lib/functools';
 import './styles.scss';
 
 const persistKey = 'HitUP:preference:GitHubRanking';
-// TODO: speed up page loading by pre-call this function, make a one time cache
 const loadPrefernce = prefetch(() => preferredStorage
 .getItem(persistKey).then(data => {
   if (!data) {throw new Error('No data')}
@@ -64,7 +63,8 @@ function GitHubRanking(props) {
 
   const { preference, setPreference } = usePreference({
     language: '',
-    since: 'week',
+    createdPeriod: "last 24 hours",
+    sort: '-stars',
     viewType: 'grid',
   }, {persistKey});
 
@@ -72,11 +72,15 @@ function GitHubRanking(props) {
   // - persisted preference done rehydrated
   // - language or since changeed
   useEffect(
-    loadTrendingRepositories,
-    [preference._rehydrated, preference.language, preference.since]
+    loadRepos, [
+      preference._rehydrated,
+      preference.language,
+      preference.createdPeriod,
+      preference.sort,
+    ]
   );
 
-  function loadTrendingRepositories() {
+  function loadRepos() {
     if (!preference._rehydrated) {
       return
     }
@@ -170,7 +174,7 @@ function GitHubRanking(props) {
           </span>
         </div>
 
-        <Filters
+        <RankingFilters
           selectedLanguage={preference.language}
           selectedViewType={preference.viewType}
           updateLanguage={l => setPreference('language', l)}

@@ -1,26 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LanguageFilter from './language-filter';
-import ViewFilter from './view-filter';
-import './styles.css';
-import TrendingPeriodFilter from './trending-period-filter';
+import LanguageFilter from 'components/language-filter';
+import ViewFilter from 'components/view-filter';
+import styles from './styles.module.css';
+import RankingPeriodFilter from './ranking-period-filter';
 
-const Filters = (props) => (
-  <div className="filters-wrap">
-    <div className="filter-item">
+const RankingFilters = (props) => (
+  <div className={styles.filtersWrap}>
+    <div className={styles.filterItem}>
       <LanguageFilter
         selectedLanguage={ props.selectedLanguage }
         updateLanguage={ props.updateLanguage }
       />
     </div>
-    <div className="filter-item">
-      <TrendingPeriodFilter
+    <div className={styles.filterItem}>
+      <RankingPeriodFilter
         updateDateJump={ props.updateDateJump }
         selectedDateJump={ props.selectedDateJump }
       />
     </div>
-    <div className="filter-item d-none d-sm-none d-md-none d-xl-block d-lg-block">
+    <div className={`${styles.filterItem} d-none d-sm-none d-md-none d-xl-block d-lg-block`}>
       <ViewFilter
         selectedViewType={ props.selectedViewType }
         updateViewType={ props.updateViewType }
@@ -29,7 +29,7 @@ const Filters = (props) => (
   </div>
 );
 
-Filters.propTypes = {
+RankingFilters.propTypes = {
   updateLanguage: PropTypes.func.isRequired,
   updateViewType: PropTypes.func.isRequired,
   updateDateJump: PropTypes.func.isRequired,
@@ -38,4 +38,4 @@ Filters.propTypes = {
   selectedDateJump: PropTypes.string
 };
 
-export default Filters;
+export default RankingFilters;
