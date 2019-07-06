@@ -24,7 +24,7 @@ id = 'ask-rating-on-chrome-web-store'
 message = """
   Hi, do you like HitUP ? Could you please
   <a target="_blank" class="action"
-    href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb?ref=HitUP-usertips">
+    href="https://chrome.google.com/webstore/detail/hitup-find-top-things/eiokaohkigpbonodjcbjpecbnccijkjb/reviews?ref=HitUP-usertips">
     give a rating on chrome web store
   </a>?
   """
