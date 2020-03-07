@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, { useState, useEffect } from 'react';
 import Alert from 'components/alert';
 import Loader from 'components/loader';
@@ -60,6 +61,11 @@ function usePreference(initial = {}, options = {}) {
     const newState = { ...state, [item]: value };
     update(newState);
     preferredStorage.setItem(persistKey, JSON.stringify(newState));
+    ReactGA.event({
+      category: 'Preference',
+      label: `Set Trending ${item}`,
+      action: `Trending ${item} Set to ${JSON.stringify(value)}`
+    });
   }
   return { preference: state, setPreference }
 }

@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import ClickOutside from 'react-click-outside';
 
 import './styles.scss';
 import {languages} from 'lib/github';
+import {isMobileDevice} from 'lib/runtime';
 
 import {ReactComponent as FilterSolid} from 'icons/filter-solid.svg';
 
@@ -22,14 +24,11 @@ class LanguageFilter extends React.Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    // only scroll into view if the active item changed since last render
-    if (prevState.selectedIndex !== this.state.selectedIndex) {
-      this.ensureSelectedVisible();
-    }
-
-    // If the dropdown has just been made visible focus the input
-    if (this.state.showDropdown && !prevState.showDropdown) {
-      this.focusFilterInput();
+    setTimeout(() => {
+      this.ensureSelectedVisible()
+    }, 0);
+    if (this.state.showDropdown && !prevState.showDropdown && !isMobileDevice()) {
+      this.focusFilterInput()
     }
   }
 
@@ -44,7 +43,10 @@ class LanguageFilter extends React.Component {
       return;
     }
 
-    domNode.scrollIntoView({ block: 'end' });
+    domNode.scrollIntoView({
+      behavior: "auto",
+      block: "center"
+    });
   }
 
   getFilteredLanguages() {
@@ -151,16 +153,12 @@ class LanguageFilter extends React.Component {
   getLanguageDropdown() {
     return (
       <div className="language-select">
-        <div className="select-menu-header">
-          <span className="select-menu-title">Search Language</span>
-        </div>
         <div className="select-menu-filters">
           <div className="select-menu-text-filter">
             <input type="text"
                    className="form-control"
                    placeholder="Filter Languages"
                    ref={ this.filterInputRef }
-                   onBlur={ this.hideDropdown }
                    onChange={ this.filterLanguages }
                    onKeyDown={ this.onKeyDown }
             />
@@ -180,7 +178,7 @@ class LanguageFilter extends React.Component {
   };
 
   render() {
-    return (
+    return (<ClickOutside onClickOutside={this.hideDropdown}>
       <div className='language-filter-wrap'>
         <button onClick={ this.toggleDropdown } className="btn btn-primary language-filter shadowed">
           <FilterSolid width="12" height="12" className="mr-2"/>
@@ -188,7 +186,7 @@ class LanguageFilter extends React.Component {
         </button>
         { this.state.showDropdown && this.getLanguageDropdown() }
       </div>
-    );
+    </ClickOutside>);
   }
 }
 

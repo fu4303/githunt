@@ -13,6 +13,7 @@ import * as reducers from './redux/reducers';
 const preferredStorage = isRunningChromeExtension ? createChromeStorage(window.chrome, 'sync') : reduxLocalStorage;
 
 const rootReducer = combineReducers({
+  'accounts': reducers.accounts,
   'preference': reducers.preference,
   'userData': persistReducer(
     {
@@ -31,7 +32,7 @@ const persistedRootReducer = persistReducer(
     key: 'hitup:root',
     storage: preferredStorage,
     timeout: null,
-    whitelist: ['preference'],
+    whitelist: ['preference', 'accounts'],
     // blacklist: ['userData'],
     stateReconciler: autoMergeLevel2,
   },

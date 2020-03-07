@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import FeedContainer from '../containers/feed';
-import CommentsContainer from '../containers/comments';
+import FeedContainer from 'containers/feed';
+import CommentsContainer from 'containers/comments';
 import withTracker from './with-tracker';
 
 const FeedContainerWithGATracker = withTracker(FeedContainer);

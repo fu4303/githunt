@@ -16,26 +16,26 @@ const RankingFilters = (props) => (
     </div>
     <div className={styles.filterItem}>
       <RankingPeriodFilter
-        updateDateJump={ props.updateDateJump }
-        selectedDateJump={ props.selectedDateJump }
+        onChange={ props.updateDatePeriod }
+        value={props.selectedDatePeriod}
       />
     </div>
-    <div className={`${styles.filterItem} d-none d-sm-none d-md-none d-xl-block d-lg-block`}>
+    {/* <div className={`${styles.filterItem} d-none d-sm-none d-md-none d-xl-block d-lg-block`}>
       <ViewFilter
         selectedViewType={ props.selectedViewType }
         updateViewType={ props.updateViewType }
       />
-    </div>
+    </div> */}
   </div>
 );
 
 RankingFilters.propTypes = {
   updateLanguage: PropTypes.func.isRequired,
-  updateViewType: PropTypes.func.isRequired,
-  updateDateJump: PropTypes.func.isRequired,
+  // updateViewType: PropTypes.func.isRequired,
+  updateDatePeriod: PropTypes.func.isRequired,
   selectedLanguage: PropTypes.string,
   selectedViewType: PropTypes.string,
-  selectedDateJump: PropTypes.string
+  selectedDatePeriod: PropTypes.object
 };
 
 export default RankingFilters;

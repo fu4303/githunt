@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "4.10.3",
+  "version": "4.10.4",
   "name": "HitUP - Find Top Things",
   "short_name": "HitUP",
   "description": "Find top things in new tab page, e.g. trending GitHub repositories and more...",
