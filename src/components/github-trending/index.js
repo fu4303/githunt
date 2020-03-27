@@ -188,7 +188,7 @@ function GitHubTrending(props) {
 
         <TrendingFilters
           selectedSpokenLanguage={preference.spokenLanguage || ""}
-          selectedLanguage={preference.language}
+          selectedLanguage={(preference.language || "").toLocaleLowerCase()}
           selectedViewType={preference.viewType}
           updateLanguage={l => setPreference('language', l)}
           updateSpokenLanguage={l => setPreference('spokenLanguage', l)}
