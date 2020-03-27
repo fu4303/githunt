@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import LanguageFilter from 'components/language-filter';
+import SpokenLanguageFilter from 'components/spoken-language-filter';
 import ViewFilter from 'components/view-filter';
 import styles from './styles.module.css';
 import TrendingPeriodFilter from './trending-period-filter';
 
 const TrendingFilters = (props) => (
   <div className={styles.filtersWrap}>
+    <div className={styles.filterItem}>
+      <SpokenLanguageFilter
+        selectedLanguage={ props.selectedSpokenLanguage }
+        updateLanguage={ props.updateSpokenLanguage }
+      />
+    </div>
     <div className={styles.filterItem}>
       <LanguageFilter
         selectedLanguage={ props.selectedLanguage }
@@ -30,9 +37,11 @@ const TrendingFilters = (props) => (
 );
 
 TrendingFilters.propTypes = {
+  updateSpokenLanguage: PropTypes.func.isRequired,
   updateLanguage: PropTypes.func.isRequired,
   updateViewType: PropTypes.func.isRequired,
   updateDateJump: PropTypes.func.isRequired,
+  selectedSpokenLanguage: PropTypes.string,
   selectedLanguage: PropTypes.string,
   selectedViewType: PropTypes.string,
   selectedDateJump: PropTypes.string

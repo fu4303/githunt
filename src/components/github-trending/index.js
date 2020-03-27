@@ -88,7 +88,7 @@ function GitHubTrending(props) {
   // - language or since changeed
   useEffect(
     loadTrendingRepositories,
-    [preference._rehydrated, preference.language, preference.since]
+    [preference._rehydrated, preference.spokenLanguage, preference.language, preference.since]
   );
 
   function loadTrendingRepositories() {
@@ -96,6 +96,7 @@ function GitHubTrending(props) {
       return
     }
     const filters = {
+      'spokenLanguage': preference.spokenLanguage,
       'language': preference.language,
       'dateJump': preference.since,
     };
@@ -186,9 +187,11 @@ function GitHubTrending(props) {
         </div>
 
         <TrendingFilters
+          selectedSpokenLanguage={preference.spokenLanguage || ""}
           selectedLanguage={preference.language}
           selectedViewType={preference.viewType}
           updateLanguage={l => setPreference('language', l)}
+          updateSpokenLanguage={l => setPreference('spokenLanguage', l)}
           updateViewType={vt => setPreference('viewType', vt)}
           updateDateJump={sc => setPreference('since', sc)}
           selectedDateJump={preference.since}

@@ -1,29 +1,23 @@
-const API = 'https://github-trending-api.now.sh/languages'
+const API = 'https://github-trending-api.now.sh/spoken_languages'
 const axios = require('axios');
 
-const popularNames = [
-    'Python',
-    'C',
-    'C++',
-    'Java',
-    'JavaScript',
-    'Ruby',
-    'PHP',
-    'HTML',
-    'Rust',
-    'Go',
-    'Shell',
+const popularLangs = [
+    'en',
+    'zh',
+    'ru',
+    'de',
+    'fr',
+    'ja',
 ];
 
 (async function () {
     try {
         let resp = await axios.get(API)
-        // console.log('Popular languages:', popularNames);
 
-        let popular = resp.data.filter(l => popularNames.includes(l.name)).sort(
-            (l, r) => popularNames.indexOf(l.name) - popularNames.indexOf(r.name)
+        let popular = resp.data.filter(l => popularLangs.includes(l.urlParam)).sort(
+            (l, r) => popularLangs.indexOf(l.urlParam) - popularLangs.indexOf(r.urlParam)
         )
-        let nonPopular = resp.data.filter(l => !popularNames.includes(l.name))
+        let nonPopular = resp.data.filter(l => !popularLangs.includes(l.urlParam))
 
         let languagesINHitUPSpec = popular.concat(nonPopular).map(l => ({
             name: l.name,

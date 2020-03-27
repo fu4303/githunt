@@ -13,6 +13,7 @@ export const trendingPeriodDefs = {
 const adaptFilters = (filters) => {
   const transformedFilters = {};
 
+  transformedFilters.spoken_language_code = filters.spokenLanguage
   transformedFilters.language = filters.language
   transformedFilters.since = {
     'week': 'weekly',
@@ -25,9 +26,9 @@ const adaptFilters = (filters) => {
 };
 
 export async function fetchTrendingRepositories(filters) {
-  const {language, since} = adaptFilters(filters);
+  const {spoken_language_code, language, since} = adaptFilters(filters);
 
-  let dataLabel = `${language || "all"}/${since}`;
+  let dataLabel = `${spoken_language_code || "all"}/${language || "all"}/${since}`;
   let cacheKey = `github-trending-repositories:${dataLabel}`;
   let reposities;
 
@@ -39,7 +40,7 @@ export async function fetchTrendingRepositories(filters) {
 
   console.debug(`Fetching trending repositories (${dataLabel}).`);
   let resp = await axios.get(TRENDING_API_URL, {
-    params: {language, since}
+    params: {language, since, spoken_language_code}
   }).catch(error => {
     ReactGA.exception({
       description: `Failed to Fetch Trending Data: ${error.message}. detail: ${JSON.stringify(error)}`,
