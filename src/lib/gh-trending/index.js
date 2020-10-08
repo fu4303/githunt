@@ -2,7 +2,7 @@ import axios from 'axios';
 import lscache from 'lscache';
 import ReactGA from 'react-ga';
 
-const TRENDING_API_URL = 'https://github-trending-api.now.sh/repositories';
+const TRENDING_API_URL = 'https://ghapi.huchen.dev/repositories';
 
 export const trendingPeriodDefs = {
     'day': {heading: 'Today', ghParamKey: 'daily'},

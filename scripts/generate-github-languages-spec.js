@@ -1,4 +1,4 @@
-const API = 'https://github-trending-api.now.sh/languages'
+const API = 'https://ghapi.huchen.dev/languages'
 const axios = require('axios');
 
 const popularNames = [
