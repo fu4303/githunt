@@ -1,4 +1,4 @@
-const API = 'https://gtrend.flwha.com/languages'
+const API = 'https://github-trending-api-wonder.herokuapp.com/languages'
 const axios = require('axios');
 
 const popularNames = [

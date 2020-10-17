@@ -13,7 +13,7 @@
   },
   {
     "name": "C++",
-    "value": "c++"
+    "value": "c%2B%2B"
   },
   {
     "name": "Java",
@@ -709,23 +709,23 @@
   },
   {
     "name": "HTML+Django",
-    "value": "html+django"
+    "value": "html%2Bdjango"
   },
   {
     "name": "HTML+ECR",
-    "value": "html+ecr"
+    "value": "html%2Becr"
   },
   {
     "name": "HTML+EEX",
-    "value": "html+eex"
+    "value": "html%2Beex"
   },
   {
     "name": "HTML+ERB",
-    "value": "html+erb"
+    "value": "html%2Berb"
   },
   {
     "name": "HTML+PHP",
-    "value": "html+php"
+    "value": "html%2Bphp"
   },
   {
     "name": "HTTP",
@@ -1105,7 +1105,7 @@
   },
   {
     "name": "NetLinx+ERB",
-    "value": "netlinx+erb"
+    "value": "netlinx%2Berb"
   },
   {
     "name": "NetLogo",
@@ -1165,7 +1165,7 @@
   },
   {
     "name": "Objective-C++",
-    "value": "objective-c++"
+    "value": "objective-c%2B%2B"
   },
   {
     "name": "Objective-J",

@@ -2,7 +2,7 @@ import axios from 'axios';
 import lscache from 'lscache';
 import ReactGA from 'react-ga';
 
-const TRENDING_API_URL = 'https://gtrend.flwha.com/repositories';
+const TRENDING_API_URL = 'https://github-trending-api-wonder.herokuapp.com/repositories';
 
 export const trendingPeriodDefs = {
     'day': {heading: 'Today', ghParamKey: 'daily'},
