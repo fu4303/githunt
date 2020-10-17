@@ -10,5 +10,5 @@ ga('create', 'UA-134825122-1', 'auto');
 ga('set', 'checkProtocolTask', function(){}); // // Removes failing protocol check.
 // ga('send', 'pageview'); // we send pv in react-router hook now
 
-var appVer = "4.11.2";
+var appVer = "4.11.3";
 ga('set', 'dimension1', appVer);
