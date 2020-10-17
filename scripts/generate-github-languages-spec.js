@@ -1,4 +1,4 @@
-const API = 'https://ghapi.huchen.dev/languages'
+const API = 'https://gtrend.flwha.com/languages'
 const axios = require('axios');
 
 const popularNames = [

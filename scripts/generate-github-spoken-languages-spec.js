@@ -1,4 +1,4 @@
-const API = 'https://ghapi.huchen.dev/spoken_languages'
+const API = 'https://gtrend.flwha.com/spoken_languages'
 const axios = require('axios');
 
 const popularLangs = [

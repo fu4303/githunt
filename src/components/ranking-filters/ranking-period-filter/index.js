@@ -1,13 +1,13 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as PeriodIcon } from 'icons/period.svg';
 import {realizePeriod} from 'lib/date-period';
 import classNames from 'classnames';
 import styles from './styles.module.scss';
-import {format, isSameDay} from 'date-fns';
+import {format} from 'date-fns';
 import ClickOutside from 'react-click-outside';
-
+// eslint-disable-next-line
 function toDateStr(d) {
   // only leave the date part
   if (!d) {return ''}
@@ -37,7 +37,7 @@ const RankingPeriodFilter = (props) => {
     end: initPeriod.end,
     spec: initPeriod.spec,
   });
-
+  // eslint-disable-next-line
   const changeHandler = event => {
     const newPeriod = {
       ...period,
