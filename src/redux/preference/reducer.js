@@ -8,7 +8,7 @@ import {
 
 const initialState = {
   whether_occupy_newtab: true,
-  theme: 'light',
+  theme: 'system',
 
   // used for repo lists
   viewType: 'grid',
