@@ -1,11 +1,11 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 
-.theme-light {
+@mixin light-theme {
   --background-primary-color: #f4f4f4;
   --background-secondary-color: #fff;
 
-  --text-main-color: #{$gray-700};  // main text, e..g repo description
+  --text-main-color: #{$gray-700}; // main text, e..g repo description
   --text-head-color: #{$gray-900};
   --text-secondary-color: #{$gray-600};
   --text-faded-color: #{$gray-400};
@@ -20,11 +20,11 @@
   --primary-button-border-color: #fff;
 }
 
-.theme-dark {
+@mixin dark-theme {
   --background-primary-color: #090809;
   --background-secondary-color: #131313;
 
-  --text-main-color: #{$gray-500};  // main text, e..g repo description
+  --text-main-color: #{$gray-500}; // main text, e..g repo description
   --text-head-color: #{$gray-300};
   --text-secondary-color: #{$gray-600};
   --text-faded-color: #{$gray-700};
@@ -39,11 +39,11 @@
   --primary-button-border-color: #131313;
 }
 
-.theme-dark-blue {
+@mixin dark-theme-blue {
   --background-primary-color: #01385c;
   --background-secondary-color: #131313;
 
-  --text-main-color: #{$gray-500};  // main text, e..g repo description
+  --text-main-color: #{$gray-500}; // main text, e..g repo description
   --text-head-color: #{$gray-300};
   --text-secondary-color: #{$gray-600};
   --text-faded-color: #{$gray-700};
@@ -56,4 +56,26 @@
 
   --primary-button-background-color: #071720;
   --primary-button-border-color: #071720;
+}
+
+.theme-light {
+  @include light-theme;
+}
+
+.theme-dark {
+  @include dark-theme;
+}
+
+.theme-dark-blue {
+  @include dark-theme-blue;
+}
+
+:root {
+  color-scheme: dark;
+  @include dark-theme-blue;
+
+  @media (prefers-color-scheme: light) {
+    color-scheme: light;
+    @include light-theme;
+  }
 }

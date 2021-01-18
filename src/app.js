@@ -44,7 +44,7 @@ const PageWrapper = props => (
 const ThemeWrapper = connect(store => ({
   theme: store.preference.theme,
 }))(props => (
-  <div id="theme-wrap" className={`theme-${props.theme}`}>
+    <div id="theme-wrap" className={`theme-${props.theme}`}>
     <SideBar/>
     <PageWrapper/>
   </div>

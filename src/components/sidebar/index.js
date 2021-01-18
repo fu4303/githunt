@@ -47,6 +47,7 @@ const SideBar = props => {
         <label>
           <span>Color Theme&nbsp;</span>
           <select value={props.theme} onChange={setThemeHandler}>
+            <option value="system">System</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
             <option value="dark-blue">Dark Blue</option>
