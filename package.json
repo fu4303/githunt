@@ -25,7 +25,7 @@
     "react-toggle": "^4.0.2",
     "react-tooltip": "^3.10.0",
     "reactstrap": "^8.0.0",
-    "redux": "^4.0.1",
+    "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-persist": "^5.10.0",
     "redux-persist-chrome-storage": "^1.0.1",
